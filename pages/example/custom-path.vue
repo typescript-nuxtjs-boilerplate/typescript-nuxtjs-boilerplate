@@ -20,8 +20,8 @@ export default {
     return {
       path: route.path,
       params: route.params,
-      query: route.query
+      query: route.query,
     }
-  }
+  },
 }
 </script>

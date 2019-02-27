@@ -21,9 +21,9 @@ export default {
   async asyncData() {
     const hex = Math.floor(Math.random() * 16777215).toString(16)
     const { data } = await axios.get(
-      `http://www.thecolorapi.com/scheme?hex=${hex}`
+      `http://www.thecolorapi.com/scheme?hex=${hex}`,
     )
     return { data }
-  }
+  },
 }
 </script>

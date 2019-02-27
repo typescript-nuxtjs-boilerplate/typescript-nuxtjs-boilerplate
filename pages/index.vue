@@ -32,8 +32,8 @@ import HelloWorld from '~/components/HelloWorld.vue'
 export default {
   components: {
     Logo,
-    HelloWorld
-  }
+    HelloWorld,
+  },
 }
 </script>
 
