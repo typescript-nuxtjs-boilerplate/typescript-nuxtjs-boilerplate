@@ -21,5 +21,10 @@
         /d-03/f-04/
       </n-link>
     </p>
+    <p>
+      <nuxt-link to="/example/assets-and-static">
+        assets and static
+      </nuxt-link>
+    </p>
   </section>
 </template>
