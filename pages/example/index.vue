@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    h1 index
+    h1.red index
     p
       nuxt-link(to='/example/ajax/color', no-prefetch)
         | color
@@ -17,3 +17,9 @@
       nuxt-link(to='/example/assets-and-static')
         | assets and static
 </template>
+
+<style lang="scss">
+.red {
+  color: red;
+}
+</style>
