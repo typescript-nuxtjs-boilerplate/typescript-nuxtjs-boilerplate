@@ -64,5 +64,14 @@ module.exports = {
         })
       }
     }
+  },
+  router: {
+    extendRoutes(routes: any, resolve: any) {
+      routes.push({
+        name: 'ab',
+        path: '/example/(c|d)-:a/(e|f)-:b/*',
+        component: resolve(__dirname, 'pages/example/custom-path.vue')
+      })
+    }
   }
 }
