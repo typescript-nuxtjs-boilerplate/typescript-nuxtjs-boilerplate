@@ -75,6 +75,7 @@ module.exports = {
   },
   router: {
     extendRoutes(routes: any, resolve: any) {
+      // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       routes.push({
         name: 'ab',
         path: '/example/(c|d)-:a/(e|f)-:b/*',
