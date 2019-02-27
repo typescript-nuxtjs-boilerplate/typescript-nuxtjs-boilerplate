@@ -14,6 +14,11 @@
     "precommit": "npm run lint",
     "test": "jest"
   },
+   "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit"
+    }
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-beta.8",
@@ -45,6 +50,7 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^1.3.1",
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "prettier": "1.16.4",
