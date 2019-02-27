@@ -22,7 +22,7 @@ $ yarn run generate
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
 
-#　nuxt to nuxt-ts 以下やったこと
+# nuxt to nuxt-ts でやったこと
 
 
 ## create-nuxt-app で雛形を作る
