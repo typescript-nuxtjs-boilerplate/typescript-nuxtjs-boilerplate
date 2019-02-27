@@ -142,3 +142,19 @@ package.json に以下の script を追加します。
 ```
 
 [開発ツール - Nuxt.js](https://ja.nuxtjs.org/guide/development-tools/)
+
+
+## server/index.js が動かなくなったので nuxt 内包 connect サーバーを使うように scripts を変更
+
+```
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "cross-env NODE_ENV=production nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "test": "jest"
+  },
+```
