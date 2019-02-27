@@ -7,6 +7,10 @@
     </div>
 
     <div><img :src="data.image.named" /></div>
+
+    <nuxt-link to="/example/">
+      example top
+    </nuxt-link>
   </section>
 </template>
 

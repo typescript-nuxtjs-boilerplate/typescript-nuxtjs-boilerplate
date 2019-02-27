@@ -6,6 +6,9 @@
       <p>params: {{ params }}</p>
       <p>query: {{ query }}</p>
     </div>
+    <nuxt-link to="/example/">
+      example top
+    </nuxt-link>
   </section>
 </template>
 
