@@ -5833,17 +5833,6 @@ nuxt-ts@^2.4.5:
     "@nuxt/typescript" "2.4.5"
     "@nuxt/webpack" "2.4.5"
 
-nuxt@^2.4.5:
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.4.5.tgz#3f3256c47e78038ef8081e522181aa2578bddcea"
-  dependencies:
-    "@nuxt/builder" "2.4.5"
-    "@nuxt/cli" "2.4.5"
-    "@nuxt/core" "2.4.5"
-    "@nuxt/generator" "2.4.5"
-    "@nuxt/opencollective" "^0.2.1"
-    "@nuxt/webpack" "2.4.5"
-
 nwsapi@^2.0.7:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.1.1.tgz#08d6d75e69fd791bdea31507ffafe8c843b67e9c"
