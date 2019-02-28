@@ -16,9 +16,12 @@
     p
       nuxt-link(to='/example/assets-and-static')
         | assets and static
+    p
+      nuxt-link(to='/example/todos')
+        | todos
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .red {
   color: red;
 }
