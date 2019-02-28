@@ -6,6 +6,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  srcDir: 'src/',
 
   /*
   ** Headers of the page
@@ -79,7 +80,7 @@ module.exports = {
       routes.push({
         name: 'ab',
         path: '/example/(c|d)-:a/(e|f)-:b/*',
-        component: resolve(__dirname, 'pages/example/custom-path.vue')
+        component: resolve(__dirname, 'src/pages/example/custom-path.vue')
       })
     }
   }

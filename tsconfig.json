@@ -4,6 +4,11 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "allowJs": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "types": [
       "@types/node",
       "@types/webpack",
