@@ -37,8 +37,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt-property-decorator": "^2.1.3",
-    "nuxt-ts": "^2.4.5",
-    "vue-property-decorator": "^7.3.0"
+    "nuxt-ts": "^2.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
