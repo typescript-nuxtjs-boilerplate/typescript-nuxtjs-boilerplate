@@ -2,7 +2,11 @@
   "name": "typescript-nuxtjs",
   "version": "0.0.1",
   "description": "My gnarly Nuxt.js project",
-  "author": "hisasann",
+  "author": {
+    "name": "hisasann",
+    "email": "hisasann25@gmail.com",
+    "url": "https://github.com/hisasann"
+  },
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt-ts",
@@ -12,7 +16,17 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "dev:docker": "node preprocessor.js dev && docker-compose up --build",
+    "stg:docker": "node preprocessor.js stg && docker-compose up --build",
+    "prod:docker": "node preprocessor.js prod && docker-compose up --build",
+    "dev:clean": "node preprocessor.js dev && docker-compose build --no-cache && docker-compose up",
+    "stg:clean": "node preprocessor.js stg && docker-compose build --no-cache && docker-compose up",
+    "prod:clean": "node preprocessor.js prod && docker-compose build --no-cache && docker-compose up",
+    "container-prune": "docker container prune",
+    "image-prune": "docker image prune",
+    "system-prune": "docker system prune",
+    "stats": "docker container stats"
   },
   "husky": {
     "hooks": {

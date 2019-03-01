@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: typescript-nuxtjs-${ENVIRONMENT}
+    build: .
+    environment:
+      - NODE_ENV=${ENVIRONMENT}
+    ports:
+     - $NUXT_APP_PORT:$NUXT_APP_PORT
