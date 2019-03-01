@@ -19,6 +19,9 @@
     p
       nuxt-link(to='/example/todos')
         | todos
+    p
+      nuxt-link(to='/example/life-cycle')
+        | life-cycle
 </template>
 
 <style lang="scss" scoped>
