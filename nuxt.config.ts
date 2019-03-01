@@ -8,6 +8,13 @@ module.exports = {
   mode: 'universal',
   srcDir: 'src/',
 
+  // https://ja.nuxtjs.org/faq/host-port/
+  server: {
+    port: 3000,
+    // 他のパソコンから IP でつながるように host を変更
+    host: '0.0.0.0', // デフォルト: localhost
+  },
+
   /*
   ** Headers of the page
   */
