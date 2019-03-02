@@ -22,6 +22,9 @@
     p
       nuxt-link(to='/example/life-cycle')
         | life-cycle
+    p
+      nuxt-link(to='/example/use-plugin')
+        | use-plugin
 </template>
 
 <style lang="scss" scoped>

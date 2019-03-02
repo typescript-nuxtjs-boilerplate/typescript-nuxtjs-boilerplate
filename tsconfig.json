@@ -1,9 +1,10 @@
 {
   "extends": "@nuxt/typescript",
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
     "experimentalDecorators": true,
-    "allowJs": true,
+    "noImplicitThis": true,
     "paths": {
       "@/*": [
         "src/*"

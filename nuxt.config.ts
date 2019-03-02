@@ -43,7 +43,9 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    '~/plugins/constants-inject.ts'
+  ],
 
   /*
   ** Nuxt.js modules
