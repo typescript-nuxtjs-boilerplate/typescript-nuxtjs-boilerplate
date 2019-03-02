@@ -1,13 +1,8 @@
 {
   "name": "typescript-nuxtjs",
+  "private": true,
   "version": "0.0.1",
   "description": "My gnarly Nuxt.js project",
-  "author": {
-    "name": "hisasann",
-    "email": "hisasann25@gmail.com",
-    "url": "https://github.com/hisasann"
-  },
-  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt-ts",
     "build": "nuxt-ts build",
@@ -31,6 +26,11 @@
     "hooks": {
       "pre-commit": "yarn precommit"
     }
+  },
+  "author": {
+    "name": "hisasann",
+    "email": "hisasann25@gmail.com",
+    "url": "https://github.com/hisasann"
   },
   "repository": {
     "type": "git",
