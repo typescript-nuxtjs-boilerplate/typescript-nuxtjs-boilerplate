@@ -4,14 +4,23 @@
     "allowJs": true,
     "baseUrl": ".",
     "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "es2017"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
     "noImplicitThis": true,
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+    "target": "es5",
     "types": [
       "@types/node",
+      "@types/jest",
       "@types/webpack",
       "@nuxt/vue-app"
     ]
