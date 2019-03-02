@@ -10,12 +10,18 @@ import { Component, Vue } from 'nuxt-property-decorator'
 @Component
 export default class LifeCycle extends Vue {
   message: string = 'open devTool!'
+
+  // https://ja.nuxtjs.org/guide/plugins
+  // Vue インスタンスの ライフサイクル において、beforeCreate と created フックのみが クライアントサイドとサーバーサイドの両方 で呼び出されることに注意してください
+  // それ以外のすべてのフックはクライアントサイドでのみ呼び出されます
   beforeCreate() {
     console.log('beforeCreate')
   }
   created() {
     console.log('created')
   }
+
+  // これ以降のメソッドはクライアントサイドでのみ実行されます
   beforeMount() {
     console.log('beforeMount')
   }
