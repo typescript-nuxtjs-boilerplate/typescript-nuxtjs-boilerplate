@@ -1,7 +1,7 @@
 <template lang="pug">
   section
     p.c
-      | {{ c }}
+      | {{ c.pjName }}
 </template>
 
 <script lang="ts">

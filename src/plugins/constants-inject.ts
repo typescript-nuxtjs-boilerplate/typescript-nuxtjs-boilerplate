@@ -14,7 +14,7 @@ declare module 'vue/types/vue' {
 }
 
 import { Context } from '@nuxt/vue-app'
-import C from '@/common/constants'
+import * as C from '@/common/constants/'
 
 // Vue インスタンスだけで使いたい場合はこちら
 // import Vue from 'vue'
