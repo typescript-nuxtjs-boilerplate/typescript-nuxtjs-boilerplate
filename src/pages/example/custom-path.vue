@@ -1,15 +1,13 @@
-<template>
-  <section class="container">
-    <h1>custom path</h1>
-    <div>
-      <p>path: {{ path }}</p>
-      <p>params: {{ params }}</p>
-      <p>query: {{ query }}</p>
-    </div>
-    <nuxt-link to="/example/">
-      example top
-    </nuxt-link>
-  </section>
+<template lang="pug">
+  section.container
+    h1.title
+      | custom path
+    div
+      p path: {{ path }}
+      p params: {{ params }}
+      p query: {{ query }}
+    nuxt-link(to='/example/')
+      | example top
 </template>
 
 <script lang="ts">

@@ -1,5 +1,7 @@
 <template lang="pug">
   section
+    h1.title
+      | use-plugin
     p.c
       | {{ c.pjName }}
 </template>
@@ -16,7 +18,7 @@ export default class UsePlugin extends Vue {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .c {
   font-size: 20px;
 }

@@ -1,5 +1,7 @@
 <template lang="pug">
   section
+    h1.title
+      | todos
     ul
       li(v-for='todo in todos', :key='todo.id')
         input(type='checkbox', :checked='todo.done', @change='toggle(todo)')
@@ -28,7 +30,7 @@ export default class extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .done {
   text-decoration: line-through;
 }

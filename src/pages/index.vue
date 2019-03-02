@@ -1,33 +1,22 @@
-<template>
-  <section class="container">
-    <div>
-      <logo />
-      <HelloWorld />
-      <h1 class="title">
-        typescript-nuxtjs
-      </h1>
-      <h2 class="subtitle">
-        My gnarly Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+ section.container
+  div
+    Logo
+    HelloWorld
+    h1.title
+      | typescript-nuxtjs
+    h2.subtitle
+      | My gnarly Nuxt.js project
+    .links
+      a.button--green(href='https://nuxtjs.org/' target='_blank')
+        | Documentation
+      a.button--grey(href='https://github.com/nuxt/nuxt.js' target='_blank')
+        | GitHub
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-import HelloWorld from '~/components/HelloWorld.vue'
+<script lang="ts">
+import Logo from '@/components/Logo.vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   components: {
@@ -37,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
