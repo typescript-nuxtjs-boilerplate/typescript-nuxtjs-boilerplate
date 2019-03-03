@@ -5,10 +5,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class HelloWorld extends Vue {
-  message: string = 'Hello world !'
+  @Prop({ default: 'Hello world !' })
+  message: string
 }
 </script>
