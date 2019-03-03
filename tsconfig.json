@@ -17,6 +17,7 @@
         "src/*"
       ]
     },
+    "strictPropertyInitialization": false,
     "target": "es5",
     "types": [
       "@types/node",
@@ -24,5 +25,7 @@
       "@types/webpack",
       "@nuxt/vue-app"
     ]
-  }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules", "stories"]
 }
