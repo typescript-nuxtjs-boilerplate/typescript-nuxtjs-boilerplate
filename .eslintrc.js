@@ -19,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'no-console': 'off',
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-self-closing.md
     'vue/html-self-closing': ['error', {
       html: {

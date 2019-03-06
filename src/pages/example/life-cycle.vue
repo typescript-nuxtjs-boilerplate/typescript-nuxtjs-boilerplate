@@ -20,6 +20,7 @@ export default class LifeCycle extends Vue {
   }
   created() {
     console.log('created')
+    console.log('RUNTIME_ENV: ', process.env.RUNTIME_ENV)
   }
 
   // これ以降のメソッドはクライアントサイドでのみ実行されます

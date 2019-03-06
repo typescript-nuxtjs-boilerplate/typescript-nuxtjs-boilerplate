@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nuxt:
+    image: typescript-nuxtjs-${ENVIRONMENT}
+    build:
+      context: "."
+      dockerfile: "Dockerfile.prod"
+    environment:
+      - environment=${ENVIRONMENT}
+      - RUNTIME_ENV=${RUNTIME_ENV}
+    ports:
+     - $WEB_APP_PORT:$WEB_APP_PORT

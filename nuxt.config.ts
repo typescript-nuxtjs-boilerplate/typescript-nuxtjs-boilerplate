@@ -8,9 +8,17 @@ module.exports = {
   mode: 'universal',
   srcDir: 'src/',
 
+  env: {
+    NODE_ENV: process.env.NODE_ENV,
+    BUILD_ENV: process.env.BUILD_ENV,
+    environment: process.env.environment,
+    NUXT_ENV_NODE_ENV: process.env.NUXT_ENV_NODE_ENV,
+    hoge: process.env.hoge
+  },
+
   // https://ja.nuxtjs.org/faq/host-port/
   server: {
-    port: 3000,
+    port: 4000,
     // 他のパソコンから IP でつながるように host を変更
     host: '0.0.0.0', // デフォルト: localhost
   },
@@ -44,7 +52,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/constants-inject.ts'
+    '@/plugins/constants-inject.ts',
+    '@/plugins/env-inject.ts'
   ],
 
   /*
@@ -53,7 +62,14 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://github.com/samtgarson/nuxt-env
+    ['nuxt-env', {
+      keys: [
+        'TEST_ENV_VAR', // Basic usage—equivalent of { key: 'TEST_ENV_VAR' }
+        { key: 'RUNTIME_ENV', default: 'defaultValue' } // Specify a default value
+      ]
+    }]
   ],
   /*
   ** Axios module configuration
