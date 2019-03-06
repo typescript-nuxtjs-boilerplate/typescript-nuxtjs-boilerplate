@@ -27,7 +27,7 @@ ADD ./src /src/src/
 # Install app dependencies
 COPY .babelrc /src/.babelrc
 COPY .eslintrc.js /src/.eslintrc.js
-COPY .prettierrc /src/.prettierrc
+COPY .prettierrc.js /src/.prettierrc.js
 COPY jest.config.js /src/jest.config.js
 COPY nuxt.config.ts /src/nuxt.config.ts
 COPY tsconfig.json /src/tsconfig.json
