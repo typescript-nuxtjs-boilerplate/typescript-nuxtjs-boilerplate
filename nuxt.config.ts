@@ -9,23 +9,19 @@ module.exports = {
   srcDir: 'src/',
 
   env: {
-    NODE_ENV: process.env.NODE_ENV,
-    BUILD_ENV: process.env.BUILD_ENV,
-    environment: process.env.environment,
-    NUXT_ENV_NODE_ENV: process.env.NUXT_ENV_NODE_ENV,
-    hoge: process.env.hoge
+    NODE_ENV: process.env.NODE_ENV
   },
 
   // https://ja.nuxtjs.org/faq/host-port/
   server: {
     port: 4000,
     // 他のパソコンから IP でつながるように host を変更
-    host: '0.0.0.0', // デフォルト: localhost
+    host: '0.0.0.0' // デフォルト: localhost
   },
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     meta: [
@@ -37,54 +33,52 @@ module.exports = {
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/main.scss'
-  ],
+   ** Global CSS
+   */
+  css: ['@/assets/main.scss'],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/constants-inject.ts',
-    '@/plugins/env-inject.ts'
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ['@/plugins/constants-inject.ts', '@/plugins/env-inject.ts'],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // https://github.com/samtgarson/nuxt-env
-    ['nuxt-env', {
-      keys: [
-        'TEST_ENV_VAR', // Basic usage—equivalent of { key: 'TEST_ENV_VAR' }
-        { key: 'RUNTIME_ENV', default: 'defaultValue' } // Specify a default value
-      ]
-    }]
+    [
+      'nuxt-env',
+      {
+        keys: [
+          'TEST_ENV_VAR', // Basic usage—equivalent of { key: 'TEST_ENV_VAR' }
+          { key: 'RUNTIME_ENV', default: 'defaultValue' } // Specify a default value
+        ]
+      }
+    ]
   ],
   /*
-  ** Axios module configuration
-  */
+   ** Axios module configuration
+   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config: Configuration, ctx: Context) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

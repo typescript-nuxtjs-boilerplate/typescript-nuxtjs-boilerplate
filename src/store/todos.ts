@@ -1,32 +1,32 @@
-export interface IState {
-  list: (ITodo)[];
+export interface TodoInterface {
+  id: number
+  text: string
+  done: boolean
 }
 
-export interface ITodo {
-  id: number;
-  text: string;
-  done: boolean;
+export interface StateInterface {
+  list: (TodoInterface)[]
 }
 
-export const state = (): IState => ({
+export const state = (): StateInterface => ({
   list: []
 })
 
-let counter = 0;
+let counter = 0
 
 export const mutations = {
-  add (state: IState, text: string) {
+  add(state: StateInterface, text: string) {
     state.list.push({
       id: counter++,
       text: text,
       done: false
     })
   },
-  remove (state: IState, { todo }: { todo: ITodo }) {
+  remove(state: StateInterface, { todo }: { todo: TodoInterface }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
   // @ts-ignore
-  toggle (state: IState, todo: ITodo) {
+  toggle(state: StateInterface, todo: TodoInterface) {
     todo.done = !todo.done
   }
 }

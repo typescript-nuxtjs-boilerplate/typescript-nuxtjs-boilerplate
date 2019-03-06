@@ -3,5 +3,5 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 storiesOf('HelloWorld', module).add('default', () => ({
   components: { HelloWorld },
-  template: `<HelloWorld message="HelloWorld" />`,
+  template: `<HelloWorld message="HelloWorld" />`
 }))

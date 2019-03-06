@@ -12,19 +12,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { IState, ITodo } from '@/store/todos'
+import { StateInterface, TodoInterface } from '@/store/todos'
 import { HTMLElementEvent } from '@/interface/HTMLElementEvent'
 
 @Component
 export default class extends Vue {
-  get todos(): IState {
+  get todos(): StateInterface {
     return this.$store.state.todos.list
   }
   addTodo(e: HTMLElementEvent<HTMLInputElement>) {
     this.$store.commit('todos/add', e.target.value)
     e.target.value = ''
   }
-  toggle(todo: ITodo) {
+  toggle(todo: TodoInterface) {
     this.$store.commit('todos/toggle', todo)
   }
 }

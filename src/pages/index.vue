@@ -24,8 +24,8 @@ console.log('Env:', Env.envName)
 export default {
   components: {
     Logo,
-    HelloWorld,
-  },
+    HelloWorld
+  }
 }
 </script>
 

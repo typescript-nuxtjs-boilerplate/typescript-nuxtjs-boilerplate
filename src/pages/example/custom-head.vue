@@ -12,7 +12,7 @@ export default class extends Vue {
   title: string = ''
   data() {
     return {
-      title: 'Hello World!',
+      title: 'Hello World!'
     }
   }
 
@@ -23,9 +23,9 @@ export default class extends Vue {
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description',
-        },
-      ],
+          content: 'My custom description'
+        }
+      ]
     }
   }
 }
