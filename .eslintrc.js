@@ -4,22 +4,32 @@ module.exports = {
     browser: true,
     node: true
   },
+  extends: [
+    '@nuxtjs',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended'
+  ],
+  plugins: [
+  ],
+  // https://qiita.com/markey/items/cfeb2a07e11d43676505
+  // https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb
+  // parserに'vue-eslint-parser'を指定し、'@typescript-eslint/parser'はparserOptionsに指定する
+  parser:  'vue-eslint-parser',
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
     ecmaFeatures: {
       legacyDecorators: true
     }
   },
-  extends: [
-    '@nuxtjs',
-    'plugin:prettier/recommended'
-  ],
-  plugins: [
-    'prettier'
-  ],
   // add your custom rules here
   rules: {
     'no-console': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'import/no-mutable-exports': 'off',
     // https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-self-closing.md
     'vue/html-self-closing': ['error', {
       html: {
