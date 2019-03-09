@@ -1,0 +1,43 @@
+<template lang="pug">
+  div
+    h1.title
+      | api
+    p store: {{this.$store.state.api.result}}
+    p getter: {{this.$store.getters['api/getResult']}}
+    p result.id: {{ result.id }}
+    p result.value: {{ result.value }}
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import { ApiPayloadInterface } from '@/interface/ApiPayloadInterface'
+import { cancelToken } from '@/utilities/'
+
+@Component
+export default class Api extends Vue {
+  // リクエスト用ペイロード
+  private payload: ApiPayloadInterface = {
+    hoge: 'foo'
+  }
+
+  // computed
+  get result(): any {
+    return this!.$store.getters['api/getResult']
+  }
+  // @ts-ignore
+  public async fetch({ store, params, error }: any): Promise<void> {
+    await console.log('fetch')
+    // await store.$store.dispatch('api/fetchApi', {
+    //   hoge: 'foo'
+    // })
+  }
+  public async created() {
+    console.log('created')
+    await this!.$store.dispatch('api/fetchApi', this.payload)
+  }
+  public beforeDestroy(): void {
+    // リクエストをキャンセル
+    cancelToken.cancel(this.payload, 'Operation canceled by the user.')
+  }
+}
+</script>

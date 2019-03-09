@@ -30,6 +30,9 @@
     p
       nuxt-link(to='/example/custom-head')
         | custom-head
+    p
+      nuxt-link(to='/example/api')
+        | api
 </template>
 
 <style lang="scss" scoped>
