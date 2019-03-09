@@ -15,7 +15,8 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "*": ["types/*"]
     },
     "strictPropertyInitialization": false,
     "target": "es5",
@@ -26,6 +27,6 @@
       "@nuxt/vue-app"
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.d.ts"],
   "exclude": ["node_modules", "stories"]
 }
