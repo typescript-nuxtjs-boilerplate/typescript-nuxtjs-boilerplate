@@ -6,9 +6,9 @@ import { EnvInterface } from '@/interface/EnvInterface'
 console.log('process.env.NODE_ENV: ', process.env.NODE_ENV)
 
 let Env: EnvInterface
-if (process.env.NODE_ENV === 'prod') {
+if (process.env.NODE_ENV === 'production') {
   Env = EnvProd
-} else if (process.env.NODE_ENV === 'stg') {
+} else if (process.env.NODE_ENV === 'staging') {
   Env = EnvStg
 } else {
   Env = EnvDev
