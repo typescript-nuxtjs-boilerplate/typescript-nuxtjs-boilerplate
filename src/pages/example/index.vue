@@ -33,6 +33,9 @@
     p
       nuxt-link(to='/example/api')
         | api
+    p
+      nuxt-link(to='/example/search/?hoge=foo&bar=fuga')
+        | search
 </template>
 
 <style lang="scss" scoped>
