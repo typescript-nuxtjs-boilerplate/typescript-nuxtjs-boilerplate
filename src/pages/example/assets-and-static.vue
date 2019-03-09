@@ -4,7 +4,7 @@
       | assets and static
     div
       h2 assets
-      img(src='~/assets/lemon-sour.medium.jpg')
+      img(src='~/assets/images/lemon-sour.medium.jpg')
     div
       h2 static
       img(src='/lemon-sour.small.jpg')
