@@ -1,8 +1,21 @@
 <template>
   <div>
+    <fork-this />
     <nuxt />
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import ForkThis from '@/components/ForkThis.vue'
+
+@Component({
+  components: {
+    ForkThis
+  }
+})
+export default class DefaultLayout extends Vue {}
+</script>
 
 <style>
 html {
