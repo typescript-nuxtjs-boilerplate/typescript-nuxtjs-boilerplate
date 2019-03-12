@@ -36,6 +36,9 @@
     p
       nuxt-link(to='/example/search/?hoge=foo&bar=fuga')
         | search
+    p
+      nuxt-link(to='/example/img-lazy-load')
+        | img-lazy-load
 </template>
 
 <style lang="scss" scoped>

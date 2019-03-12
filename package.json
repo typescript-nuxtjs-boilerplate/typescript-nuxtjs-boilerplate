@@ -55,7 +55,8 @@
     "express": "^4.16.4",
     "nuxt-env": "^0.1.0",
     "nuxt-property-decorator": "^2.1.3",
-    "nuxt-ts": "^2.4.5"
+    "nuxt-ts": "^2.4.5",
+    "vue-lazyload": "^1.2.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

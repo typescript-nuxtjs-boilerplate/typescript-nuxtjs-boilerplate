@@ -45,7 +45,11 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/constants-inject.ts', '@/plugins/env-inject.ts'],
+  plugins: [
+    '@/plugins/constants-inject.ts',
+    '@/plugins/env-inject.ts',
+    '@/plugins/vue-lazyload.ts'
+  ],
 
   /*
    ** Nuxt.js modules
@@ -90,6 +94,18 @@ module.exports = {
             exclude: /(node_modules)/
           })
         }
+      }
+
+      const vueLoader: any = config.module!.rules.find(
+        rule => rule.loader === 'vue-loader'
+      )
+      vueLoader.options.transformAssetUrls = {
+        video: ['src', 'poster'],
+        source: 'src',
+        img: ['src', 'data-src'],
+        image: 'xlink:href',
+        Test: 'source',
+        'lazy-image': 'src'
       }
     }
   },
