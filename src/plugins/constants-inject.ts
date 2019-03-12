@@ -10,12 +10,6 @@
 import { Context } from '@nuxt/vue-app'
 import * as C from '@/common/constants/'
 
-declare module 'vue/types/vue' {
-  interface Vue {
-    $C: any
-  }
-}
-
 // Vue インスタンスだけで使いたい場合はこちら
 // import Vue from 'vue'
 // Vue.prototype.$C = C
