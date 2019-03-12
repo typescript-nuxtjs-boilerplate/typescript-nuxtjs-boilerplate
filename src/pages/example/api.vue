@@ -11,6 +11,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { ApiPayloadInterface } from '@/interface/ApiPayloadInterface'
+import { ApiInterface } from '@/store/api'
 import { cancelToken } from '@/utilities/'
 
 @Component
@@ -21,8 +22,8 @@ export default class Api extends Vue {
   }
 
   // computed
-  get result(): any {
-    return this!.$store.getters['api/getResult']
+  get result(): ApiInterface {
+    return this.$store.getters['api/getResult']
   }
   // @ts-ignore
   public async fetch({ store, params, error }: any): Promise<void> {
@@ -33,7 +34,7 @@ export default class Api extends Vue {
   }
   public async created() {
     console.log('created')
-    await this!.$store.dispatch('api/fetchApi', this.payload)
+    await this.$store.dispatch('api/fetchApi', this.payload)
   }
   public beforeDestroy(): void {
     // リクエストをキャンセル
