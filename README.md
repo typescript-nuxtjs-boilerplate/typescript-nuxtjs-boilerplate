@@ -1,4 +1,4 @@
-# typescript-nuxtjs
+# typescript-nuxtjs-boilerplate
 
 > My gnarly Nuxt.js project
 

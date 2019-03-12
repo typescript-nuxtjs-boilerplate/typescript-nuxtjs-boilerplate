@@ -1,5 +1,5 @@
 {
-  "name": "typescript-nuxtjs",
+  "name": "typescript-nuxtjs-boilerplate",
   "private": true,
   "version": "0.0.1",
   "description": "My gnarly Nuxt.js project",
@@ -38,14 +38,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hisasann/typescript-nuxtjs.git"
+    "url": "git+https://github.com/hisasann/typescript-nuxtjs-boilerplate.git"
   },
   "keywords": [
     "nuxt-ts",
     "typescript"
   ],
   "bugs": {
-    "url": "https://github.com/hisasann/typescript-nuxtjs/issues"
+    "url": "https://github.com/hisasann/typescript-nuxtjs-boilerplate/issues"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
