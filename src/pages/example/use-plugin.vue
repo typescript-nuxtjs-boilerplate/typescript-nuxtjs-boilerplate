@@ -11,7 +11,8 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class UsePlugin extends Vue {
-  c: string = 'a'
+  public c: string = 'a'
+
   mounted() {
     this.c = this.$C
   }
