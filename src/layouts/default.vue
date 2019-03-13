@@ -1,23 +1,26 @@
-<template>
-  <div>
-    <fork-this />
-    <nuxt />
-  </div>
+<template lang="pug">
+  .app
+    fork-this
+    .main
+      navbar
+      nuxt
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import Navbar from '@/components/Navbar.vue'
 import ForkThis from '@/components/ForkThis.vue'
 
 @Component({
   components: {
-    ForkThis
+    ForkThis,
+    Navbar
   }
 })
 export default class DefaultLayout extends Vue {}
 </script>
 
-<style>
+<style lang="scss" scoped>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -35,6 +38,16 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+.main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .button--green {
