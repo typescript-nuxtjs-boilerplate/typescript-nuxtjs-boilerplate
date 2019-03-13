@@ -10,31 +10,31 @@
       nuxt-link(to='/example/ajax/schema')
         | schema
     p
-      nuxt-link(to='/example/c-01/e-02/')
+      nuxt-link(to='/example/c-01/e-02/', no-prefetch)
         | custom-path /c-01/e-02/
     p
       n-link(to='/example/d-03/f-04/')
         | custom-path /d-03/f-04/
     p
-      nuxt-link(to='/example/assets-and-static')
+      nuxt-link(to='/example/assets-and-static', no-prefetch)
         | assets and static
     p
       nuxt-link(to='/example/todos')
         | todos
     p
-      nuxt-link(to='/example/life-cycle')
+      nuxt-link(to='/example/life-cycle', no-prefetch)
         | life-cycle
     p
       nuxt-link(to='/example/use-plugin')
         | use-plugin
     p
-      nuxt-link(to='/example/custom-head')
+      nuxt-link(to='/example/custom-head', no-prefetch)
         | custom-head
     p
       nuxt-link(to='/example/api')
         | api
     p
-      nuxt-link(to='/example/search/?hoge=foo&bar=fuga')
+      nuxt-link(to='/example/search/?hoge=foo&bar=fuga', no-prefetch)
         | search
     p
       nuxt-link(to='/example/img-lazy-load')

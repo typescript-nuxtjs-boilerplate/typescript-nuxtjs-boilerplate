@@ -35,7 +35,10 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
 
   /*
    ** Global CSS
@@ -110,6 +113,8 @@ module.exports = {
     }
   },
   router: {
+    middleware: 'check-auth',
+
     extendRoutes(routes: any, resolve: any) {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       routes.push({
