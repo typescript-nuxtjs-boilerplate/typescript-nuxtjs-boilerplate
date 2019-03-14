@@ -123,7 +123,7 @@ module.exports = {
       routes.push({
         name: 'ab',
         path: '/example/(c|d)-:a/(e|f)-:b/*',
-        component: resolve(__dirname, 'src/pages/example/custom-path.vue')
+        component: resolve(__dirname, 'src/templates/custom-path.vue')
       })
     }
   }

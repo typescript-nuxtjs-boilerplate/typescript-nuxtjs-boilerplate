@@ -1,7 +1,7 @@
 <template lang="pug">
   section.container
     h1.title
-      | custom path
+      | custom path from templates
     div
       p path: {{ path }}
       p params: {{ params }}
