@@ -41,6 +41,9 @@
     p
       nuxt-link(to='/example/img-lazy-load')
         | img-lazy-load
+    p
+      nuxt-link(to='/example/type-safe-vuex')
+        | type-safe-vuex
 </template>
 
 <script lang="ts">
