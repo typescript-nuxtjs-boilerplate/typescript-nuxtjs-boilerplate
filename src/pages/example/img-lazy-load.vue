@@ -23,7 +23,13 @@ import LazyImage from '@/components/LazyImage.vue'
     LazyImage
   }
 })
-export default class ImgLazyLoad extends Vue {}
+export default class ImgLazyLoad extends Vue {
+  public head() {
+    return {
+      title: 'img-lazy-load'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -13,12 +13,18 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
-export default class Api extends Vue {
+export default class Condition extends Vue {
   asyncData({ route }) {
     return {
       path: route.path,
       params: route.params,
       query: route.query
+    }
+  }
+
+  head() {
+    return {
+      title: 'search/_condition'
     }
   }
 }

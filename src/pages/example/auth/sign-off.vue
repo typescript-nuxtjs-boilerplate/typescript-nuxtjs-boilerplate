@@ -14,5 +14,11 @@ export default class SignOff extends Vue {
     await this.$store.dispatch('auth/logout')
     this.$router.replace('/example')
   }
+
+  public head() {
+    return {
+      title: 'sign-off'
+    }
+  }
 }
 </script>

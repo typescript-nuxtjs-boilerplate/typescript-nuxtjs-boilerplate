@@ -11,3 +11,16 @@
     nuxt-link(to='/example/')
       | example top
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class extends Vue {
+  public head() {
+    return {
+      title: 'assets-and-static'
+    }
+  }
+}
+</script>

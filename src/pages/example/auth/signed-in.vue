@@ -14,5 +14,11 @@ export default class SignedIn extends Vue {
     setToken(this.$route.query.user)
     this.$router.replace('/example')
   }
+
+  public head() {
+    return {
+      title: 'signed-in'
+    }
+  }
 }
 </script>

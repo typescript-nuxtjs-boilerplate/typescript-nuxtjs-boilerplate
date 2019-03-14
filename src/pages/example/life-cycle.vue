@@ -36,5 +36,11 @@ export default class LifeCycle extends Vue {
   destroyed() {
     console.log('destroyed')
   }
+
+  public head() {
+    return {
+      title: 'life-cycle'
+    }
+  }
 }
 </script>

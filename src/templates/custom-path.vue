@@ -13,12 +13,21 @@
 <script lang="ts">
 // http://localhost:3000/example/c-01/e-02/
 // http://localhost:3000/example/d-03/f-04/
-export default {
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class extends Vue {
   asyncData({ route }: any) {
     return {
       path: route.path,
       params: route.params,
       query: route.query
+    }
+  }
+
+  public head() {
+    return {
+      title: 'custom-path'
     }
   }
 }

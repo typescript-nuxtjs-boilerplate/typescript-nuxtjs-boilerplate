@@ -40,5 +40,11 @@ export default class Api extends Vue {
     // リクエストをキャンセル
     cancelToken.cancel(this.payload, 'Operation canceled by the user.')
   }
+
+  public head() {
+    return {
+      title: 'api'
+    }
+  }
 }
 </script>

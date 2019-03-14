@@ -24,5 +24,11 @@ export default class SignIn extends Vue {
 
     await this.$router.replace('/example/auth/signed-in?user=hisasann')
   }
+
+  public head() {
+    return {
+      title: 'sign-in'
+    }
+  }
 }
 </script>

@@ -36,5 +36,11 @@ export default class extends Vue {
     await sleep(3000)
     await this.typeSafeAction('type-safe-vuex from action')
   }
+
+  public head() {
+    return {
+      title: 'type-safe-vuex'
+    }
+  }
 }
 </script>
