@@ -6,12 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-
-function sleep(milliseconds: number) {
-  return new Promise<void>(resolve => {
-    setTimeout(() => resolve(), milliseconds)
-  })
-}
+import { sleep } from '@/utilities/'
 
 @Component({
   middleware: 'anonymous'

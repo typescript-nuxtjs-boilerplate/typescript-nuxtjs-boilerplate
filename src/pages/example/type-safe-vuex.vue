@@ -17,6 +17,7 @@ import {
   ITypeSafeVuexGetters,
   ITypeSafeVuexActions
 } from '@/store/type-safe-vuex'
+import { sleep } from '@/utilities/'
 
 @Component
 export default class extends Vue {
@@ -29,12 +30,11 @@ export default class extends Vue {
   @typeSafeVuexNS.Action('typeSafeAction')
   public typeSafeAction: ITypeSafeVuexActions['typeSafeAction']
 
-  public created() {
+  public async created() {
     console.log('created')
     this.setTypeSafe('type-safe-vuex from mutation')
-    setTimeout(async () => {
-      await this.typeSafeAction('type-safe-vuex from action')
-    }, 3000)
+    await sleep(3000)
+    await this.typeSafeAction('type-safe-vuex from action')
   }
 }
 </script>
