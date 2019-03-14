@@ -1,7 +1,9 @@
 <template lang="pug">
   section
     h1.red
-      | index
+      | example index page
+      |  - nuxtServerInit has been called is {{ isServerInitCalled }}
+      |  - nuxtClientInit has been called is {{ isClientInitCalled }}
     hr
     p
       nuxt-link(to='/example/ajax/color', no-prefetch)
@@ -40,6 +42,21 @@
       nuxt-link(to='/example/img-lazy-load')
         | img-lazy-load
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+import { StateInterface } from '@/store/'
+
+@Component
+export default class extends Vue {
+  get isServerInitCalled(): StateInterface {
+    return this.$store.getters['isServerInitCalled']
+  }
+  get isClientInitCalled(): StateInterface {
+    return this.$store.getters['isClientInitCalled']
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .red {

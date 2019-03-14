@@ -61,6 +61,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    // https://github.com/potato4d/nuxt-client-init-module
+    // https://qiita.com/potato4d/items/cc5d8ea24949e86f8a5b
+    'nuxt-client-init-module',
     // https://github.com/samtgarson/nuxt-env
     [
       'nuxt-env',
