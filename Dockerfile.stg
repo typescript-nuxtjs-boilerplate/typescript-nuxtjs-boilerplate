@@ -34,7 +34,7 @@ COPY nuxt.config.ts /src/nuxt.config.ts
 COPY tsconfig.json /src/tsconfig.json
 COPY package.json /src/package.json
 COPY yarn.lock /src/yarn.lock
-COPY run-test.sh /src/run-test.sh
+COPY tools/run-test.sh /src/run-test.sh
 
 #COPY index.js /src/index.js
 
