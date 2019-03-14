@@ -1,4 +1,4 @@
-import { getTokenFromCookie } from '@/utilities/auth'
+import { getTokenFromCookie } from '@/utilities/'
 
 export default async function({ isServer, store, req }: any): Promise<void> {
   console.log('check-auth')

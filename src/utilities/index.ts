@@ -2,4 +2,5 @@
  * @file ユーティリティのエンドポイント
  */
 
-export * from './cancelToken'
+export * from '@/utilities/cancelToken'
+export * from '@/utilities/auth'
