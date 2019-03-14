@@ -1,22 +1,41 @@
-# typescript-nuxtjs-boilerplate
+# :bento: typescript-nuxtjs-boilerplate
 
-> My gnarly Nuxt.js project
+---
 
-## Build Setup
+## Installation Dependencies
 
-``` bash
-# install dependencies
-$ yarn install
+Using yarn:
 
-# serve with hot reload at localhost:3000
+```bash
+yarn install
+```
+
+Using npm:
+
+```bash
+npm install
+```
+
+## serve with hot reload at localhost:4000
+
+```bash
 $ yarn run dev
+```
 
-# build for production and launch server
+## build for production and launch server
+
+```bash
 $ yarn run build
 $ yarn start
-
-# generate static project
-$ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Maintainers
+
+- [hisasann](https://github.com/hisasann)
+
+## License
+
+MIT © [hisasann](https://github.com/hisasann)
+
