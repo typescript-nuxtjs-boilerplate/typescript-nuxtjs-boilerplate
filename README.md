@@ -1,5 +1,7 @@
 # :bento: typescript-nuxtjs-boilerplate
 
+[https://typescript-nuxtjs-boilerplate.netlify.com/example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
+
 ---
 
 ## Installation Dependencies
@@ -31,22 +33,22 @@ $ yarn start
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-##  :blue_book: Links
+##  :blue_book: Example Links
 
-- [typescript-nuxtjs-boilerplate](http://localhost:4000/example)
-- [ajax/color](http://localhost:4000/example/ajax/color)
-- [ajax/schema](http://localhost:4000/example/ajax/schema)
-- [custom-path](http://localhost:4000/example/c-01/e-02/)
-- [custom-path](http://localhost:4000/example/d-03/f-04/)
-- [assets-and-static](http://localhost:4000/example/assets-and-static)
-- [todos](http://localhost:4000/example/todos)
-- [life-cycle](http://localhost:4000/example/life-cycle)
-- [use-plugin](http://localhost:4000/example/use-plugin)
-- [custom-head](http://localhost:4000/example/custom-head)
-- [api](http://localhost:4000/example/api)
-- [search/_condition](http://localhost:4000/example/search/?hoge=foo&bar=fuga)
-- [img-lazy-load](http://localhost:4000/example/img-lazy-load)
-- [type-safe-vuex](http://localhost:4000/example/type-safe-vuex)
+- [typescript-nuxtjs-boilerplate](https://typescript-nuxtjs-boilerplate.netlify.com/example)
+- [ajax/color](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/color)
+- [ajax/schema](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/schema)
+- [custom-path](https://typescript-nuxtjs-boilerplate.netlify.com/example/c-01/e-02/)
+- [custom-path](https://typescript-nuxtjs-boilerplate.netlify.com/example/d-03/f-04/)
+- [assets-and-static](https://typescript-nuxtjs-boilerplate.netlify.com/example/assets-and-static)
+- [todos](https://typescript-nuxtjs-boilerplate.netlify.com/example/todos)
+- [life-cycle](https://typescript-nuxtjs-boilerplate.netlify.com/example/life-cycle)
+- [use-plugin](https://typescript-nuxtjs-boilerplate.netlify.com/example/use-plugin)
+- [custom-head](https://typescript-nuxtjs-boilerplate.netlify.com/example/custom-head)
+- [api](https://typescript-nuxtjs-boilerplate.netlify.com/example/api)
+- [search/_condition](https://typescript-nuxtjs-boilerplate.netlify.com/example/search/?hoge=foo&bar=fuga)
+- [img-lazy-load](https://typescript-nuxtjs-boilerplate.netlify.com/example/img-lazy-load)
+- [type-safe-vuex](https://typescript-nuxtjs-boilerplate.netlify.com/example/type-safe-vuex)
 
 ## Maintainers
 
