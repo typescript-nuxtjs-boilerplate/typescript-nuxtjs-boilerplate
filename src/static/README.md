@@ -1,6 +1,6 @@
 # STATIC
 
-**このディレクトリは基本的に使いません！**
+**このディレクトリは基本的に favicon.ico 以外に使いません！**
 
 **This directory is not required, you can delete it if you don't want to use it.**
 
