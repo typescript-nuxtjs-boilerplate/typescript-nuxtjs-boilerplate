@@ -3,4 +3,3 @@
   command = "npm run build:static"
 
 [build.environment]
-  NODE_ENV="production"
