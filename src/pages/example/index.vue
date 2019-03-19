@@ -44,6 +44,9 @@
     p
       nuxt-link(to='/example/type-safe-vuex')
         | type-safe-vuex
+    p
+      nuxt-link(to='/example/extend-css-class')
+        | extend-css-class
 </template>
 
 <script lang="ts">
