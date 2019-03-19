@@ -61,6 +61,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    // https://github.com/nuxt-community/style-resources-module/
+    '@nuxtjs/style-resources',
     // https://github.com/potato4d/nuxt-client-init-module
     // https://qiita.com/potato4d/items/cc5d8ea24949e86f8a5b
     'nuxt-client-init-module',
@@ -132,5 +134,8 @@ module.exports = {
         component: resolve(__dirname, 'src/include/include.vue')
       })
     }
+  },
+  styleResources: {
+    scss: ['@/assets/styles/components/**/*.scss']
   }
 }
