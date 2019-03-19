@@ -121,9 +121,15 @@ module.exports = {
     extendRoutes(routes: any, resolve: any) {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       routes.push({
-        name: 'ab',
+        name: 'custom-path',
         path: '/example/(c|d)-:a/(e|f)-:b/*',
         component: resolve(__dirname, 'src/routed-pages/custom-path.vue')
+      })
+
+      routes.push({
+        name: 'include',
+        path: '/include',
+        component: resolve(__dirname, 'src/include/include.vue')
       })
     }
   }
