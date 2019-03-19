@@ -50,6 +50,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [img-lazy-load](https://typescript-nuxtjs-boilerplate.netlify.com/example/img-lazy-load)
 - [type-safe-vuex](https://typescript-nuxtjs-boilerplate.netlify.com/example/type-safe-vuex)
 - [extend-css-class](https://typescript-nuxtjs-boilerplate.netlify.com/example/extend-css-class)
+- [external-include](https://typescript-nuxtjs-boilerplate.netlify.com/include/)
 
 ## Maintainers
 
