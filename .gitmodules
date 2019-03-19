@@ -1,3 +1,3 @@
 [submodule "typescript-nuxtjs-boilerplate-submodule"]
 	path = src/include
-	url = git://github.com:hisasann/typescript-nuxtjs-boilerplate-submodule.git
+	url = git://github.com/hisasann/typescript-nuxtjs-boilerplate-submodule.git
