@@ -1,6 +1,7 @@
 // https://qiita.com/iwata@github/items/5bc61ea9ca1c692d0370
 import { Configuration } from 'webpack'
 import { Context } from '@nuxt/vue-app'
+import routers from './src/routers/'
 
 const pkg = require('./package')
 
@@ -121,18 +122,11 @@ module.exports = {
     middleware: 'check-auth',
 
     extendRoutes(routes: any, resolve: any) {
-      // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
-      routes.push({
-        name: 'custom-path',
-        path: '/example/(c|d)-:a/(e|f)-:b/*',
-        component: resolve(__dirname, 'src/routed-pages/custom-path.vue')
-      })
-
-      routes.push({
-        name: 'include',
-        path: '/include',
-        component: resolve(__dirname, 'src/include/include.vue')
-      })
+      if (routers && routers.length > 0) {
+        for (let i = 0, len = routers.length; i < len; i++) {
+          routers[i](routes, resolve)
+        }
+      }
     }
   },
   styleResources: {
