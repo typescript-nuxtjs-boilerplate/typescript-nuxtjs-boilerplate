@@ -1,4 +1,4 @@
-# ROUTED_PAGES
+# ROUTERS
 
 nuxt.config.ts の `router.extendRoutes` でカスタムルーティングしたいが、 pages にファイルを配置すると `.vue` ファイルの名前でアクセスできてしまう。
 
