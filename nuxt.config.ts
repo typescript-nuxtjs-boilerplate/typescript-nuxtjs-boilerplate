@@ -13,6 +13,9 @@ module.exports = {
     NODE_ENV: process.env.NODE_ENV
   },
 
+  // https://qiita.com/toaru/items/0690a9110c94052bb479
+  hardSource: true,
+
   // https://ja.nuxtjs.org/faq/host-port/
   server: {
     port: 4000,
