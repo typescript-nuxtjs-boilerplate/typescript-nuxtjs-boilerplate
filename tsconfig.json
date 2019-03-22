@@ -1,5 +1,4 @@
 {
-  "extends": "@nuxt/typescript",
   "compilerOptions": {
     "allowJs": true,
     "baseUrl": ".",
@@ -16,7 +15,12 @@
       "@/*": [
         "src/*"
       ],
-      "*": ["types/*"]
+      "~/*": [
+        "./*"
+      ],
+      "*": [
+        "types/*"
+      ]
     },
     "sourceMap": true,
     "strictNullChecks": true,
@@ -27,8 +31,19 @@
       "@types/jest",
       "@types/webpack",
       "@nuxt/vue-app"
-    ]
+    ],
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noEmit": true
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "types/**/*.d.ts"],
-  "exclude": ["node_modules", "stories"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "stories"
+  ]
 }
