@@ -53,12 +53,12 @@ export const actions = {
     { res, error }
   ): Promise<void> {
     await console.log('nuxtServerInit')
+    commit('setIsServerInitCalled')
   },
   /** クライアント初期化時の処理 */
   // @ts-ignore
   nuxtClientInit({ commit }: ActionContext<any, any>, { app }): void {
     console.log('nuxtClientInit')
-    commit('setIsServerInitCalled')
     commit('setIsClientInitCalled')
   }
 }
