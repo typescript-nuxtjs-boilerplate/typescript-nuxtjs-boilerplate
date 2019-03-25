@@ -97,7 +97,7 @@ module.exports = {
      */
     extend(config: Configuration, ctx: Context) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+      if (ctx.isDev && process.client) {
         if (config.module) {
           config.module.rules.push({
             enforce: 'pre',
