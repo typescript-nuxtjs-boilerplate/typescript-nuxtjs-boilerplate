@@ -38,6 +38,7 @@ export default class Api extends Vue {
   }
   public beforeDestroy(): void {
     // リクエストをキャンセル
+    // https://qiita.com/yumaeda/items/6e386172edf9beba6041
     cancelToken.cancel(this.payload, 'Operation canceled by the user.')
   }
 
