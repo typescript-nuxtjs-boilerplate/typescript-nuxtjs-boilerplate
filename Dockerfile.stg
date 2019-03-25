@@ -23,7 +23,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 # Bundle app source
 ADD ./src /src/src/
-ADD ./types /src/types/
 
 # Install app dependencies
 COPY .babelrc /src/.babelrc
