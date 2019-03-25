@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { AxiosRequestConfig } from 'axios'
 import { ApiPayloadInterface } from '@/interface/ApiPayloadInterface'
 import { cancelToken } from '@/utilities/'
 
@@ -81,7 +82,7 @@ export const actions = {
         {
           cancelToken: cancelToken.getToken(payload),
           params: payload
-        }
+        } as AxiosRequestConfig // https://github.com/axios/axios/blob/master/index.d.ts
       )
       console.log('apiResult:', apiResult)
 

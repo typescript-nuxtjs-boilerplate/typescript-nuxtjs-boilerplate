@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'dot-notation': 'off',
     'no-console': 'off',
+    '@typescript-eslint/no-object-literal-type-assertion': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
