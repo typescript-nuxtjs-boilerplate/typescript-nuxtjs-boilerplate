@@ -17,6 +17,7 @@
     "test": "jest",
     "clean:cache": "rm -rf node_modeles/.cache/hard-source",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "analyze": "cross-env NODE_ENV=production nuxt build --analyze",
     "docker:dev": "node tools/preprocessor.js dev && docker-compose -f docker-compose.dev.yml up --build",
     "docker:stg": "node tools/preprocessor.js stg && docker-compose -f docker-compose.stg.yml up --build",
     "docker:prod": "node tools/preprocessor.js prod && docker-compose -f docker-compose.prod.yml up --build",
