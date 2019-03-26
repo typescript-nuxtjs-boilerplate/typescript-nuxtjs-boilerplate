@@ -35,7 +35,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ##  :blue_book: Example Links
 
-- [typescript-nuxtjs-boilerplate](https://typescript-nuxtjs-boilerplate.netlify.com/example)
+- [root-example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 - [ajax/color](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/color)
 - [ajax/schema](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/schema)
 - [custom-path](https://typescript-nuxtjs-boilerplate.netlify.com/example/c-01/e-02/)
@@ -51,6 +51,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [type-safe-vuex](https://typescript-nuxtjs-boilerplate.netlify.com/example/type-safe-vuex)
 - [extend-css-class](https://typescript-nuxtjs-boilerplate.netlify.com/example/extend-css-class)
 - [external-include](https://typescript-nuxtjs-boilerplate.netlify.com/include/)
+- [dynamic-import](https://typescript-nuxtjs-boilerplate.netlify.com/example/dynamic-import)
 
 ## Maintainers
 
