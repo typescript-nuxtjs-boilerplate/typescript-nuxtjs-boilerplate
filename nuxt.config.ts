@@ -125,9 +125,10 @@ module.exports = {
     middleware: 'check-auth',
 
     extendRoutes(routes: any, resolve: any) {
+      // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       if (routers && routers.length > 0) {
         for (let i = 0, len = routers.length; i < len; i++) {
-          routers[i](routes, resolve)
+          routes.push(routers[i](resolve))
         }
       }
     }

@@ -1,7 +1,11 @@
-export default function(routes: any, resolve: any): void {
-  routes.push({
+import INuxtRoute from '../interface/INuxtRoute'
+
+export default function(
+  resolve: (dirname: string, routeDir: string) => string
+): INuxtRoute {
+  return {
     name: 'include',
     path: '/include',
     component: resolve(__dirname, '../../src/include/include.vue')
-  })
+  }
 }

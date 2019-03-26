@@ -1,8 +1,11 @@
-export default function(routes: any, resolve: any): void {
-  // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
-  routes.push({
+import INuxtRoute from '../interface/INuxtRoute'
+
+export default function(
+  resolve: (dirname: string, routeDir: string) => string
+): INuxtRoute {
+  return {
     name: 'custom-path',
     path: '/example/(c|d)-:a/(e|f)-:b/*',
     component: resolve(__dirname, '../../src/routed-pages/custom-path.vue')
-  })
+  }
 }
