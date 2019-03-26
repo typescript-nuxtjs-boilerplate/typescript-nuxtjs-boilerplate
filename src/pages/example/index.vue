@@ -47,6 +47,9 @@
     p
       nuxt-link(to='/example/extend-css-class')
         | extend-css-class
+    p
+      nuxt-link(to='/example/dynamic-import')
+        | dynamic-import
 </template>
 
 <script lang="ts">

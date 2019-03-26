@@ -16,10 +16,13 @@
 
 <script lang="ts">
 import Logo from '@/components/Logo.vue'
-import HelloWorld from '@/components/HelloWorld.vue'
 import Env from '@/common/env/'
 
 console.log('Env:', Env.envName)
+
+// Dynamic Import
+// import HelloWorld from '@/components/HelloWorld.vue'
+const HelloWorld = () => import('@/components/HelloWorld.vue')
 
 export default {
   components: {
