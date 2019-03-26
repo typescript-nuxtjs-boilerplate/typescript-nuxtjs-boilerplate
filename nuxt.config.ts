@@ -67,6 +67,8 @@ module.exports = {
     '@nuxtjs/pwa',
     // https://github.com/nuxt-community/style-resources-module/
     '@nuxtjs/style-resources',
+    // https://github.com/nuxt-community/sentry-module
+    '@nuxtjs/sentry',
     // https://github.com/potato4d/nuxt-client-init-module
     // https://qiita.com/potato4d/items/cc5d8ea24949e86f8a5b
     'nuxt-client-init-module',
@@ -81,6 +83,10 @@ module.exports = {
       }
     ]
   ],
+  sentry: {
+    dsn: 'https://3381f2ffafa94f1cbd9ad904027baaf6@sentry.io/1423878', // Enter your project's DSN here
+    config: {} // Additional config
+  },
   /*
    ** Axios module configuration
    */
