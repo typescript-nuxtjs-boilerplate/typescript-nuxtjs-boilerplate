@@ -133,8 +133,8 @@ module.exports = {
     extendRoutes(routes: any, resolve: any) {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       if (routers && routers.length > 0) {
-        for (let i = 0, len = routers.length; i < len; i++) {
-          routes.push(routers[i](resolve))
+        for (const fn of routers) {
+          routes.push(fn(resolve))
         }
       }
     }
