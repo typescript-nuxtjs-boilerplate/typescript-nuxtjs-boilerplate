@@ -33,6 +33,9 @@
       nuxt-link(to='/example/custom-head', no-prefetch)
         | custom-head
     p
+      nuxt-link(to='/example/async-custom-head', no-prefetch)
+        | async-custom-head
+    p
       nuxt-link(to='/example/api')
         | api
     p
