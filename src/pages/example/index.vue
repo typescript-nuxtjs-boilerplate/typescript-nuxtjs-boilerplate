@@ -12,6 +12,9 @@
       nuxt-link(to='/example/ajax/schema')
         | schema
     p
+      nuxt-link(to='/example/ajax/custom-http-headers')
+        | custom-http-headers
+    p
       nuxt-link(to='/example/c-01/e-02/', no-prefetch)
         | custom-path /c-01/e-02/
     p
@@ -53,6 +56,9 @@
     p
       nuxt-link(to='/example/dynamic-import')
         | dynamic-import
+    p
+      nuxt-link(to='/example/user-agent')
+        | user-agent
 </template>
 
 <script lang="ts">

@@ -56,6 +56,8 @@
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "@nuxtjs/sentry": "^2.3.1",
     "@types/webpack": "^4.4.26",
+    "@ungap/url-search-params": "^0.1.2",
+    "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "js-cookie": "^2.2.0",
