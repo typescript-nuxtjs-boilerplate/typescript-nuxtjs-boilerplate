@@ -26,6 +26,10 @@ export default class UsePlugin extends Vue {
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  color: crimson;
+}
+
 .c {
   font-size: 20px;
 }
