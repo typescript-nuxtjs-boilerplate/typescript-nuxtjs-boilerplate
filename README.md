@@ -38,6 +38,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [root-example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 - [ajax/color](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/color)
 - [ajax/schema](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/schema)
+- [custom-http-headers](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/custom-http-headers)
 - [custom-path](https://typescript-nuxtjs-boilerplate.netlify.com/example/c-01/e-02/)
 - [custom-path](https://typescript-nuxtjs-boilerplate.netlify.com/example/d-03/f-04/)
 - [assets-and-static](https://typescript-nuxtjs-boilerplate.netlify.com/example/assets-and-static)
@@ -45,6 +46,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [life-cycle](https://typescript-nuxtjs-boilerplate.netlify.com/example/life-cycle)
 - [use-plugin](https://typescript-nuxtjs-boilerplate.netlify.com/example/use-plugin)
 - [custom-head](https://typescript-nuxtjs-boilerplate.netlify.com/example/custom-head)
+- [async-custom-head](https://typescript-nuxtjs-boilerplate.netlify.com/example/async-custom-head)
 - [api](https://typescript-nuxtjs-boilerplate.netlify.com/example/api)
 - [search/_condition](https://typescript-nuxtjs-boilerplate.netlify.com/example/search/?hoge=foo&bar=fuga)
 - [img-lazy-load](https://typescript-nuxtjs-boilerplate.netlify.com/example/img-lazy-load)
@@ -52,6 +54,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [extend-css-class](https://typescript-nuxtjs-boilerplate.netlify.com/example/extend-css-class)
 - [external-include](https://typescript-nuxtjs-boilerplate.netlify.com/include/)
 - [dynamic-import](https://typescript-nuxtjs-boilerplate.netlify.com/example/dynamic-import)
+- [user-agent](https://typescript-nuxtjs-boilerplate.netlify.com/example/user-agent)
 
 ## Maintainers
 
