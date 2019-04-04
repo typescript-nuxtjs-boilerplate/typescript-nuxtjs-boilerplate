@@ -19,7 +19,7 @@ export default class extends Vue {
   }
   public data() {
     return {
-      title: 'custom-head'
+      title: 'async-custom-head'
     }
   }
 
