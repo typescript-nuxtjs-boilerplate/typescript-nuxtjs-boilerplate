@@ -11,13 +11,21 @@ export const unsetToken = (): void => {
 
 // @ts-ignore
 export const getTokenFromCookie = (req: any): string | undefined => {
+  // SSR
   if (req && req.headers.cookie) {
+    console.log('req.headers.cookie:', req.headers.cookie)
     const cookie: string = req.headers.cookie
       .split(';')
       .find((c: string) => c.trim().startsWith('token='))
-      .split('=')[1]
-    return cookie
+
+    if (!cookie) {
+      return ''
+    }
+
+    const token = cookie.split('=')[1]
+    return token
   }
 
+  // CSR
   return Cookie.get('token')
 }
