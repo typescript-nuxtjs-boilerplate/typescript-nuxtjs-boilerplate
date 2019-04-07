@@ -1,6 +1,6 @@
 /**
  * Api Payload インターフェイス
  */
-export interface ApiPayloadInterface {
+export interface IApiPayload {
   hoge: string
 }

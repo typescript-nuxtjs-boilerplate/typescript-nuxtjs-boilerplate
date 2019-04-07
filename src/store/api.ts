@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { AxiosRequestConfig } from 'axios'
-import { ApiPayloadInterface } from '@/interface/ApiPayloadInterface'
+import { IApiPayload } from '@/interface/IApiPayload'
 import { cancelToken } from '@/utilities/'
 
 /**
@@ -72,7 +72,7 @@ export const actions = {
     this: Vue,
     // @ts-ignore
     { state, commit }: any,
-    payload: ApiPayloadInterface
+    payload: IApiPayload
   ): Promise<void> {
     console.log('payload:', payload)
 
