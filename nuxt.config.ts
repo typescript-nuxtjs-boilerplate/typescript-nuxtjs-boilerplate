@@ -128,6 +128,8 @@ module.exports = {
     }
   },
   router: {
+    // リロードのタイミングでは SSR 側で実行される
+    // ルーティングの度に CSR 側で実行される
     middleware: 'check-auth',
 
     extendRoutes(routes: any, resolve: any) {
