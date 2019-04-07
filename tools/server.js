@@ -14,8 +14,10 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header(
     'Access-Control-Allow-Headers',
-    // 'origin, x-requested-with, content-type, accept'
-    '*'
+    // Chrome は OK で、 Firefox と IE11 がダメだったため、
+    // '*' だと CORS 的に許可されないので、明示的にリクエストヘッダーの key 名を許可しています
+    'post-header, common-header, header1'
+    // '*'
   )
   // https://stackoverflow.com/questions/37897523/axios-get-access-to-response-header-fields
   // https://github.com/axios/axios/issues/606
