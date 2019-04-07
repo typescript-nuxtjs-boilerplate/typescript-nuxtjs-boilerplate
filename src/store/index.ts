@@ -50,7 +50,7 @@ export const actions = {
     // @ts-ignore
     { dispatch, commit, state }: ActionContext<any, any>,
     // @ts-ignore
-    { res, error }
+    { req, res, error }
   ): Promise<void> {
     await console.log('nuxtServerInit')
     commit('setIsServerInitCalled')
