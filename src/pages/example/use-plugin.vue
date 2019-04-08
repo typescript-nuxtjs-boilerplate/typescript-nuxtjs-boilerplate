@@ -1,9 +1,9 @@
 <template lang="pug">
-  section
-    h1.title
-      | use-plugin
-    p.c
-      | {{ c.pjName }}
+section
+  h1.title
+    | use-plugin
+  p.c
+    | {{ c.pjName }}
 </template>
 
 <script lang="ts">

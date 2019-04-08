@@ -1,13 +1,12 @@
-<template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"></div>
-    <div class="Triangle Triangle--one"></div>
-    <div class="Triangle Triangle--three"></div>
-    <div class="Triangle Triangle--four"></div>
-  </div>
+<template lang="pug">
+.VueToNuxtLogo
+  .Triangle.Triangle--two
+  .Triangle.Triangle--one
+  .Triangle.Triangle--three
+  .Triangle.Triangle--four
 </template>
 
-<style>
+<style lang="scss" scoped>
 .VueToNuxtLogo {
   display: inline-block;
   animation: turn 2s linear forwards 1s;

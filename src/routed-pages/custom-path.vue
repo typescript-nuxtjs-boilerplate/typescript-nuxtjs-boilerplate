@@ -1,13 +1,13 @@
 <template lang="pug">
-  section.container
-    h1.title
-      | custom path from templates
-    div
-      p path: {{ path }}
-      p params: {{ params }}
-      p query: {{ query }}
-    nuxt-link(to='/example/')
-      | example top
+section.container
+  h1.title
+    | custom path from templates
+  div
+    p path: {{ path }}
+    p params: {{ params }}
+    p query: {{ query }}
+  nuxt-link(to='/example/')
+    | example top
 </template>
 
 <script lang="ts">

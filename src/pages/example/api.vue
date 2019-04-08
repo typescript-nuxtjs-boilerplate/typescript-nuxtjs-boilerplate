@@ -1,11 +1,11 @@
 <template lang="pug">
-  div
-    h1.title
-      | api
-    p store: {{this.$store.state.api.result}}
-    p getter: {{this.$store.getters['api/getResult']}}
-    p result.id: {{ result.id }}
-    p result.value: {{ result.value }}
+div
+  h1.title
+    | api
+  p store: {{this.$store.state.api.result}}
+  p getter: {{this.$store.getters['api/getResult']}}
+  p result.id: {{ result.id }}
+  p result.value: {{ result.value }}
 </template>
 
 <script lang="ts">

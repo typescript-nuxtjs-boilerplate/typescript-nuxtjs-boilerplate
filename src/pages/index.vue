@@ -1,5 +1,5 @@
 <template lang="pug">
- section.container
+section.container
   div
     Logo
     HelloWorld
@@ -16,9 +16,6 @@
 
 <script lang="ts">
 import Logo from '@/components/Logo.vue'
-import Env from '@/common/env/'
-
-console.log('Env:', Env.envName)
 
 // Dynamic Import
 // import HelloWorld from '@/components/HelloWorld.vue'

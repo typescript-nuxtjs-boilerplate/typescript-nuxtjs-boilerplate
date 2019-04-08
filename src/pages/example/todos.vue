@@ -1,13 +1,13 @@
 <template lang="pug">
-  section
-    h1.title
-      | todos
-    ul
-      li(v-for='todo in todos', :key='todo.id')
-        input(type='checkbox', :checked='todo.done', @change='toggle(todo)')
-        span(:class='{ done: todo.done }') {{ todo.text }}
-      li
-        input(placeholder='What needs to be done?', @keyup.enter='addTodo')
+section
+  h1.title
+    | todos
+  ul
+    li(v-for='todo in todos', :key='todo.id')
+      input(type='checkbox', :checked='todo.done', @change='toggle(todo)')
+      span(:class='{ done: todo.done }') {{ todo.text }}
+    li
+      input(placeholder='What needs to be done?', @keyup.enter='addTodo')
 </template>
 
 <script lang="ts">

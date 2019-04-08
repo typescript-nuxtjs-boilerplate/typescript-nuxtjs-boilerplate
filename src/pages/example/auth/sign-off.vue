@@ -1,6 +1,6 @@
 <template lang="pug">
-  section
-    p Signing off...
+section
+  p Signing off...
 </template>
 
 <script lang="ts">

@@ -1,17 +1,17 @@
 <template lang="pug">
-  section
-    h1.title
-      | assets and static
-    div
-      h2 assets lazy-image lemon-sour.medium.jpg
-      <lazy-image src='~assets/images/lemon-sour.medium.jpg' alt='alt'/>
-    div.center
-    div
-      h2 assets lazy-image lemon-sour.small.jpg
-      <lazy-image src='~assets/images/lemon-sour.small.jpg' alt='alt'/>
-    div
-    nuxt-link(to='/example/')
-      | example top
+section
+  h1.title
+    | assets and static
+  div
+    h2 assets lazy-image lemon-sour.medium.jpg
+    <lazy-image src='~assets/images/lemon-sour.medium.jpg' alt='alt'/>
+  div.center
+  div
+    h2 assets lazy-image lemon-sour.small.jpg
+    <lazy-image src='~assets/images/lemon-sour.small.jpg' alt='alt'/>
+  div
+  nuxt-link(to='/example/')
+    | example top
 </template>
 
 <script lang="ts">

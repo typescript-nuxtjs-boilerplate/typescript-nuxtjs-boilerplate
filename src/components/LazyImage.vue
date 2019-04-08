@@ -1,5 +1,5 @@
 <template lang="pug">
-  img(:alt="alt" v-lazy="src")
+img(:alt="alt" v-lazy="src")
 </template>
 
 <script lang="ts">

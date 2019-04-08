@@ -1,7 +1,7 @@
 <template lang="pug">
-  section.container
-    h1.title
-      | custom-head
+section.container
+  h1.title
+    | custom-head
 </template>
 
 <script lang="ts">

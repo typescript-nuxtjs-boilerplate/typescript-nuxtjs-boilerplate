@@ -1,8 +1,8 @@
 <template lang="pug">
-  div
-    h1.title
-      | include
-    span.color {{ message }}
+div
+  h1.title
+    | include
+  span.color {{ message }}
 </template>
 
 <script lang="ts">

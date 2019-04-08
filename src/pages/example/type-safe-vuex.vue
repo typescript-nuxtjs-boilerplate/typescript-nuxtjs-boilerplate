@@ -1,11 +1,11 @@
 <template lang="pug">
-  section
-    h1.title
-      | type safe vuex
-    p
-      | state: {{ typeSafeState }}
-    p
-      | getter: {{ typeSafeGetter }}
+section
+  h1.title
+    | type safe vuex
+  p
+    | state: {{ typeSafeState }}
+  p
+    | getter: {{ typeSafeGetter }}
 </template>
 
 <script lang="ts">

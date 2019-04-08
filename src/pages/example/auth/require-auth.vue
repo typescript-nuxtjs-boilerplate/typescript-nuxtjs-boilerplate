@@ -1,7 +1,7 @@
 <template lang="pug">
-  section
-    h1.title
-      | require auth
+section
+  h1.title
+    | require auth
 </template>
 
 <script lang="ts">

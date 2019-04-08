@@ -1,7 +1,7 @@
 <template lang="pug">
-  div
-    h1.title
-      | dynamic-import
+div
+  h1.title
+    | dynamic-import
 </template>
 
 <script lang="ts">

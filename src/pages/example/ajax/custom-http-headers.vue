@@ -1,13 +1,13 @@
 <template lang="pug">
-  div
-    h1.title
-      | custom-http-headers
-    hr
-    h2 data
-    p {{ data }}
-    hr
-    h2 headers
-    p {{ headers['from-server'] }}
+div
+  h1.title
+    | custom-http-headers
+  hr
+  h2 data
+  p {{ data }}
+  hr
+  h2 headers
+  p {{ headers['from-server'] }}
 </template>
 
 <script lang="ts">

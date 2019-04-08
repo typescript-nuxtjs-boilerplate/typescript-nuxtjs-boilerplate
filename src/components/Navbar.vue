@@ -1,11 +1,11 @@
 <template lang="pug">
-  section.header
-    nuxt-link(to='/example', exact='')
-      | Home
-    nuxt-link(v-if='!isAuthenticated', to='/example/auth/sign-in')
-      | Sign In
-    nuxt-link(v-else='isAuthenticated', to='/example/auth/sign-off')
-      | Sign Off
+section.header
+  nuxt-link(to='/example', exact='')
+    | Home
+  nuxt-link(v-if='!isAuthenticated', to='/example/auth/sign-in')
+    | Sign In
+  nuxt-link(v-else='isAuthenticated', to='/example/auth/sign-off')
+    | Sign Off
 </template>
 
 <script lang="ts">

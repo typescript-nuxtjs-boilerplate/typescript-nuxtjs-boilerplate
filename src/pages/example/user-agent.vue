@@ -1,13 +1,13 @@
 <template lang="pug">
-  div
-    h1.title
-      | user-agent
-    hr
-    h2 Nuxt.js 側で UA 判定した結果
-    p {{ message }}
-    hr
-    h2 ブラウザ→①→ SSR サーバー→②→ API サーバー
-    p {{ data }}
+div
+  h1.title
+    | user-agent
+  hr
+  h2 Nuxt.js 側で UA 判定した結果
+  p {{ message }}
+  hr
+  h2 ブラウザ→①→ SSR サーバー→②→ API サーバー
+  p {{ data }}
 </template>
 
 <script lang="ts">

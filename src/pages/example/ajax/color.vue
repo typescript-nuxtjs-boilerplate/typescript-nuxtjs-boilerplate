@@ -1,16 +1,16 @@
 <template lang="pug">
-  section.container
-    h1.title
-      | color
-    div
-      span color
-      span |
-      span
-        nuxt-link(to="/example/ajax/schema") schema
-    div
-      img(:src="data.image.named")
-    nuxt-link(to="/example/")
-      | example top
+section.container
+  h1.title
+    | color
+  div
+    span color
+    span |
+    span
+      nuxt-link(to="/example/ajax/schema") schema
+  div
+    img(:src="data.image.named")
+  nuxt-link(to="/example/")
+    | example top
 </template>
 
 <script lang="ts">

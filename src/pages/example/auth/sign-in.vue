@@ -1,13 +1,13 @@
 <template lang="pug">
-  .login-form
-    form(@submit.prevent='login')
-      p.error(v-if='error') {{ error }}
-      p
-        input(type='text' v-model='username' placeholder='username' name='username')
-      p
-        input(type='text' v-model='password' placeholder='password' name='password')
-      .login-btn
-        button(type='submit') ログイン
+.login-form
+  form(@submit.prevent='login')
+    p.error(v-if='error') {{ error }}
+    p
+      input(type='text' v-model='username' placeholder='username' name='username')
+    p
+      input(type='text' v-model='password' placeholder='password' name='password')
+    .login-btn
+      button(type='submit') ログイン
 </template>
 
 <script lang="ts">

@@ -1,8 +1,8 @@
 <template lang="pug">
-  div
-    h1.title
-      | life-cycle
-    | {{ message }}
+div
+  h1.title
+    | life-cycle
+  p {{ message }}
 </template>
 
 <script lang="ts">
