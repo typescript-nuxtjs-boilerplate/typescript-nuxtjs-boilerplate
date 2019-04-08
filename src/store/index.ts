@@ -1,5 +1,6 @@
 import { ActionContext } from 'vuex'
 import { ILoginCheckPayload } from '@/interface/User/ILoginCheck'
+import { setToken, unsetToken } from '@/utilities/'
 
 /**
  * store 用インターフェイス
@@ -58,14 +59,25 @@ export const actions = {
     await console.log('nuxtServerInit')
     commit('setIsServerInitCalled')
 
+    // ログインチェック
     await dispatch('auth/loginCheck', {} as ILoginCheckPayload)
   },
   /**
    * クライアント初期化時の処理
    */
   // @ts-ignore
-  nuxtClientInit({ commit }: ActionContext<any, any>, { app }): void {
+  nuxtClientInit({ commit, getters }: ActionContext<any, any>, { app }): void {
     console.log('nuxtClientInit')
     commit('setIsClientInitCalled')
+
+    // nuxtServerInit でログインチェックした state を元に token を cookie にセットし直す
+    const token = getters['auth/getToken']
+    const loggedIn = getters['auth/isAuthenticated']
+    console.log('token', getters['auth/getToken'], 'loggedIn:', loggedIn)
+    if (token && loggedIn) {
+      setToken(token)
+    } else {
+      unsetToken()
+    }
   }
 }

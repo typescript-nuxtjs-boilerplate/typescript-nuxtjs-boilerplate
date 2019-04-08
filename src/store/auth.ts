@@ -18,6 +18,10 @@ export interface IState {
    */
   loggedIn: boolean
   /**
+   * ログイントークン
+   */
+  token: string | null
+  /**
    * ローディング
    */
   busy: {
@@ -34,6 +38,7 @@ export interface IState {
 export const state = (): IState => ({
   authUser: null,
   loggedIn: false,
+  token: null,
   busy: {
     register: false,
     login: false,
@@ -48,6 +53,9 @@ export const state = (): IState => ({
 export const getters = {
   isAuthenticated(state: IState): boolean {
     return !!state.loggedIn
+  },
+  getToken(state: IState): string | null {
+    return state.token
   }
 }
 
@@ -66,6 +74,12 @@ export const mutations = {
    */
   updateLoginStatus(state: IState, status: boolean): void {
     state.loggedIn = status
+  },
+  /**
+   * ログイントークンを更新する
+   */
+  updateLoginToken(state: IState, token: string | null): void {
+    state.token = token
   },
   /**
    * 処理中ステータスを更新する
@@ -117,11 +131,16 @@ export const actions = {
           cancelToken: cancelToken.getToken(payload)
         } as AxiosRequestConfig
       )
+      const token = headers['access-token']
 
-      setToken(headers['access-token'])
+      if (process.client && token && data.loggedIn) {
+        setToken(token)
+      }
 
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)
+      // ログイントークンを更新
+      commit('updateLoginToken', token)
       // ユーザー情報をストアに保存
       commit('SET_USER', data)
 
@@ -162,10 +181,14 @@ export const actions = {
         } as AxiosRequestConfig
       )
 
-      unsetToken()
+      if (process.client && !data.loggedIn) {
+        unsetToken()
+      }
 
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)
+      // ログイントークンを更新
+      commit('updateLoginToken', null)
 
       return data
     } catch (err) {
@@ -198,13 +221,20 @@ export const actions = {
           cancelToken: cancelToken.getToken(payload)
         } as AxiosRequestConfig
       )
+      const token = headers['access-token']
 
-      if (headers['access-token'] && data.loggedIn) {
-        setToken(headers['access-token'])
+      if (process.client) {
+        if (token && data.loggedIn) {
+          setToken(token)
+        } else if (!token || !data.loggedIn) {
+          unsetToken()
+        }
       }
 
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)
+      // ログイントークンを更新
+      commit('updateLoginToken', token)
 
       return data
     } catch (err) {
