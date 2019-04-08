@@ -9,7 +9,6 @@ export const unsetToken = (): void => {
   window.localStorage.setItem('logout', Date.now() + '')
 }
 
-// @ts-ignore
 export const getTokenFromCookie = (req?: any): string | undefined => {
   // SSR
   if (req && req.headers.cookie) {
