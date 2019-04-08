@@ -1,20 +1,19 @@
-<template>
-  <div class="container">
-    <h1 v-if="error.statusCode === 404">
-      ページが見つかりません
-    </h1>
-    <h1 v-else>
-      エラーが発生しました
-    </h1>
-    <nuxt-link to="/example">
-      ホーム
-    </nuxt-link>
-  </div>
+<template lang="pug">
+  .container
+    h1(v-if='error.statusCode === 404')
+      | ページが見つかりません
+    h1(v-else='')
+      | エラーが発生しました {{ error.message }}
+    nuxt-link(to='/example')
+      | ホーム
 </template>
-<script>
-export default {
-  props: {
-    error: undefined
-  }
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class Error extends Vue {
+  @Prop({ type: Object })
+  public error: any
 }
 </script>

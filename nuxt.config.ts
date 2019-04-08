@@ -53,6 +53,7 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    '@/plugins/axios.ts',
     '@/plugins/constants-inject.ts',
     '@/plugins/env-inject.ts',
     '@/plugins/vue-lazyload.ts'

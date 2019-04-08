@@ -1,6 +1,5 @@
 import { ActionContext } from 'vuex'
 import { ILoginCheckPayload } from '@/interface/User/ILoginCheck'
-import { getTokenFromCookie } from '@/utilities/'
 
 /**
  * store 用インターフェイス
@@ -59,11 +58,7 @@ export const actions = {
     await console.log('nuxtServerInit')
     commit('setIsServerInitCalled')
 
-    const token = getTokenFromCookie(req)
-
-    await dispatch('auth/loginCheck', {
-      token
-    } as ILoginCheckPayload)
+    await dispatch('auth/loginCheck', {} as ILoginCheckPayload)
   },
   /**
    * クライアント初期化時の処理

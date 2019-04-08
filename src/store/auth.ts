@@ -88,11 +88,10 @@ export const actions = {
    * login
    * @param state
    * @param commit
-   * @param token
+   * @param payload
    */
   async login(
     this: Vue,
-    // @ts-ignore
     { state, commit }: any,
     payload: ILoginPayload
   ): Promise<IUser | void> {
@@ -108,13 +107,7 @@ export const actions = {
     commit('updateBusyStatus', ['login', true])
 
     try {
-      const {
-        data,
-        headers,
-        status,
-        statusText,
-        config
-      } = await this.$axios.post<IUser>(
+      const { data, headers } = await this.$axios.post<IUser>(
         this.$C.API_ENDPOINT.LOGIN,
         {
           username: payload.username,
@@ -144,10 +137,10 @@ export const actions = {
    * logout
    * @param state
    * @param commit
+   * @param payload
    */
   async logout(
     this: Vue,
-    // @ts-ignore
     { state, commit }: any,
     payload: ILogoutPayload
   ): Promise<ILogout | void> {
@@ -161,19 +154,13 @@ export const actions = {
     commit('updateBusyStatus', ['logout', true])
 
     try {
-      const token: string = payload.token
-      const {
-        data,
-        headers,
-        status,
-        statusText,
-        config
-      } = await this.$axios.post<ILogout>(this.$C.API_ENDPOINT.LOGOUT, {}, {
-        headers: {
-          'access-token': token
-        },
-        cancelToken: cancelToken.getToken(payload)
-      } as AxiosRequestConfig)
+      const { data } = await this.$axios.post<ILogout>(
+        this.$C.API_ENDPOINT.LOGOUT,
+        {},
+        {
+          cancelToken: cancelToken.getToken(payload)
+        } as AxiosRequestConfig
+      )
 
       unsetToken()
 
@@ -192,11 +179,10 @@ export const actions = {
    * loginCheck
    * @param state
    * @param commit
-   * @param token
+   * @param payload
    */
   async loginCheck(
     this: Vue,
-    // @ts-ignore
     { state, commit }: any,
     payload: ILoginCheckPayload
   ): Promise<ILoginCheck | void> {
@@ -205,23 +191,10 @@ export const actions = {
     commit('updateBusyStatus', ['loginCheck', true])
 
     try {
-      const postHeaders = {}
-      const token: string | undefined = payload.token
-      if (token) {
-        postHeaders['access-token'] = token
-      }
-
-      const {
-        data,
-        headers,
-        status,
-        statusText,
-        config
-      } = await this.$axios.post<ILoginCheck>(
+      const { data, headers } = await this.$axios.post<ILoginCheck>(
         this.$C.API_ENDPOINT.LOGIN_CHECK,
         {},
         {
-          headers: postHeaders,
           cancelToken: cancelToken.getToken(payload)
         } as AxiosRequestConfig
       )

@@ -1,9 +1,7 @@
 /**
  * Logout インターフェイス
  */
-export interface ILogoutPayload {
-  token: string
-}
+export interface ILogoutPayload {}
 
 export interface ILogout {
   loggedIn: boolean
