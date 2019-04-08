@@ -102,8 +102,10 @@ app.post('/login', (req, res) => {
   console.log('login succeeded')
 
   // カスタムレスポンスヘッダーをセットします
+  const id = uuid()
+  console.log('uuid:', id)
   res.set({
-    'access-token': uuid()
+    'access-token': id
   })
 
   res.send(
@@ -150,8 +152,10 @@ app.post('/login-check', (req, res) => {
   console.log('login again')
 
   // カスタムレスポンスヘッダーをセットします
+  const id = uuid()
+  console.log('uuid:', id)
   res.set({
-    'access-token': uuid()
+    'access-token': id
   })
 
   res.send(
