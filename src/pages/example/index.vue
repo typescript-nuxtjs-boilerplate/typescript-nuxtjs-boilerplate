@@ -6,6 +6,9 @@
       |  - nuxtClientInit has been called is {{ isClientInitCalled }}
     hr
     p
+      nuxt-link(to='/example/auth/require-auth')
+        | require-auth
+    p
       nuxt-link(to='/example/ajax/color', no-prefetch)
         | color
     p
