@@ -1,5 +1,6 @@
 const Env = {
-  envName: 'stg'
+  envName: 'stg',
+  url: 'http://localhost:5000'
 }
 
 export default Env

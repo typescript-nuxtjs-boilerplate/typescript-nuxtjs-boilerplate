@@ -1,5 +1,6 @@
 const Env = {
-  envName: 'dev'
+  envName: 'dev',
+  url: 'http://localhost:5000'
 }
 
 export default Env
