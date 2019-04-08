@@ -13,7 +13,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Error extends Vue {
-  @Prop({ type: Object })
+  @Prop({ type: Object, required: true })
   public error: any
 }
 </script>
