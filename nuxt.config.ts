@@ -130,7 +130,8 @@ module.exports = {
   router: {
     // リロードのタイミングでは SSR 側で実行される
     // ルーティングの度に CSR 側で実行される
-    middleware: 'check-auth',
+    // ログインの必要のない画面でも middleware が実行されるので注意が必要
+    // middleware: 'check-auth',
 
     extendRoutes(routes: any, resolve: any) {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
