@@ -5,13 +5,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { unsetToken } from '@/utilities/auth'
+import { getTokenFromCookie } from '@/utilities/'
+import { ILogoutPayload } from '@/interface/User/ILogout'
 
-@Component
+@Component({
+  middleware: 'authenticated'
+})
 export default class SignOff extends Vue {
   public async mounted() {
-    unsetToken()
-    await this.$store.dispatch('auth/logout')
+    await this.$store.dispatch('auth/logout', {
+      token: getTokenFromCookie()
+    } as ILogoutPayload)
+
     this.$router.replace('/example')
   }
 

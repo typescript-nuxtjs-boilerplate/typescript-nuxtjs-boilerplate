@@ -10,14 +10,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { ApiPayloadInterface } from '@/interface/ApiPayloadInterface'
+import { IApiPayload } from '@/interface/IApiPayload'
 import { ApiInterface } from '@/store/api'
 import { cancelToken } from '@/utilities/'
 
 @Component
 export default class Api extends Vue {
   // リクエスト用ペイロード
-  private payload: ApiPayloadInterface = {
+  private payload: IApiPayload = {
     hoge: 'foo'
   }
 

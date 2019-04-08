@@ -1,6 +1,7 @@
 /**
  * Env インターフェイス
  */
-export interface EnvInterface {
+export interface IEnv {
   envName: string
+  url: string
 }
