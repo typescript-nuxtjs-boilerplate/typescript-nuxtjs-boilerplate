@@ -3,7 +3,7 @@ import { AxiosRequestConfig } from 'axios'
 import { ILoginPayload, IUser } from '@/interface/User/ILogin'
 import { ILoginCheckPayload, ILoginCheck } from '@/interface/User/ILoginCheck'
 import { ILogoutPayload, ILogout } from '@/interface/User/ILogout'
-import { setToken, unsetToken, cancelToken } from '@/utilities/'
+import { cancelToken } from '@/utilities/'
 
 /**
  * store 用インターフェイス
@@ -131,11 +131,7 @@ export const actions = {
           cancelToken: cancelToken.getToken(payload)
         } as AxiosRequestConfig
       )
-      const token = headers['access-token']
-
-      if (process.client && token && data.loggedIn) {
-        setToken(token)
-      }
+      const token = headers[this.$C.ACCESS_TOKEN_NAME]
 
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)
@@ -181,10 +177,6 @@ export const actions = {
         } as AxiosRequestConfig
       )
 
-      if (process.client && !data.loggedIn) {
-        unsetToken()
-      }
-
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)
       // ログイントークンを更新
@@ -221,15 +213,7 @@ export const actions = {
           cancelToken: cancelToken.getToken(payload)
         } as AxiosRequestConfig
       )
-      const token = headers['access-token']
-
-      if (process.client) {
-        if (token && data.loggedIn) {
-          setToken(token)
-        } else if (!token || !data.loggedIn) {
-          unsetToken()
-        }
-      }
+      const token = headers[this.$C.ACCESS_TOKEN_NAME]
 
       // ログイン状態を更新
       commit('updateLoginStatus', data.loggedIn)

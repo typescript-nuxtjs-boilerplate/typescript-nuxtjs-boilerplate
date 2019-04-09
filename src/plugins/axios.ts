@@ -4,35 +4,52 @@
 
 import { AxiosError, AxiosRequestConfig } from 'axios'
 import Vue from 'vue'
-import { getTokenFromCookie } from '@/utilities/'
+import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
 
-export default ({ $axios, app, req, error }) => {
-  $axios.onRequest((config: AxiosRequestConfig) => {
-    console.log('$axios.onRequest')
-    const token = getTokenFromCookie(req)
+export default ({ $axios, app, req, error }): void => {
+  $axios.onRequest(
+    (config: AxiosRequestConfig): void => {
+      const token = getTokenFromCookie(req)
+      console.log('$axios.onRequest', token)
 
-    if (token) {
-      config.headers['access-token'] = token
+      // トークンがあればログイン済みなのでリクエストヘッダで送信する
+      if (token) {
+        config.headers[app.$C.ACCESS_TOKEN_NAME] = token
+      }
     }
-  })
+  )
 
-  $axios.onResponse(response => {
-    console.log('$axios.onResponse')
-  })
+  $axios.onResponse(
+    (response): void => {
+      const token = response.headers[app.$C.ACCESS_TOKEN_NAME]
+      console.log('$axios.onResponse', token)
 
-  $axios.onResponseError((response: AxiosError) => {
-    console.log('$axios.onResponseError')
-    // 通信エラー
-    if (!response.response) {
-      return
+      // CSR のときだけトークンをセットする、 SSR のときは nuxtClientInit でセットしている
+      if (process.client) {
+        if (token) {
+          setToken(token)
+        } else {
+          unsetToken()
+        }
+      }
     }
+  )
 
-    const { status } = response.response
+  $axios.onResponseError(
+    (response: AxiosError): void => {
+      console.log('$axios.onResponseError')
+      // 通信エラー
+      if (!response.response) {
+        return
+      }
 
-    if (status === 401) {
-      const message = '401 error'
+      const { status } = response.response
 
-      error({ statusCode: 401, message })
+      if (status === app.$C.HTTP_STATUS.UNAUTHORIZED) {
+        const message = '401 error'
+
+        error({ statusCode: 401, message })
+      }
     }
-  })
+  )
 }
