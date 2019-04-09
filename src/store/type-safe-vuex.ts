@@ -26,7 +26,7 @@ export const state = (): IState => ({
  * getters
  */
 export const getters = {
-  typeSafeGetter(state: IState) {
+  typeSafeGetter(state: IState): string {
     return state.typeSafeState + ' getter'
   }
 }

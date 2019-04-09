@@ -1,6 +1,6 @@
 import { Context } from '@nuxt/vue-app'
 
-export default (context: Context) => {
+export default (context: Context): void => {
   for (const k in context.app.$env) {
     console.log('env-inject:', k, context.app.$env[k])
     if (!process.env[k]) {

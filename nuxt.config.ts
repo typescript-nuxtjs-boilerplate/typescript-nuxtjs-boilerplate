@@ -102,7 +102,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config: Configuration, ctx: Context) {
+    extend(config: Configuration, ctx: Context): void {
       // Run ESLint on save
       if (ctx.isDev && process.client) {
         if (config.module) {
@@ -116,7 +116,7 @@ module.exports = {
       }
 
       const vueLoader: any = config.module!.rules.find(
-        rule => rule.loader === 'vue-loader'
+        (rule): boolean => rule.loader === 'vue-loader'
       )
       vueLoader.options.transformAssetUrls = {
         video: ['src', 'poster'],
@@ -134,7 +134,7 @@ module.exports = {
     // ログインの必要のない画面でも middleware が実行されるので注意が必要
     // middleware: 'check-auth',
 
-    extendRoutes(routes: any, resolve: any) {
+    extendRoutes(routes: any, resolve: any): void {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
       if (routers && routers.length > 0) {
         for (const fn of routers) {

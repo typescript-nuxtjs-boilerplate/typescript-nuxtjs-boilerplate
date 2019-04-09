@@ -1,7 +1,8 @@
 /**
  * @file 最低限の定義でVuexの型をType-safeに定義するライブラリ
  */
-/* tslint:disable interface-name */
+/* eslint-disable interface-name */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 
 import {
   ActionContext as BaseActionContext,
@@ -18,7 +19,7 @@ declare type IfNotNever<T, R> = { T: {}; F: R }[IsNever<T>]
 
 // Storeモジュールのペイロード部分（第２引数）を返すユーティリティ
 declare type ModulePayload<F extends Function> = F extends (
-  ctx: any,
+  ctx,
   payload: infer A
 ) => any
   ? A
@@ -107,10 +108,10 @@ export const Action = cvd('methods', mapActions) as IAction
 // Namespaceを定義する関数
 export function namespace(n?: string): any {
   return {
-    State: (k: any) => State(k, n),
-    Mutation: (k: any) => Mutation(k, n),
-    Getter: (k: any) => Getter(k, n),
-    Action: (k: any) => Action(k, n)
+    State: k => State(k, n),
+    Mutation: k => Mutation(k, n),
+    Getter: k => Getter(k, n),
+    Action: k => Action(k, n)
   }
 }
 

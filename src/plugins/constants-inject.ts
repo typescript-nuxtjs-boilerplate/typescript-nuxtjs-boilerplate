@@ -15,6 +15,6 @@ import * as C from '@/common/constants/'
 // Vue.prototype.$C = C
 
 // @ts-ignore
-export default (context: Context, inject: any) => {
+export default (context: Context, inject: any): void => {
   inject('C', C)
 }

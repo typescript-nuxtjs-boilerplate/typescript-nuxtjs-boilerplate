@@ -23,10 +23,10 @@ export const state = (): StateInterface => ({
  * getters
  */
 export const getters = {
-  isServerInitCalled(state: StateInterface) {
+  isServerInitCalled(state: StateInterface): boolean {
     return state.isServerInitCalled
   },
-  isClientInitCalled(state: StateInterface) {
+  isClientInitCalled(state: StateInterface): boolean {
     return state.isClientInitCalled
   }
 }

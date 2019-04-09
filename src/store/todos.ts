@@ -15,18 +15,18 @@ export const state = (): StateInterface => ({
 let counter = 0
 
 export const mutations = {
-  add(state: StateInterface, text: string) {
+  add(state: StateInterface, text: string): void {
     state.list.push({
       id: counter++,
       text: text,
       done: false
     })
   },
-  remove(state: StateInterface, { todo }: { todo: TodoInterface }) {
+  remove(state: StateInterface, { todo }: { todo: TodoInterface }): void {
     state.list.splice(state.list.indexOf(todo), 1)
   },
   // @ts-ignore
-  toggle(state: StateInterface, todo: TodoInterface) {
+  toggle(state: StateInterface, todo: TodoInterface): void {
     todo.done = !todo.done
   }
 }
