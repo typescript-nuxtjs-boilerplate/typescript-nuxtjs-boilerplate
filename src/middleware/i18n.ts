@@ -30,7 +30,7 @@ export default function({
   }
   // Set locale
   store.commit('i18n/SET_LANG', locale)
-  app.i18n.locale = store.state.locale
+  app.i18n.locale = store.state.i18n.locale
   // If route is /<defaultLocale>/... -> redirect to /...
   // if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
   //   const toReplace = '^/' + defaultLocale + (route.fullPath.indexOf('/' + defaultLocale + '/') === 0 ? '/' : '')
