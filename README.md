@@ -36,6 +36,8 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 ##  :blue_book: Example Links
 
 - [root-example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
+- [sign-in](https://typescript-nuxtjs-boilerplate.netlify.com/example/auth/sign-in)
+- [sign-out](https://typescript-nuxtjs-boilerplate.netlify.com/example/auth/sign-out)
 - [ajax/color](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/color)
 - [ajax/schema](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/schema)
 - [custom-http-headers](https://typescript-nuxtjs-boilerplate.netlify.com/example/ajax/custom-http-headers)
@@ -55,6 +57,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [external-include](https://typescript-nuxtjs-boilerplate.netlify.com/include/)
 - [dynamic-import](https://typescript-nuxtjs-boilerplate.netlify.com/example/dynamic-import)
 - [user-agent](https://typescript-nuxtjs-boilerplate.netlify.com/example/user-agent)
+- [i18n](https://typescript-nuxtjs-boilerplate.netlify.com/example/i18n)
 
 ## Maintainers
 
