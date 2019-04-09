@@ -1,3 +1,7 @@
+/**
+ * @file 環境変数をグローバルにセットする
+ */
+
 import { Context } from '@nuxt/vue-app'
 
 export default (context: Context): void => {
