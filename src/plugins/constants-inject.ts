@@ -1,5 +1,5 @@
 /**
- * 定数をグローバルにセットする
+ * @file 定数をグローバルにセットする
  */
 // https://ja.nuxtjs.org/guide/plugins
 
