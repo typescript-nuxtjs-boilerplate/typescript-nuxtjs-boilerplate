@@ -62,6 +62,9 @@ section
   p
     nuxt-link(to='/example/user-agent')
       | user-agent
+  p
+    nuxt-link(to='/example/i18n')
+      | i18n
 </template>
 
 <script lang="ts">

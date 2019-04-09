@@ -56,7 +56,8 @@ module.exports = {
     '@/plugins/axios.ts',
     '@/plugins/constants-inject.ts',
     '@/plugins/env-inject.ts',
-    '@/plugins/vue-lazyload.ts'
+    '@/plugins/vue-lazyload.ts',
+    '@/plugins/i18n.ts'
   ],
 
   /*
@@ -133,6 +134,8 @@ module.exports = {
     // ルーティングの度に CSR 側で実行される
     // ログインの必要のない画面でも middleware が実行されるので注意が必要
     // middleware: 'check-auth',
+
+    middleware: 'i18n',
 
     extendRoutes(routes: any, resolve: any): void {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
