@@ -24,6 +24,12 @@ npm install
 $ yarn run dev
 ```
 
+and run mock server
+
+```bash
+$ node ./tools/server.js
+```
+
 ## build for production and launch server
 
 ```bash
