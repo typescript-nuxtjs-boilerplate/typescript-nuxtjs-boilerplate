@@ -10,7 +10,11 @@ module.exports = {
   srcDir: 'src/',
 
   env: {
-    NODE_ENV: process.env.NODE_ENV
+    NODE_ENV: process.env.NODE_ENV,
+    BUILD_ENV: process.env.BUILD_ENV,
+    envName: process.env.envName,
+    internalEndpointUrl: process.env.internalEndpointUrl,
+    externalEndpointUrl: process.env.externalEndpointUrl
   },
 
   // https://qiita.com/toaru/items/0690a9110c94052bb479

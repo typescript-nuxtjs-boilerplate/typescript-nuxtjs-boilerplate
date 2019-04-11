@@ -1,17 +1,22 @@
-import EnvDev from './env.dev'
-import EnvStg from './env.stg'
-import EnvProd from './env.prod'
+import EnvLocal from './env.local'
 import { IEnv } from '@/interface/IEnv'
 
 console.log('process.env.NODE_ENV: ', process.env.NODE_ENV)
+console.log('process.env.BUILD_ENV: ', process.env.BUILD_ENV)
 
 let Env: IEnv
-if (process.env.NODE_ENV === 'production') {
-  Env = EnvProd
-} else if (process.env.NODE_ENV === 'staging') {
-  Env = EnvStg
+if (process.env.BUILD_ENV === 'docker') {
+  /** docker のビルド環境の環境変数から値を取ってくる */
+  Env = {
+    envName: process.env.envName,
+    internalEndpointUrl: process.env.internalEndpointUrl,
+    externalEndpointUrl: process.env.externalEndpointUrl
+  } as IEnv
 } else {
-  Env = EnvDev
+  /** docker でビルドされていない場合は、 .env.local から値を取ってくる */
+  Env = EnvLocal
 }
+
+console.log('Env:', Env)
 
 export default Env
