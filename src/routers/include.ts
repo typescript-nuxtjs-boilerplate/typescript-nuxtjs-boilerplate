@@ -6,6 +6,6 @@ export default function(
   return {
     name: 'include',
     path: '/include',
-    component: resolve(__dirname, '../../src/include/include.vue')
+    component: resolve(__dirname, '../include/include.vue')
   }
 }

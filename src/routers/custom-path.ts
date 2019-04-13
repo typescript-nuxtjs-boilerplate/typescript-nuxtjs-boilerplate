@@ -6,6 +6,6 @@ export default function(
   return {
     name: 'custom-path',
     path: '/example/(c|d)-:a/(e|f)-:b/*',
-    component: resolve(__dirname, '../../src/routed-pages/custom-path.vue')
+    component: resolve(__dirname, '../routed-pages/custom-path.vue')
   }
 }
