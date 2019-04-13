@@ -6,7 +6,7 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'ts', 'vue', 'json'],
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$'
