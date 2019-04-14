@@ -5,6 +5,8 @@ import routers from './src/routers/'
 
 const pkg = require('./package')
 
+const isProduction = process.env.BUILD_ENV === 'production'
+
 module.exports = {
   mode: 'universal',
   srcDir: 'src/',
@@ -17,8 +19,42 @@ module.exports = {
     externalEndpointUrl: process.env.externalEndpointUrl
   },
 
-  // https://qiita.com/toaru/items/0690a9110c94052bb479
-  hardSource: true,
+  /*
+   ** Build configuration
+   */
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config: Configuration, ctx: Context): void {
+      // Run ESLint on save
+      if (ctx.isDev && process.client) {
+        if (config.module) {
+          config.module.rules.push({
+            enforce: 'pre',
+            test: /\.(js|vue)$/,
+            loader: 'eslint-loader',
+            exclude: /(node_modules)/
+          })
+        }
+      }
+
+      const vueLoader: any = config.module!.rules.find(
+        (rule): boolean => rule.loader === 'vue-loader'
+      )
+      vueLoader.options.transformAssetUrls = {
+        video: ['src', 'poster'],
+        source: 'src',
+        img: ['src', 'data-src'],
+        image: 'xlink:href',
+        Test: 'source',
+        'lazy-image': 'src'
+      }
+    },
+    extractCSS: isProduction,
+    // https://qiita.com/toaru/items/0690a9110c94052bb479
+    hardSource: true
+  },
 
   // https://ja.nuxtjs.org/faq/host-port/
   server: {
@@ -89,10 +125,12 @@ module.exports = {
       }
     ]
   ],
+
   sentry: {
     dsn: 'https://3381f2ffafa94f1cbd9ad904027baaf6@sentry.io/1423878', // Enter your project's DSN here
     config: {} // Additional config
   },
+
   /*
    ** Axios module configuration
    */
@@ -100,39 +138,6 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config: Configuration, ctx: Context): void {
-      // Run ESLint on save
-      if (ctx.isDev && process.client) {
-        if (config.module) {
-          config.module.rules.push({
-            enforce: 'pre',
-            test: /\.(js|vue)$/,
-            loader: 'eslint-loader',
-            exclude: /(node_modules)/
-          })
-        }
-      }
-
-      const vueLoader: any = config.module!.rules.find(
-        (rule): boolean => rule.loader === 'vue-loader'
-      )
-      vueLoader.options.transformAssetUrls = {
-        video: ['src', 'poster'],
-        source: 'src',
-        img: ['src', 'data-src'],
-        image: 'xlink:href',
-        Test: 'source',
-        'lazy-image': 'src'
-      }
-    }
-  },
   router: {
     // リロードのタイミングでは SSR 側で実行される
     // ルーティングの度に CSR 側で実行される
@@ -150,6 +155,7 @@ module.exports = {
       }
     }
   },
+
   styleResources: {
     scss: ['@/assets/styles/components/**/*.scss']
   }
