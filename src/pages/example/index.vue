@@ -6,65 +6,47 @@ section
     |  - nuxtClientInit has been called is {{ isClientInitCalled }}
   hr
   p
-    nuxt-link(to='/example/auth/require-auth')
-      | require-auth
+    nuxt-link(to='/example/auth/require-auth') require-auth
   p
-    nuxt-link(to='/example/ajax/color', no-prefetch)
-      | color
+    nuxt-link(to='/example/ajax/color', no-prefetch) color
   p
-    nuxt-link(to='/example/ajax/schema')
-      | schema
+    nuxt-link(to='/example/ajax/schema') schema
   p
-    nuxt-link(to='/example/ajax/custom-http-headers')
-      | custom-http-headers
+    nuxt-link(to='/example/ajax/custom-http-headers') custom-http-headers
   p
-    nuxt-link(to='/example/c-01/e-02/', no-prefetch)
-      | custom-path /c-01/e-02/
+    nuxt-link(to='/example/c-01/e-02/', no-prefetch) custom-path /c-01/e-02/
   p
-    n-link(to='/example/d-03/f-04/')
-      | custom-path /d-03/f-04/
+    n-link(to='/example/d-03/f-04/') custom-path /d-03/f-04/
   p
-    nuxt-link(to='/example/assets-and-static', no-prefetch)
-      | assets and static
+    nuxt-link(to='/example/assets-and-static', no-prefetch) assets and static
   p
-    nuxt-link(to='/example/todos')
-      | todos
+    nuxt-link(to='/example/todos') todos
   p
-    nuxt-link(to='/example/life-cycle', no-prefetch)
-      | life-cycle
+    nuxt-link(to='/example/life-cycle', no-prefetch) life-cycle
   p
-    nuxt-link(to='/example/use-plugin')
-      | use-plugin
+    nuxt-link(to='/example/use-plugin') use-plugin
   p
-    nuxt-link(to='/example/custom-head', no-prefetch)
-      | custom-head
+    nuxt-link(to='/example/custom-head', no-prefetch) custom-head
   p
-    nuxt-link(to='/example/async-custom-head', no-prefetch)
-      | async-custom-head
+    nuxt-link(to='/example/async-custom-head', no-prefetch) async-custom-head
   p
-    nuxt-link(to='/example/api')
-      | api
+    nuxt-link(to='/example/api') api
   p
-    nuxt-link(to='/example/search/?hoge=foo&bar=fuga', no-prefetch)
-      | search
+    nuxt-link(to='/example/search/?hoge=foo&bar=fuga', no-prefetch) search
   p
-    nuxt-link(to='/example/img-lazy-load')
-      | img-lazy-load
+    nuxt-link(to='/example/img-lazy-load') img-lazy-load
   p
-    nuxt-link(to='/example/type-safe-vuex')
-      | type-safe-vuex
+    nuxt-link(to='/example/type-safe-vuex') type-safe-vuex
   p
-    nuxt-link(to='/example/extend-css-class')
-      | extend-css-class
+    nuxt-link(to='/example/extend-css-class') extend-css-class
   p
-    nuxt-link(to='/example/dynamic-import')
-      | dynamic-import
+    nuxt-link(to='/example/dynamic-import') dynamic-import
   p
-    nuxt-link(to='/example/user-agent')
-      | user-agent
+    nuxt-link(to='/example/user-agent') user-agent
   p
-    nuxt-link(to='/example/i18n')
-      | i18n
+    nuxt-link(to='/example/i18n') i18n
+  p
+    nuxt-link(to='/example/animejs') animejs
 </template>
 
 <script lang="ts">
