@@ -17,10 +17,10 @@ import axios from 'axios'
 import URLSearchParams from '@ungap/url-search-params'
 
 @Component
-export default class UserAgent extends Vue {
+export default class extends Vue {
   data: string = ''
 
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, req }) {
     $axios.defaults.headers.post['post-header'] = 'post-header1' // for POST requests
     $axios.defaults.headers.common['common-header'] = 'common-header1' // for all requests
 
@@ -28,9 +28,22 @@ export default class UserAgent extends Vue {
     params.append('param1', 'value1')
     params.append('param2', 'value2')
 
+    const ua = process.server ? req.headers['user-agent'] : navigator.userAgent
+    const referrer = (() => {
+      let referer
+      if (process.server) {
+        referer = req.headers['referer']
+      } else {
+        referer = document.referrer
+      }
+      return referer || ''
+    })()
+    console.log('ua:', ua)
+    console.log('referrer:', referrer)
+
     const { data, headers, status, statusText, config } = await $axios.post(
       `http://localhost:5000/custom-headers`,
-      { hoge: 'hoge' },
+      { hoge: 'foo' },
       // x-www-form-urlencoded で渡したい場合は Browser と node.js でデータの作り方が変わってきます
       // https://github.com/axios/axios#using-applicationx-www-form-urlencoded-format
       // https://developer.mozilla.org/ja/docs/Web/HTTP/Methods/POST
@@ -41,6 +54,8 @@ export default class UserAgent extends Vue {
       // process.server ? querystring.stringify({ foo: 'bar' }) : params,
       {
         headers: {
+          'X-User-Agent': ua,
+          'X-Referer': referrer,
           header1: 'custom1'
         }
       }
