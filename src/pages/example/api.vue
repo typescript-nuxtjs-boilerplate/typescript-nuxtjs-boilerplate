@@ -28,7 +28,7 @@ export default class Api extends Vue {
   // @ts-ignore
   public async fetch({ store, params, error }: any): Promise<void> {
     await console.log('fetch')
-    // await store.$store.dispatch('api/fetchApi', {
+    // await store.dispatch('api/fetchApi', {
     //   hoge: 'foo'
     // })
   }
