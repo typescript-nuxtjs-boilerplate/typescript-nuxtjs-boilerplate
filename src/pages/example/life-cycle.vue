@@ -15,7 +15,7 @@ div
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { AxiosRequestConfig } from 'axios'
-import { IApiPayload } from '@/interface/IApiPayload'
+import { IApiPayload } from '@/interface/api/IApiPayload'
 
 @Component
 export default class LifeCycle extends Vue {

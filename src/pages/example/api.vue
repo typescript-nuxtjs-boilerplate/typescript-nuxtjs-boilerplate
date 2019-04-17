@@ -10,7 +10,7 @@ div
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { IApiPayload } from '@/interface/IApiPayload'
+import { IApiPayload } from '@/interface/api/IApiPayload'
 import { ApiInterface } from '@/store/api'
 import { cancelToken } from '@/utilities/'
 

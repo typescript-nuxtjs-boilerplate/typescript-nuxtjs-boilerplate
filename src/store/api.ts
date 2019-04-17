@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { AxiosRequestConfig } from 'axios'
-import { IApiPayload } from '@/interface/IApiPayload'
+import { IApiPayload } from '@/interface/api/IApiPayload'
 import { cancelToken } from '@/utilities/'
 
 /**

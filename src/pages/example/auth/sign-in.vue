@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { ILoginPayload, IUser } from '@/interface/User/ILogin'
+import { ILoginPayload, IUser } from '@/interface/api/User/ILogin'
 
 @Component({
   middleware: 'anonymous'
