@@ -145,7 +145,7 @@ export const actions = {
 
       return data
     } catch (err) {
-      throw new Error(err)
+      throw err
     } finally {
       commit('updateBusyStatus', ['login', false])
     }
@@ -187,7 +187,7 @@ export const actions = {
 
       return data
     } catch (err) {
-      throw new Error(err)
+      throw err
     } finally {
       commit('updateBusyStatus', ['logout', false])
     }
@@ -225,7 +225,7 @@ export const actions = {
 
       return data
     } catch (err) {
-      throw new Error(err)
+      throw err
     } finally {
       commit('updateBusyStatus', ['loginCheck', false])
     }
