@@ -1,9 +1,9 @@
 <template lang="pug">
 section
-  h1.red
+  h1.title
     | example index page
-    |  - nuxtServerInit has been called is {{ isServerInitCalled }}
-    |  - nuxtClientInit has been called is {{ isClientInitCalled }}
+  p nuxtServerInit has been called is {{ isServerInitCalled }}
+  p nuxtClientInit has been called is {{ isClientInitCalled }}
   hr
   p
     nuxt-link(to='/example/auth/require-auth') require-auth
@@ -47,6 +47,8 @@ section
     nuxt-link(to='/example/i18n') i18n
   p
     nuxt-link(to='/example/animejs') animejs
+  p
+    nuxt-link(to='/example/now-utcoffset') now-utcoffset
 </template>
 
 <script lang="ts">
@@ -65,12 +67,7 @@ export default class extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.red {
-  margin: 5px;
-  color: red;
-}
-
 p {
-  margin: 5px;
+  margin-bottom: 5px;
 }
 </style>
