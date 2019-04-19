@@ -49,6 +49,8 @@ section
     nuxt-link(to='/example/animejs') animejs
   p
     nuxt-link(to='/example/now-utcoffset') now-utcoffset
+  p
+    nuxt-link(to='/example/vue-carousel') vue-carousel
 </template>
 
 <script lang="ts">

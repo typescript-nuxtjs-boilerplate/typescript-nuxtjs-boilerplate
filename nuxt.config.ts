@@ -97,7 +97,8 @@ module.exports = {
     '@/plugins/constants-inject.ts',
     '@/plugins/env-inject.ts',
     '@/plugins/vue-lazyload.ts',
-    '@/plugins/i18n.ts'
+    '@/plugins/i18n.ts',
+    { src: '@/plugins/vue-carousel.ts', ssr: false }
   ],
 
   /*
