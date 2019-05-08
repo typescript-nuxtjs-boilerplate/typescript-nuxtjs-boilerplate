@@ -90,7 +90,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## Docs
 
-See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boilerplate/wiki){:target="_blank"}
+See our <a href="https://github.com/hisasann/typescript-nuxtjs-boilerplate/wiki" target="_blank">docs and guides here</a>	
 
 ## Maintainers
 
