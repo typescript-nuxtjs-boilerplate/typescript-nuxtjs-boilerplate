@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development BUILD_ENV=local nuxt",
     "build": "nuxt build --no-lock",
     "build:static": "nuxt build --spa --no-lock",
-    "build:local": "cross-env NODE_ENV=production BUILD_ENV=local nuxt build --no-lock",
+    "build:local": "cross-env NODE_ENV=production BUILD_ENV=local envName=local nuxt build --no-lock",
     "build:docker": "cross-env NODE_ENV=production nuxt build --no-lock",
     "start": "nuxt start",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",

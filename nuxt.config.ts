@@ -11,6 +11,7 @@ module.exports = {
   mode: 'universal',
   srcDir: 'src/',
 
+  // ビルド時に渡される env の値は、ここに記載することで文字列に置換される
   env: {
     NODE_ENV: process.env.NODE_ENV,
     BUILD_ENV: process.env.BUILD_ENV,
@@ -42,6 +43,7 @@ module.exports = {
       const vueLoader: any = config.module!.rules.find(
         (rule): boolean => rule.loader === 'vue-loader'
       )
+      // 特殊なアトリビュートでも webpack の require がかまされるようにする
       vueLoader.options.transformAssetUrls = {
         video: ['src', 'poster'],
         source: 'src',
@@ -53,7 +55,16 @@ module.exports = {
     },
     extractCSS: isProduction,
     // https://qiita.com/toaru/items/0690a9110c94052bb479
-    hardSource: true
+    hardSource: true,
+    terser: {
+      terserOptions: {
+        compress: {
+          // console 系を削除する
+          // https://www.lancard.com/blog/2019/04/05/delete_console-log_at_nuxt_build/
+          drop_console: process.env.envName === 'production' // eslint-disable-line @typescript-eslint/camelcase
+        }
+      }
+    }
   },
 
   // https://ja.nuxtjs.org/faq/host-port/
