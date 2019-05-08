@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import { AxiosRequestConfig } from 'axios'
-import { ILoginPayload, IUser } from '@/interface/api/User/ILogin'
+import { ILoginPayload, IUser } from '@/interfaces/api/User/ILogin'
 import {
   ILoginCheckPayload,
   ILoginCheck
-} from '@/interface/api/User/ILoginCheck'
-import { ILogoutPayload, ILogout } from '@/interface/api/User/ILogout'
+} from '@/interfaces/api/User/ILoginCheck'
+import { ILogoutPayload, ILogout } from '@/interfaces/api/User/ILogout'
 import { cancelToken } from '@/utilities/'
 
 /**

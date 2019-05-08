@@ -4,7 +4,7 @@
  * @param redirect
  */
 
-import { ILoginCheckPayload } from '@/interface/api/User/ILoginCheck'
+import { ILoginCheckPayload } from '@/interfaces/api/User/ILoginCheck'
 
 export default async function({ store, redirect }): Promise<void> {
   console.log('authenticated')

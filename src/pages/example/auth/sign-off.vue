@@ -5,7 +5,7 @@ section
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { ILogoutPayload } from '@/interface/api/User/ILogout'
+import { ILogoutPayload } from '@/interfaces/api/User/ILogout'
 
 @Component({
   middleware: 'authenticated'
