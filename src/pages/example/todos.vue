@@ -13,7 +13,7 @@ section
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { StateInterface, TodoInterface } from '@/store/todos'
-import { HTMLElementEvent } from '@/interface/HTMLElementEvent'
+import { HTMLElementEvent } from '@/interfaces/HTMLElementEvent'
 
 @Component
 export default class extends Vue {

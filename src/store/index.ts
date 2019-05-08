@@ -1,5 +1,5 @@
 import { ActionContext } from 'vuex'
-import { ILoginCheckPayload } from '@/interface/api/User/ILoginCheck'
+import { ILoginCheckPayload } from '@/interfaces/api/User/ILoginCheck'
 import { setToken, unsetToken } from '@/utilities/'
 
 /**
