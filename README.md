@@ -88,6 +88,10 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [now utc offset](https://typescript-nuxtjs-boilerplate.netlify.com/example/now-utcoffset)
 - [vue-carousel](https://typescript-nuxtjs-boilerplate.netlify.com/example/vue-carousel)
 
+## Docs
+
+See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boilerplate/wiki){:target="_blank"}
+
 ## Maintainers
 
 - [hisasann](https://github.com/hisasann)
