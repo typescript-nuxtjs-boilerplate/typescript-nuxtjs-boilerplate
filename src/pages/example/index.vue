@@ -51,6 +51,10 @@ section
     nuxt-link(to='/example/now-utcoffset') now-utcoffset
   p
     nuxt-link(to='/example/vue-carousel') vue-carousel
+  p
+    nuxt-link(to='/example/routing-validate/true') routing-validate - validate is true
+  p
+    nuxt-link(to='/example/routing-validate/false') routing-validate - validate is not true
 </template>
 
 <script lang="ts">
