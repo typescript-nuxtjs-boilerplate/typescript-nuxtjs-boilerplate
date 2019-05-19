@@ -13,7 +13,12 @@ import { Component, Vue } from 'nuxt-property-decorator'
 export default class UsePlugin extends Vue {
   public c: string = 'a'
 
+  public asyncData(context) {
+    console.log(context.app.$C)
+  }
+
   public mounted() {
+    console.log(this.$C)
     this.c = this.$C
   }
 

@@ -55,6 +55,8 @@ section
     nuxt-link(to='/example/routing-validate/true') routing-validate - validate is true
   p
     nuxt-link(to='/example/routing-validate/false') routing-validate - validate is not true
+  p
+    nuxt-link(to='/example/v-scroll') v-scroll
 </template>
 
 <script lang="ts">

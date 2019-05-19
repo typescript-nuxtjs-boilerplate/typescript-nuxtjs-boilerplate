@@ -21,7 +21,7 @@ export default class extends Vue {
     }
   }
 
-  public validate({ params, query, store }) {
+  public validate({ params, query, store, app }) {
     if (params.condition === 'true') {
       return true // params バリデーションを通過したとき
     }
