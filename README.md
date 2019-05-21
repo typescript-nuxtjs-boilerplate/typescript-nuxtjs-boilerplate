@@ -34,6 +34,12 @@ Using npm:
 npm install
 ```
 
+## Run sample server at localhost:5000
+
+```bash
+$ node ./tools/server.js
+```
+
 ## Serve with hot reload at localhost:4000
 
 ```bash
