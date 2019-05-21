@@ -1,4 +1,4 @@
-import INuxtRoute from '../interfaces/INuxtRoute'
+import INuxtRoute from '../interfaces/app/INuxtRoute'
 
 export default function(
   resolve: (dirname: string, routeDir: string) => string
