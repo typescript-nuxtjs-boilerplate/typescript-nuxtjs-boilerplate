@@ -88,6 +88,13 @@ function uuid() {
 }
 
 /**
+ * get '/healthcheck'
+ */
+app.get('/healthcheck', function(req, res) {
+  res.send('ok')
+})
+
+/**
  * post '/login'
  */
 app.post('/login', (req, res) => {

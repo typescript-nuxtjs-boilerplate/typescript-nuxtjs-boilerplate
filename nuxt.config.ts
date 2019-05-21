@@ -11,7 +11,10 @@ module.exports = {
   mode: 'universal',
   srcDir: 'src/',
 
-  // ビルド時に渡される env の値は、ここに記載することで文字列に置換される
+  /**
+   * 環境変数
+   * ビルド時に渡される env の値は、ここに記載することで文字列に置換される
+   */
   env: {
     NODE_ENV: process.env.NODE_ENV,
     BUILD_ENV: process.env.BUILD_ENV,
@@ -20,12 +23,13 @@ module.exports = {
     externalEndpointUrl: process.env.externalEndpointUrl
   },
 
-  /*
-   ** Build configuration
+  /**
+   * Build configuration
+   * webpack のビルドに関する設定はここに書く
    */
   build: {
-    /*
-     ** You can extend webpack config here
+    /**
+     * You can extend webpack config here
      */
     extend(config: Configuration, ctx: Context): void {
       // Run ESLint on save
@@ -54,8 +58,11 @@ module.exports = {
       }
     },
     extractCSS: isProduction,
+
+    // ビルドを爆速にする
     // https://qiita.com/toaru/items/0690a9110c94052bb479
     hardSource: true,
+
     terser: {
       terserOptions: {
         compress: {
@@ -74,8 +81,8 @@ module.exports = {
     host: '0.0.0.0' // デフォルト: localhost
   },
 
-  /*
-   ** Headers of the page
+  /**
+   * Headers of the page
    */
   head: {
     title: pkg.name,
@@ -87,21 +94,22 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
-  /*
-   ** Customize the progress-bar color
+  /**
+   * Customize the progress-bar color
    */
   loading: {
     color: 'blue',
     height: '5px'
   },
 
-  /*
-   ** Global CSS
+  /**
+   * Global CSS
+   * 他の scss ファイルに依存しない scss はこちらに
    */
   css: ['@/assets/styles/reset.scss', '@/assets/styles/main.scss'],
 
-  /*
-   ** Plugins to load before mounting the App
+  /**
+   * Plugins to load before mounting the App
    */
   plugins: [
     '@/plugins/axios.ts',
@@ -143,8 +151,8 @@ module.exports = {
     config: {} // Additional config
   },
 
-  /*
-   ** Axios module configuration
+  /**
+   * Axios module configuration
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
@@ -168,7 +176,17 @@ module.exports = {
     }
   },
 
+  /**
+   * Sass の @extend を使う場合はこのパスの scss ファイルに CSS クラスを書く
+   */
   styleResources: {
     scss: ['@/assets/styles/components/**/*.scss']
-  }
+  },
+
+  /**
+   * nuxt サーバーを API サーバーとして使う場合のミドルウェアを定義する
+   */
+  serverMiddleware: [
+    { path: '/api/healthcheck', handler: '~/api/healthcheck.js' }
+  ]
 }
