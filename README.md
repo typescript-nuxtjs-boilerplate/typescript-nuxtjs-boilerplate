@@ -52,6 +52,8 @@ $ node ./tools/server.js
 $ yarn run dev
 ```
 
+or
+
 ```bash
 $ yarn run local
 ```
