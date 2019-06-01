@@ -1,13 +1,16 @@
-// https://qiita.com/iwata@github/items/5bc61ea9ca1c692d0370
-import { Configuration } from 'webpack'
-import { Context } from '@nuxt/vue-app'
+import NuxtConfiguration from '@nuxt/config'
+import {
+  Configuration as WebpackConfiguration,
+  Options as WebpackOptions,
+  Plugin as WebpackPlugin
+} from 'webpack'
 import routers from './src/routers/'
 
 const pkg = require('./package')
 
 const isProduction = process.env.BUILD_ENV === 'production'
 
-module.exports = {
+const config: NuxtConfiguration = {
   mode: 'universal',
   srcDir: 'src/',
 
@@ -16,11 +19,11 @@ module.exports = {
    * ビルド時に渡される env の値は、ここに記載することで文字列に置換される
    */
   env: {
-    NODE_ENV: process.env.NODE_ENV,
-    BUILD_ENV: process.env.BUILD_ENV,
-    envName: process.env.envName,
-    internalEndpointUrl: process.env.internalEndpointUrl,
-    externalEndpointUrl: process.env.externalEndpointUrl
+    NODE_ENV: process.env.NODE_ENV || '',
+    BUILD_ENV: process.env.BUILD_ENV || '',
+    envName: process.env.envName || '',
+    internalEndpointUrl: process.env.internalEndpointUrl || '',
+    externalEndpointUrl: process.env.externalEndpointUrl || ''
   },
 
   /**
@@ -31,7 +34,15 @@ module.exports = {
     /**
      * You can extend webpack config here
      */
-    extend(config: Configuration, ctx: Context): void {
+    extend(
+      config: WebpackConfiguration,
+      ctx: {
+        isDev: boolean
+        isClient: boolean
+        isServer: boolean
+        loaders: any
+      }
+    ): void {
       // Run ESLint on save
       if (ctx.isDev && process.client) {
         if (config.module) {
@@ -112,12 +123,12 @@ module.exports = {
    * Plugins to load before mounting the App
    */
   plugins: [
-    '@/plugins/axios.ts',
     '@/plugins/constants-inject.ts',
     '@/plugins/env-inject.ts',
-    '@/plugins/vue-lazyload.ts',
-    '@/plugins/i18n.ts',
-    { src: '@/plugins/vue-carousel.ts', ssr: false }
+    '@/plugins/libraries/axios.ts',
+    '@/plugins/libraries/vue-lazyload.ts',
+    '@/plugins/locale/i18n.ts',
+    { src: '@/plugins/libraries/vue-carousel.ts', ssr: false }
   ],
 
   /*
@@ -190,3 +201,5 @@ module.exports = {
     { path: '/api/healthcheck', handler: '~/api/healthcheck.js' }
   ]
 }
+
+module.exports = config
