@@ -2,38 +2,35 @@
   "compilerOptions": {
     "allowJs": true,
     "baseUrl": ".",
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "lib": [
-      "dom",
-      "es2015",
-      "es2017"
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitThis": true,
     "paths": {
       "@/*": [
         "src/*"
       ],
       "~/*": [
-        "./*"
-      ],
-      "*": [
-        "types/*"
+        "src/*"
       ]
     },
+    "removeComments": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": false,
-    "target": "es5",
+    "noImplicitThis": true,
+    "target": "esnext",
     "types": [
       "@types/node",
       "@types/jest",
       "@types/webpack",
       "@nuxt/vue-app"
     ],
-    "esModuleInterop": true,
-    "strict": true,
+    "strict": false,
     "noImplicitAny": false,
     "noEmit": true
   },
@@ -46,3 +43,4 @@
     "stories"
   ]
 }
+
