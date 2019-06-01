@@ -16,7 +16,7 @@ section
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import LazyImage from '@/components/LazyImage.vue'
+import LazyImage from '@/components/partials/lazyImage/LazyImage.vue'
 
 @Component({
   components: {
