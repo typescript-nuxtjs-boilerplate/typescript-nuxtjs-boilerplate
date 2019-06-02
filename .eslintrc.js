@@ -22,7 +22,8 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       legacyDecorators: true
-    }
+    },
+    warnOnUnsupportedTypeScriptVersion: false
   },
   // add your custom rules here
   rules: {
