@@ -4,7 +4,7 @@ example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https:/
 
 ---
 
-## Install
+## 💾 Install
 
 **Note: requires node version >= 8.10.0 and npm version >= 5.6.0**
 
@@ -46,7 +46,7 @@ npm install
 $ node ./tools/server.js
 ```
 
-## Serve with hot reload at localhost:4000
+## 🔌 Serve with hot reload at localhost:4000
 
 ```bash
 $ yarn run dev
@@ -73,7 +73,7 @@ $ yarn start
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-## :blue_book: Example Links
+## 🎩 :blue_book: Example Links
 
 - [/example root directory](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 - [sign-in](https://typescript-nuxtjs-boilerplate.netlify.com/example/auth/sign-in)
@@ -102,15 +102,15 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [now utc offset](https://typescript-nuxtjs-boilerplate.netlify.com/example/now-utcoffset)
 - [vue-carousel](https://typescript-nuxtjs-boilerplate.netlify.com/example/vue-carousel)
 
-## Docs
+## 📚 Docs
 
 See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boilerplate/wiki)
 
-## Maintainers
+## ⚙️ Maintainers
 
 - [hisasann](https://github.com/hisasann)
 
-## License
+## 🍜 License
 
 MIT © [hisasann](https://github.com/hisasann)
 
