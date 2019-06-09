@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+const ACCESS_TOKEN_NAME = 'x-authorization-code'
+
 // https://blog.ryo4004.net/web/306/
 // method: post のために必須
 const bodyParser = require('body-parser')
@@ -16,13 +18,16 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Headers',
     // Chrome は OK で、 Firefox と IE11 がダメだったため、
     // '*' だと CORS 的に許可されないので、明示的にリクエストヘッダーの key 名を許可しています
-    'origin, x-requested-with, content-type, accept, post-header, common-header, header1, access-token, X-User-Agent, X-Referer'
+    `origin, x-requested-with, content-type, accept, post-header, common-header, header1, ${ACCESS_TOKEN_NAME}, X-User-Agent, X-Referer`
     // '*'
   )
   // https://stackoverflow.com/questions/37897523/axios-get-access-to-response-header-fields
   // https://github.com/axios/axios/issues/606
   // Access-Control-Expose-Headers を追加しないとカスタムレスポンスヘッダーをブラウザに返すことはできない
-  res.header('Access-Control-Expose-Headers', 'from-server, access-token')
+  res.header(
+    'Access-Control-Expose-Headers',
+    `from-server, ${ACCESS_TOKEN_NAME}`
+  )
   next()
 })
 
@@ -112,7 +117,7 @@ app.post('/login', (req, res) => {
   const id = uuid()
   console.log('uuid:', id)
   res.set({
-    'access-token': id
+    [ACCESS_TOKEN_NAME]: id
   })
 
   res.send(
@@ -132,7 +137,7 @@ app.post('/logout', (req, res) => {
 
   // カスタムレスポンスヘッダーをセットします
   res.set({
-    'access-token': ''
+    [ACCESS_TOKEN_NAME]: ''
   })
 
   res.send(
@@ -146,7 +151,7 @@ app.post('/logout', (req, res) => {
  * post '/login-check'
  */
 app.post('/login-check', (req, res) => {
-  if (!req.headers['access-token']) {
+  if (!req.headers[ACCESS_TOKEN_NAME]) {
     console.log('not login')
     res.send(
       JSON.stringify({
@@ -162,7 +167,7 @@ app.post('/login-check', (req, res) => {
   const id = uuid()
   console.log('uuid:', id)
   res.set({
-    'access-token': id
+    [ACCESS_TOKEN_NAME]: id
   })
 
   res.send(

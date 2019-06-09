@@ -25,12 +25,17 @@ export const API_ENDPOINT = {
 }
 
 /** アクセストークンヘッダ名 - API サーバーとのログインセッション用のトークン名 */
-export const ACCESS_TOKEN_NAME = 'access-token'
+export const ACCESS_TOKEN_NAME = 'x-authorization-code'
+
+/** アクセストークン Cookie 名 - API サーバーからのトークンを保存する先の Cookie 名 */
+export const ACCESS_TOKEN_COOKIE_NAME = 'x-authorization-code'
 
 /** HTTP ステータス */
 export const HTTP_STATUS = {
   /** OK */
   OK: 200,
   /** 認証が必要である */
-  UNAUTHORIZED: 401
+  UNAUTHORIZED: 401,
+  /** サービス利用不可 */
+  SERVICE_UNAVAILABLE: 503
 }
