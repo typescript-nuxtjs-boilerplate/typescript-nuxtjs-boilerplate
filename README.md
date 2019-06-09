@@ -73,7 +73,7 @@ $ yarn start
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-## 🎩 :blue_book: Example Links
+## :blue_book: Example Links
 
 - [/example root directory](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 - [sign-in](https://typescript-nuxtjs-boilerplate.netlify.com/example/auth/sign-in)
