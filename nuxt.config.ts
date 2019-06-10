@@ -31,6 +31,10 @@ const config: NuxtConfiguration = {
    * webpack のビルドに関する設定はここに書く
    */
   build: {
+    // vue-devtools を許可するかどうかを設定します
+    // https://ja.nuxtjs.org/api/configuration-build/#devtools
+    devtools: true,
+
     /**
      * You can extend webpack config here
      */
