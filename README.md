@@ -101,6 +101,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [animation - animejs](https://typescript-nuxtjs-boilerplate.netlify.com/example/animejs)
 - [now utc offset](https://typescript-nuxtjs-boilerplate.netlify.com/example/now-utcoffset)
 - [vue-carousel](https://typescript-nuxtjs-boilerplate.netlify.com/example/vue-carousel)
+- [vue-awesome-swiper](https://typescript-nuxtjs-boilerplate.netlify.com/example/vue-awesome-swiper)
 
 ## 📚 Docs
 
