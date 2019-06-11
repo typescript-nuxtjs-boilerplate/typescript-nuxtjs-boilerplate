@@ -57,6 +57,8 @@ section
     nuxt-link(to='/example/routing-validate/false') routing-validate - validate is not true
   p
     nuxt-link(to='/example/v-scroll') v-scroll
+  p
+    nuxt-link(to='/example/vue-awesome-swiper') vue-awesome-swiper
 </template>
 
 <script lang="ts">

@@ -121,7 +121,11 @@ const config: NuxtConfiguration = {
    * Global CSS
    * 他の scss ファイルに依存しない scss はこちらに
    */
-  css: ['@/assets/styles/reset.scss', '@/assets/styles/main.scss'],
+  css: [
+    '@/assets/styles/reset.scss',
+    '@/assets/styles/main.scss',
+    'swiper/dist/css/swiper.css'
+  ],
 
   /**
    * Plugins to load before mounting the App
@@ -132,7 +136,8 @@ const config: NuxtConfiguration = {
     '@/plugins/libraries/axios.ts',
     '@/plugins/libraries/vue-lazyload.ts',
     '@/plugins/locale/i18n.ts',
-    { src: '@/plugins/libraries/vue-carousel.ts', ssr: false }
+    { src: '@/plugins/libraries/vue-carousel.ts', ssr: false },
+    { src: '@/plugins/libraries/vue-awesome-swiper', mode: 'client' }
   ],
 
   /*
