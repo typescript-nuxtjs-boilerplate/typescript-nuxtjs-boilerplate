@@ -1,5 +1,7 @@
 # :bento: typescript-nuxtjs-boilerplate
 
+<img src="internals/images/header.png" width="100%" />
+
 example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 
 ---
