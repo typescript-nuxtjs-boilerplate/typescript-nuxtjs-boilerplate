@@ -2,7 +2,7 @@
   "name": "typescript-nuxtjs-boilerplate",
   "private": true,
   "version": "0.0.1",
-  "description": "My gnarly Nuxt.js project",
+  "description": "Nuxt.js with TypeScript and Run with docker and docker-compose",
   "scripts": {
     "local": "npm run dev",
     "dev": "cross-env NODE_ENV=development BUILD_ENV=local nuxt",
