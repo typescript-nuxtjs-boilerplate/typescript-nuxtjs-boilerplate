@@ -117,3 +117,4 @@ See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boi
 
 MIT © [hisasann](https://github.com/hisasann)
 
+<a href="https://twitter.com/hisasann"><img src="https://badgen.net/twitter/follow/hisasann" alt="twitter"></a>
