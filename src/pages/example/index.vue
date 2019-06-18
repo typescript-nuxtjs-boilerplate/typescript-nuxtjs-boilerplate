@@ -59,6 +59,10 @@ section
     nuxt-link(to='/example/v-scroll') v-scroll
   p
     nuxt-link(to='/example/vue-awesome-swiper') vue-awesome-swiper
+  p
+    nuxt-link(to='/example/audio', no-prefetch) audio
+  p
+    nuxt-link(to='/example/video', no-prefetch) video
 </template>
 
 <script lang="ts">

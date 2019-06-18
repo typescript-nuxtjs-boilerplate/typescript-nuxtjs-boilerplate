@@ -35,6 +35,20 @@ const config: NuxtConfiguration = {
     // https://ja.nuxtjs.org/api/configuration-build/#devtools
     devtools: true,
 
+    loaders: {
+      // https://ja.nuxtjs.org/faq/webpack-audio-files/
+      vue: {
+        // 特殊なアトリビュートでも webpack の require がかまされるようにする
+        transformAssetUrls: {
+          audio: 'src',
+          video: ['src', 'poster'],
+          source: 'src',
+          img: ['src', 'data-src'],
+          'lazy-image': 'src'
+        }
+      }
+    },
+
     /**
      * You can extend webpack config here
      */
@@ -59,18 +73,14 @@ const config: NuxtConfiguration = {
         }
       }
 
-      const vueLoader: any = config.module!.rules.find(
-        (rule): boolean => rule.loader === 'vue-loader'
-      )
-      // 特殊なアトリビュートでも webpack の require がかまされるようにする
-      vueLoader.options.transformAssetUrls = {
-        video: ['src', 'poster'],
-        source: 'src',
-        img: ['src', 'data-src'],
-        image: 'xlink:href',
-        Test: 'source',
-        'lazy-image': 'src'
-      }
+      // https://ja.nuxtjs.org/faq/webpack-audio-files/
+      config.module!.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
     },
     extractCSS: isProduction,
 
