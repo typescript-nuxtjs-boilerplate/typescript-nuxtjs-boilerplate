@@ -116,6 +116,8 @@ const config: NuxtConfiguration = {
     color: 'blue',
     height: '5px'
   },
+  // ローディングを使わない場合はここを false
+  // loading: false,
 
   /**
    * Global CSS
