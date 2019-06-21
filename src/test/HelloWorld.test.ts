@@ -7,7 +7,7 @@ describe('HelloWorld', (): void => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 
-  test('renders props.message when passed', () => {
+  test('renders props.message when passed', (): void => {
     const message = 'new message'
     const wrapper = shallowMount(HelloWorld, {
       propsData: { message }
