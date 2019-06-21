@@ -106,6 +106,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - [vue-awesome-swiper](https://typescript-nuxtjs-boilerplate.netlify.com/example/vue-awesome-swiper)
 - [audio](https://typescript-nuxtjs-boilerplate.netlify.com/example/audio)
 - [video](https://typescript-nuxtjs-boilerplate.netlify.com/example/video)
+- [server-side-set-cookie](https://typescript-nuxtjs-boilerplate.netlify.com/example/server-side-set-cookie)
 
 ## 📚 Docs
 
