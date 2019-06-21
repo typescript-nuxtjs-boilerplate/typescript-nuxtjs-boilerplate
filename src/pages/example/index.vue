@@ -63,6 +63,8 @@ section
     nuxt-link(to='/example/audio', no-prefetch) audio
   p
     nuxt-link(to='/example/video', no-prefetch) video
+  p
+    nuxt-link(to='/example/server-side-set-cookie', no-prefetch) server-side-set-cookie
 </template>
 
 <script lang="ts">
