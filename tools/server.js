@@ -1,19 +1,27 @@
 const express = require('express')
 const app = express()
 
-const ACCESS_TOKEN_NAME = 'x-authorization-code'
-
 // https://blog.ryo4004.net/web/306/
 // method: post のために必須
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+const cookieParser = require('cookie-parser')
+app.use(cookieParser())
+
 // Example directories as static files
 app.use(express.static('src/static'))
 
+const ACCESS_TOKEN_NAME = 'x-authorization-code'
+
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
+  // CORSリクエストでクレデンシャル(≒クッキー)を必要とする場合の注意点 - Qiita - https://qiita.com/kawaz/items/1e51c374b7a13c21b7e2
+  // * だと withCredentials が動かない
+  // res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4000')
+  res.header('Access-Control-Allow-Credentials', true)
+
   res.header(
     'Access-Control-Allow-Headers',
     // Chrome は OK で、 Firefox と IE11 がダメだったため、
@@ -21,6 +29,7 @@ app.use((req, res, next) => {
     `origin, x-requested-with, content-type, accept, post-header, common-header, header1, ${ACCESS_TOKEN_NAME}, X-User-Agent, X-Referer`
     // '*'
   )
+
   // https://stackoverflow.com/questions/37897523/axios-get-access-to-response-header-fields
   // https://github.com/axios/axios/issues/606
   // Access-Control-Expose-Headers を追加しないとカスタムレスポンスヘッダーをブラウザに返すことはできない
@@ -36,6 +45,23 @@ app.use((req, res, next) => {
  */
 app.get('/', function(req, res) {
   res.send('Hello World')
+})
+
+/**
+ * post '/set-cookie'
+ */
+app.post('/set-cookie', function(req, res) {
+  const token = req.body.token
+
+  if (token) {
+    res.cookie('from-server-token', token, { maxAge: 60000, httpOnly: false })
+  }
+
+  res.send(
+    JSON.stringify({
+      apiResult: 'ok'
+    })
+  )
 })
 
 /**
