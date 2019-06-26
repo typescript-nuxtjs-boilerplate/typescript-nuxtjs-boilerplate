@@ -65,6 +65,8 @@ section
     nuxt-link(to='/example/video', no-prefetch) video
   p
     nuxt-link(to='/example/server-side-set-cookie', no-prefetch) server-side-set-cookie
+  p
+    nuxt-link(to='/example/counter', no-prefetch) counter
 </template>
 
 <script lang="ts">
