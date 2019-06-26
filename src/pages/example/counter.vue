@@ -2,15 +2,16 @@
 div
   h1.title
     | counter
-  p counter: {{ counter }} {{ this.$store.state.counter.count }}
-  p isOdd: {{ isOdd }} {{ this.$store.getters['counter/isOdd'] }}
   div
-    p Clicked: {{ value }} times
+    p.clicked
+      | Clicked:
+      span.value {{ value }}
+      span times
     p
-      button(@click="onIncrement") +
-      button(@click="onDecrement") -
-      button(@click="onIncrementIfOdd") Increment if odd
-      button(@click="onIncrementAsync") Increment async
+      button.button-size(@click="onIncrement") +
+      button.button-size(@click="onDecrement") -
+      button.button-size(@click="onIncrementIfOdd") Increment if odd
+      button.button-size(@click="onIncrementAsync") Increment async
 </template>
 
 <script lang="ts">
@@ -21,74 +22,53 @@ import { RootStore } from '@/@types/vuex'
 export default class Counter extends Vue {
   $store!: RootStore
 
-  counter: number = 0
-
   /** computed */
-  public get isOdd() {
-    return this.$store.getters['counter/isOdd']
+  public get value() {
+    return this.$store.state.counter.count
   }
 
   /** Nuxt ライフサイクル */
-  public async asyncData({ store }: any) {
-    await console.log('counter/asyncData')
+  public asyncData({ store }: any) {
     const { state } = store as RootStore
     const { count } = state.counter
 
-    return {
-      counter: count + 1
-    }
+    // ...
   }
 
   /** Nuxt ライフサイクル */
-  public async fetch({ store }: any): Promise<void> {
-    await console.log('counter/fetch')
+  public fetch({ store }: any) {
     const { state, commit, dispatch } = store as RootStore
     const { count } = state.counter
 
-    await dispatch('counter/asyncUpdateCount', count + 19)
+    // ...
   }
 
-  /** Vue ライフサイクル */
-  public created() {
-    setTimeout(() => {
-      this.counter = this.increment()
-    }, 3000)
-  }
-
-  /** Vue ライフサイクル */
-  public mounted() {
-    console.log('mounted:', this.$refs)
-
-    setTimeout(async () => {
-      await this.asyncCount(200)
-    }, 5000)
-  }
-
-  public increment() {
+  public onIncrement() {
+    console.log('onIncrement')
     const { state, commit } = this.$store
-    commit('counter/updateCount', state.counter.count + 1)
-
-    // updated counter count
-    console.log('counter/increment', state.counter.count)
-    return state.counter.count
+    commit('counter/increment', 1)
   }
 
-  public async asyncCount(count: number) {
+  public onDecrement() {
+    console.log('onDecrement')
+    const { state, commit } = this.$store
+    commit('counter/decrement', 1)
+  }
+
+  public onIncrementIfOdd() {
+    console.log('onIncrementIfOdd')
+    const { state, getters, commit } = this.$store
+
+    if (getters['counter/isOdd']) {
+      this.onIncrement()
+    }
+  }
+
+  public async onIncrementAsync() {
+    console.log('onIncrementAsync')
     const { state, dispatch } = this.$store
-
-    await dispatch('counter/asyncUpdateCount', state.counter.count + count)
-
-    // updated counter count
-    console.log('counter/asyncCount', state.counter.count)
+    await dispatch('counter/asyncUpdateCount', 1)
   }
-
-  public onIncrement(e) {}
-
-  public onDecrement(e) {}
-
-  public onIncrementIfOdd(e) {}
-
-  public onIncrementAsync(e) {}
 
   public head() {
     return {
@@ -98,4 +78,20 @@ export default class Counter extends Vue {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.clicked {
+  font-size: 1.5em;
+}
+
+.value {
+  color: red;
+  margin: 0 5px 0 5px;
+}
+
+.button-size {
+  font-size: 1.2em;
+  width: 170px;
+  height: 100px;
+  margin: 2px 2px;
+}
+</style>

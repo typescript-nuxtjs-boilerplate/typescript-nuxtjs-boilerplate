@@ -28,18 +28,18 @@ export type Getters = Convertor<
 >
 
 export const mutations = {
-  updateCount(state: IState, count: number): void {
-    state.count = count
+  increment(state: IState, count: number): void {
+    state.count += count
   },
-  resetCount(state: IState): void {
-    state.count = 0
+  decrement(state: IState, count: number): void {
+    state.count -= count
   }
 }
 export type Mutations = Convertor<
   typeof mutations,
   {
-    'counter/updateCount': 'updateCount'
-    'counter/resetCount': 'resetCount'
+    'counter/increment': 'increment'
+    'counter/decrement': 'decrement'
   }
 >
 
@@ -50,7 +50,7 @@ export const actions = {
     { commit }: Ctx,
     count: number
   ): Promise<void> {
-    await commit('updateCount', count)
+    await commit('increment', count)
   }
 }
 export type Actions = Convertor<
