@@ -47,6 +47,7 @@
     "url": "https://github.com/hisasann/typescript-nuxtjs-boilerplate/issues"
   },
   "dependencies": {
+    "@lollipop-onl/vuex-typesafe-helper": "^0.2.6",
     "@nuxt/typescript": "^2.8.0",
     "@nuxtjs/axios": "^5.5.3",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
