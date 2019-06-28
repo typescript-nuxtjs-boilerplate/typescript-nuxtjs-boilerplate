@@ -16,8 +16,8 @@ export const state = (): IState => ({
 // Convert to global name
 // It is an error if there is excess or deficiency
 export const getters = {
-  isOdd: (state: IState): number => {
-    return state.count % 2
+  isOdd: (state: IState): boolean => {
+    return state.count % 2 === 0
   }
 }
 export type Getters = Convertor<
