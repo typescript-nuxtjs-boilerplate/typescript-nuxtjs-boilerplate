@@ -124,7 +124,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## 📚 Docs
 
-See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boilerplate/wiki)
+See our [docs and guides here](https://github.com/hisasann/typescript-nuxtjs-boilerplate/tree/master/docs)
 
 ## ⚙️ Maintainers
 
