@@ -55,11 +55,9 @@ export class CancelTokenMap {
    * @param message キャンセルメッセージ
    */
   public cancelAll(keys: any[], message?: string): void {
-    keys.forEach(
-      (key): void => {
-        this.cancel(key, message)
-      }
-    )
+    keys.forEach((key): void => {
+      this.cancel(key, message)
+    })
   }
 }
 

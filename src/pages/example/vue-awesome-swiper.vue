@@ -54,9 +54,7 @@ export default class VueAwesomeSwiper extends Vue {
       spaceBetween: 30,
       slidesPerGroup: 3,
       pagination: {
-        el: `.swiper-pagination-bullets[data-component-id="${
-          this.componentId
-        }"]`,
+        el: `.swiper-pagination-bullets[data-component-id="${this.componentId}"]`,
         clickable: true,
         bulletElement: 'li'
       },

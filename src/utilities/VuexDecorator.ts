@@ -1,7 +1,6 @@
 /**
  * @file 最低限の定義でVuexの型をType-safeに定義するライブラリ
  */
-/* eslint-disable interface-name */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
 import {

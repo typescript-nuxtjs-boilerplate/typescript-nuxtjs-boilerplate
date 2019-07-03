@@ -32,9 +32,8 @@ export const getTokenFromCookie = (req?: any): string | undefined => {
     console.log('req.headers.cookie:', req.headers.cookie)
     const cookie: string = req.headers.cookie
       .split(';')
-      .find(
-        (c: string): boolean =>
-          c.trim().startsWith(`${ACCESS_TOKEN_COOKIE_NAME}=`)
+      .find((c: string): boolean =>
+        c.trim().startsWith(`${ACCESS_TOKEN_COOKIE_NAME}=`)
       )
 
     if (!cookie) {
