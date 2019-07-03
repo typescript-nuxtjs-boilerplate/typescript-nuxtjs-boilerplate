@@ -12,9 +12,7 @@ module.exports = (req, res, next) => {
 
   if (process.env.BUILD_ENV === 'docker') {
     /** docker のビルド環境の環境変数から値を取ってくる */
-    internalHealthcheckUrl = `${
-      process.env.internalEndpointUrl
-    }${HEALTHCHECK_PATH}`
+    internalHealthcheckUrl = `${process.env.internalEndpointUrl}${HEALTHCHECK_PATH}`
   } else {
     /** docker でビルドされていない場合は、 .env.local から値を取ってくる */
     internalHealthcheckUrl = `http://localhost:5000${HEALTHCHECK_PATH}`

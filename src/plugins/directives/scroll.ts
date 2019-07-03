@@ -11,14 +11,11 @@ import { throttle } from 'throttle-debounce'
 
 export default {
   inserted: (el, binding): void => {
-    const f = throttle(
-      20,
-      (evt): void => {
-        if (binding.value(evt, el)) {
-          window.removeEventListener('scroll', f)
-        }
+    const f = throttle(20, (evt): void => {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f)
       }
-    )
+    })
 
     window.addEventListener('scroll', f)
   }
