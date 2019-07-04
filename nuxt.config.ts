@@ -8,7 +8,18 @@ import routers from './src/routers/'
 
 const pkg = require('./package')
 
-const isProduction = process.env.BUILD_ENV === 'production'
+// const {
+//   NUXT_ENV_GTM_CONTAINER_ID = '',
+//   NUXT_ENV_GTM_AUTH = '',
+//   NUXT_ENV_GTM_PREVIEW = 'env-6',
+//   NUXT_ENV_GTM_COOKIES_WIN = 'x'
+// } = process.env
+// Docker から渡ってくるが Nuxt アプリではなく nuxt.config で必要な環境変数
+const {
+  gtmContainerId = 'GTM-56L94CP',
+  gtmPreview = 'env-6',
+  gtmCookiesWin = 'x'
+} = process.env
 
 const config: NuxtConfiguration = {
   mode: 'universal',
@@ -19,8 +30,11 @@ const config: NuxtConfiguration = {
    * ビルド時に渡される env の値は、ここに記載することで文字列に置換される
    */
   env: {
+    // Nuxt のビルドで必要な環境変数
     NODE_ENV: process.env.NODE_ENV || '',
     BUILD_ENV: process.env.BUILD_ENV || '',
+
+    // Docker から渡ってくる Nuxt アプリで使う環境変数
     envName: process.env.envName || '',
     internalEndpointUrl: process.env.internalEndpointUrl || '',
     externalEndpointUrl: process.env.externalEndpointUrl || ''
@@ -82,7 +96,7 @@ const config: NuxtConfiguration = {
         }
       })
     },
-    extractCSS: isProduction,
+    // extractCSS: isProduction,
 
     // ビルドを爆速にする
     // https://qiita.com/toaru/items/0690a9110c94052bb479
@@ -93,7 +107,7 @@ const config: NuxtConfiguration = {
         compress: {
           // console 系を削除する
           // https://www.lancard.com/blog/2019/04/05/delete_console-log_at_nuxt_build/
-          drop_console: process.env.envName === 'production' // eslint-disable-line @typescript-eslint/camelcase
+          // drop_console: process.env.envName === 'production' // eslint-disable-line @typescript-eslint/camelcase
         }
       }
     }
@@ -166,6 +180,20 @@ const config: NuxtConfiguration = {
     // https://github.com/potato4d/nuxt-client-init-module
     // https://qiita.com/potato4d/items/cc5d8ea24949e86f8a5b
     'nuxt-client-init-module',
+    [
+      '@nuxtjs/google-tag-manager',
+      {
+        id: gtmContainerId,
+        layer: 'dataLayer',
+        pageTracking: false,
+        dev: false,
+        query: {
+          // gtm_auth: NUXT_ENV_GTM_AUTH, // eslint-disable-line @typescript-eslint/camelcase
+          gtm_preview: gtmPreview, // eslint-disable-line @typescript-eslint/camelcase
+          gtm_cookies_win: gtmCookiesWin // eslint-disable-line @typescript-eslint/camelcase
+        }
+      }
+    ],
     // https://github.com/samtgarson/nuxt-env
     [
       'nuxt-env',
