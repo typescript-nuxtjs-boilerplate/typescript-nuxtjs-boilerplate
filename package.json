@@ -50,6 +50,7 @@
     "@lollipop-onl/vuex-typesafe-helper": "^0.2.6",
     "@nuxt/typescript": "^2.8.1",
     "@nuxtjs/axios": "^5.5.4",
+    "@nuxtjs/google-tag-manager": "^2.2.0",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "@nuxtjs/sentry": "^3.0.0",
     "@types/shortid": "^0.0.29",
