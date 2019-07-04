@@ -8,17 +8,10 @@ import routers from './src/routers/'
 
 const pkg = require('./package')
 
-// const {
-//   NUXT_ENV_GTM_CONTAINER_ID = '',
-//   NUXT_ENV_GTM_AUTH = '',
-//   NUXT_ENV_GTM_PREVIEW = 'env-6',
-//   NUXT_ENV_GTM_COOKIES_WIN = 'x'
-// } = process.env
 // Docker から渡ってくるが Nuxt アプリではなく nuxt.config で必要な環境変数
 const {
-  gtmContainerId = 'GTM-56L94CP',
-  gtmPreview = 'env-6',
-  gtmCookiesWin = 'x'
+  // Google Tag Manager
+  gtmContainerId = 'GTM-56L94CP'
 } = process.env
 
 const config: NuxtConfiguration = {
@@ -180,18 +173,15 @@ const config: NuxtConfiguration = {
     // https://github.com/potato4d/nuxt-client-init-module
     // https://qiita.com/potato4d/items/cc5d8ea24949e86f8a5b
     'nuxt-client-init-module',
+    // https://github.com/nuxt-community/modules/tree/master/packages/google-tag-manager
     [
       '@nuxtjs/google-tag-manager',
       {
         id: gtmContainerId,
         layer: 'dataLayer',
         pageTracking: false,
-        dev: false,
-        query: {
-          // gtm_auth: NUXT_ENV_GTM_AUTH, // eslint-disable-line @typescript-eslint/camelcase
-          gtm_preview: gtmPreview, // eslint-disable-line @typescript-eslint/camelcase
-          gtm_cookies_win: gtmCookiesWin // eslint-disable-line @typescript-eslint/camelcase
-        }
+        dev: !gtmContainerId,
+        query: {}
       }
     ],
     // https://github.com/samtgarson/nuxt-env

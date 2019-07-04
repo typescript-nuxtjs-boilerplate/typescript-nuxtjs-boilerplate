@@ -10,7 +10,8 @@ if (process.env.BUILD_ENV === 'docker') {
   Env = {
     envName: process.env.envName,
     internalEndpointUrl: process.env.internalEndpointUrl,
-    externalEndpointUrl: process.env.externalEndpointUrl
+    externalEndpointUrl: process.env.externalEndpointUrl,
+    gtmContainerId: process.env.gtmContainerId
   } as IEnv
 } else {
   /** docker でビルドされていない場合は、 .env.local から値を取ってくる */
