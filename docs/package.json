@@ -6,10 +6,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start": "docsify serve ./",
     "textlint": "textlint --config .textlintrc ./*.md",
     "textlint:fix": "yarn textlint --fix --format diff"
   },
   "dependencies": {
+    "docsify-cli": "^4.3.0",
     "textlint": "^11.2.5",
     "textlint-filter-rule-whitelist": "^2.0.0",
     "textlint-rule-no-todo": "^2.0.1",

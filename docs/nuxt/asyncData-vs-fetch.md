@@ -1,1 +1,0 @@
-[Nuxt.jsのasyncDataとfetchは何が違うのか - Qiita](https://qiita.com/Tsuyoshi84/items/2e47b7f5e7fb8c0c3c66)
