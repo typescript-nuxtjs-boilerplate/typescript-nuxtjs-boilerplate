@@ -73,6 +73,14 @@ $ yarn run build:docker
 $ yarn start
 ```
 
+## Build for production and `SPA mode`
+
+```bash
+$ yarn run build:static
+```
+
+It will be published in the `dist` directory
+
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
 ## :blue_book: Example Links
