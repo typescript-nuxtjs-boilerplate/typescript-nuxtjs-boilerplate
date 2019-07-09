@@ -37,14 +37,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hisasann/typescript-nuxtjs-boilerplate.git"
+    "url": "git+https://github.com/typescript-nuxtjs-boilerplate/typescript-nuxtjs-boilerplate.git"
   },
   "keywords": [
     "nuxt",
     "typescript"
   ],
   "bugs": {
-    "url": "https://github.com/hisasann/typescript-nuxtjs-boilerplate/issues"
+    "url": "https://github.com/typescript-nuxtjs-boilerplate/typescript-nuxtjs-boilerplate/issues"
   },
   "dependencies": {
     "@lollipop-onl/vuex-typesafe-helper": "^0.2.6",

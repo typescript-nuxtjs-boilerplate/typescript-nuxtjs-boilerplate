@@ -13,7 +13,7 @@ example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https:/
 First, clone the repo via git:
 
 ```bash
-$ git clone --recursive git@github.com:hisasann/typescript-nuxtjs-boilerplate.git
+$ git clone --recursive git@github.com:typescript-nuxtjs-boilerplate/typescript-nuxtjs-boilerplate.git
 ```
 
 ### Install yarn
