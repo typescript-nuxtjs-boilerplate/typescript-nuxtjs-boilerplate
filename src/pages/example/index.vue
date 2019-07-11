@@ -67,6 +67,8 @@ section
     nuxt-link(to='/example/server-side-set-cookie', no-prefetch) server-side-set-cookie
   p
     nuxt-link(to='/example/counter', no-prefetch) counter
+  p
+    nuxt-link(to='/example/this-is-undefined', no-prefetch) this-is-undefined
 </template>
 
 <script lang="ts">
