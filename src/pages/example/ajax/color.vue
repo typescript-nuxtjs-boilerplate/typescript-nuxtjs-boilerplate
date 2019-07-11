@@ -18,7 +18,7 @@ import axios from 'axios'
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
-export default class extends Vue {
+export default class Color extends Vue {
   async asyncData() {
     const hex = Math.floor(Math.random() * 16777215).toString(16)
     const { data } = await axios.get(`http://www.thecolorapi.com/id?hex=${hex}`)

@@ -17,7 +17,7 @@ import axios from 'axios'
 import URLSearchParams from '@ungap/url-search-params'
 
 @Component
-export default class extends Vue {
+export default class CustomHttpHeaders extends Vue {
   data: string = ''
 
   async asyncData({ $axios, req }) {
