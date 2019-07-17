@@ -155,6 +155,7 @@ const config: NuxtConfiguration = {
     '@/plugins/libraries/axios.ts',
     '@/plugins/libraries/vue-lazyload.ts',
     '@/plugins/locale/i18n.ts',
+    '@/plugins/libraries/vee-validate.ts',
     { src: '@/plugins/libraries/vue-carousel.ts', ssr: false },
     { src: '@/plugins/libraries/vue-awesome-swiper', mode: 'client' }
   ],
