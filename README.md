@@ -129,6 +129,9 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
   * TypeScript annotation
 - [counter with typesafe](https://typescript-nuxtjs-boilerplate.netlify.com/example/counter)
   * [@lollipop-onl/vuex-typesafe-helper - npm](https://www.npmjs.com/package/@lollipop-onl/vuex-typesafe-helper)
+- [typescript-nuxtjs-boilerplate](https://typescript-nuxtjs-boilerplate.netlify.com/example/this-is-undefined)
+  * [asyncDataとfetch内でのthisについて - typescript-nuxtjs-boilerplate-docs](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/nuxt/about-this-in-asyncdata-and-fetch?id=this%e3%81%8c%e6%9c%9f%e5%be%85%e3%81%a8%e3%81%8a%e3%82%8a%e3%81%ab%e5%8b%95%e3%81%8b%e3%81%aa%e3%81%84%e3%83%91%e3%82%bf%e3%83%bc%e3%83%b3)
+- [vee-validate](https://typescript-nuxtjs-boilerplate.netlify.com/example/vee-validate)
 
 ## 📚 Docs
 
