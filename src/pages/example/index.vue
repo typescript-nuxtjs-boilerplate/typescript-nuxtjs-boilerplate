@@ -69,6 +69,8 @@ section
     nuxt-link(to='/example/counter', no-prefetch) counter
   p
     nuxt-link(to='/example/this-is-undefined', no-prefetch) this-is-undefined
+  p
+    nuxt-link(to='/example/vee-validate', no-prefetch) vee-validate
 </template>
 
 <script lang="ts">
