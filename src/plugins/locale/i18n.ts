@@ -18,6 +18,7 @@ export default ({ app, store }): void => {
     }
   })
 
+  // NOTE: 日本語固定で使うのでコメントアウト
   // app.i18n.path = (link) => {
   //   if (app.i18n.locale === app.i18n.fallbackLocale) {
   //     return `/${link}`
