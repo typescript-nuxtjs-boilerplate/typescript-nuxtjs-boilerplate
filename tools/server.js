@@ -203,5 +203,26 @@ app.post('/login-check', (req, res) => {
   )
 })
 
+/**
+ * get '/status?s=200'
+ */
+app.get('/status/:s', function(req, res) {
+  console.log(req.params)
+  // ゲットしたい http status がない場合はとりあえず 200 を返す
+  if (!req.params.s) {
+    res.status(200).send('ok')
+    return
+  }
+
+  // 200 - 成功
+  if (req.params.s === 200) {
+    res.status(req.params.s).send('ok')
+    return
+  }
+
+  // それ以外のエラー系の http status
+  res.status(req.params.s).send('ng')
+})
+
 const port = 5000
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

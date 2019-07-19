@@ -47,12 +47,12 @@ export default ({ $axios, app, req, error }): void => {
       return
     }
 
-    const { status } = response.response
+    const { status, data } = response.response
 
+    // 401
     if (status === app.$C.HTTP_STATUS.UNAUTHORIZED) {
-      const message = '401 error'
-
-      error({ statusCode: 401, message })
+      const message = app.i18n.t('error.api.status401')
+      error({ statusCode: status, message })
     }
   })
 }
