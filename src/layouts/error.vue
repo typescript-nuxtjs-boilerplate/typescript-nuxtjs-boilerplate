@@ -3,7 +3,9 @@
     h1(v-if='error.statusCode === 404')
       | ページが見つかりません
     h1(v-else='')
-      | エラーが発生しました {{ error.message }}
+      | エラーが発生しました
+    p
+      | {{ error.message }}
     nuxt-link(to='/example')
       | ホーム
 </template>

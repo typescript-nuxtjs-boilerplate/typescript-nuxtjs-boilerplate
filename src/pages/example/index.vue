@@ -71,6 +71,8 @@ section
     nuxt-link(to='/example/this-is-undefined', no-prefetch) this-is-undefined
   p
     nuxt-link(to='/example/vee-validate', no-prefetch) vee-validate
+  p
+    nuxt-link(to='/example/handle-api-error', no-prefetch) handle-api-error
 </template>
 
 <script lang="ts">
