@@ -64,6 +64,7 @@
     "express": "^4.17.1",
     "js-cookie": "^2.2.0",
     "moment": "^2.24.0",
+    "node-log-rotate": "^0.0.11",
     "nuxt": "^2.8.1",
     "nuxt-client-init-module": "^0.1.4",
     "nuxt-env": "^0.1.0",

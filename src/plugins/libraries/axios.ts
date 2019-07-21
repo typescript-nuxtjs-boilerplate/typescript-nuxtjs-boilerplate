@@ -6,7 +6,7 @@ import { AxiosError, AxiosRequestConfig } from 'axios'
 import Vue from 'vue'
 import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
 
-export default ({ $axios, app, req, error }): void => {
+export default ({ $axios, $log, app, req, error }): void => {
   /**
    * $axios.onRequest
    */
@@ -25,6 +25,8 @@ export default ({ $axios, app, req, error }): void => {
    */
   $axios.onResponse((response): void => {
     const token = response.headers[app.$C.ACCESS_TOKEN_NAME]
+    const { status, statusText, config, data } = response
+
     console.log('$axios.onResponse', token)
 
     // CSR のときだけトークンをセットする、 SSR のときは nuxtClientInit でセットしている
@@ -34,6 +36,11 @@ export default ({ $axios, app, req, error }): void => {
       } else {
         unsetToken()
       }
+    }
+
+    // SSR 時だけ log を実行する
+    if (process.server) {
+      $log(`${config.url}:${status}`)
     }
   })
 
@@ -47,7 +54,12 @@ export default ({ $axios, app, req, error }): void => {
       return
     }
 
-    const { status, data } = response.response
+    const { status, statusText, config } = response.response
+
+    // SSR 時だけ log を実行する
+    if (process.server) {
+      $log(`${config.url}:${status}`)
+    }
 
     // 401
     if (status === app.$C.HTTP_STATUS.UNAUTHORIZED) {
