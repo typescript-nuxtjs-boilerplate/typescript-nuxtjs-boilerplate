@@ -157,12 +157,13 @@ const config: NuxtConfiguration = {
   plugins: [
     '@/plugins/constants-inject.ts',
     '@/plugins/env-inject.ts',
-    '@/plugins/libraries/axios.ts',
     '@/plugins/libraries/vue-lazyload.ts',
     '@/plugins/locale/i18n.ts',
     '@/plugins/libraries/vee-validate.ts',
-    { src: '@/plugins/libraries/vue-carousel.ts', ssr: false },
-    { src: '@/plugins/libraries/vue-awesome-swiper', mode: 'client' }
+    { src: '@/plugins/libraries/node-log-rotate.ts', mode: 'server' },
+    { src: '@/plugins/libraries/vue-carousel.ts', mode: 'client' },
+    { src: '@/plugins/libraries/vue-awesome-swiper', mode: 'client' },
+    '@/plugins/libraries/axios.ts'
   ],
 
   /*
