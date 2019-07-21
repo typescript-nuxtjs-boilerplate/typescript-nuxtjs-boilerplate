@@ -88,6 +88,11 @@ const config: NuxtConfiguration = {
           name: '[path][name].[ext]'
         }
       })
+
+      // https://github.com/nuxt-community/dotenv-module/issues/11
+      config.node = {
+        fs: 'empty'
+      }
     },
     // extractCSS: isProduction,
 
