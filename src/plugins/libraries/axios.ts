@@ -6,7 +6,9 @@ import { AxiosError, AxiosRequestConfig } from 'axios'
 import Vue from 'vue'
 import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
 
-export default ({ $axios, $log, app, req, error }): void => {
+export default ({ $axios, $log, $simple, app, req, error }): void => {
+  $simple.simpleFunction()
+
   /**
    * $axios.onRequest
    */
