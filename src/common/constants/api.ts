@@ -46,3 +46,6 @@ export const HTTP_STATUS = {
   /** サービス利用不可 */
   SERVICE_UNAVAILABLE: 503
 }
+
+/** http タイムアウト ms */
+export const TIMEOUT = 100000

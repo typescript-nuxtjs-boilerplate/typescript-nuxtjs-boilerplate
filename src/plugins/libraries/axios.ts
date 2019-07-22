@@ -5,6 +5,7 @@
 import { AxiosError, AxiosRequestConfig } from 'axios'
 import Vue from 'vue'
 import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
+import { TIMEOUT } from '@/common/constants/'
 
 export default ({ $axios, $log, $simple, app, req, error }): void => {
   $simple.simpleFunction()
@@ -13,6 +14,9 @@ export default ({ $axios, $log, $simple, app, req, error }): void => {
    * $axios.onRequest
    */
   $axios.onRequest((config: AxiosRequestConfig): void => {
+    // Timeout
+    config.timeout = TIMEOUT
+
     const token = getTokenFromCookie(req)
     console.log('$axios.onRequest', token)
 
