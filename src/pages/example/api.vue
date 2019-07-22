@@ -53,6 +53,10 @@ export default class Api extends Vue {
     await store.dispatch('api/fetchApi', {
       hoge: 'foo'
     })
+
+    if (process.client) {
+      window.alert('fetchApi is done')
+    }
   }
   public async created() {
     await console.log('created')

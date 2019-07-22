@@ -85,7 +85,6 @@ export const actions = {
         } as AxiosRequestConfig // https://github.com/axios/axios/blob/master/index.d.ts
       )
       console.log('apiResult:', apiResult)
-      alert('fetchApi is done')
 
       // 値をストアに保存
       commit('saveApiResult', apiResult)
