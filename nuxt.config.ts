@@ -219,10 +219,8 @@ const config: NuxtConfiguration = {
   router: {
     // リロードのタイミングでは SSR 側で実行される
     // ルーティングの度に CSR 側で実行される
-    // ログインの必要のない画面でも middleware が実行されるので注意が必要
-    // middleware: 'check-auth',
-
-    middleware: 'i18n',
+    // check-auth のような middleware を作る場合は、ログインの必要のない画面でも middleware が実行されるので注意が必要
+    middleware: ['i18n', 'check-router'],
 
     extendRoutes(routes: any, resolve: any): void {
       // https://ja.nuxtjs.org/api/configuration-router/#extendroutes
