@@ -73,6 +73,8 @@ section
     nuxt-link(to='/example/vee-validate', no-prefetch) vee-validate
   p
     nuxt-link(to='/example/handle-api-error', no-prefetch) handle-api-error
+  p
+    nuxt-link(to='/example/nested-component', no-prefetch) nested-component
 </template>
 
 <script lang="ts">
