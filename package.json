@@ -6,6 +6,7 @@
   "scripts": {
     "local": "npm run dev",
     "dev": "cross-env NODE_ENV=development BUILD_ENV=local nuxt",
+    "dev:markup": "cross-env NODE_ENV=development BUILD_ENV=local nuxt --spa",
     "build": "nuxt build --no-lock",
     "build:static": "nuxt build --spa --no-lock",
     "build:local": "cross-env NODE_ENV=production BUILD_ENV=local envName=local nuxt build --no-lock",
