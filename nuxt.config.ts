@@ -4,6 +4,7 @@ import {
   Options as WebpackOptions,
   Plugin as WebpackPlugin
 } from 'webpack'
+import StyleLintPlugin from 'stylelint-webpack-plugin'
 import routers from './src/routers/'
 
 const pkg = require('./package')
@@ -94,6 +95,17 @@ const config: NuxtConfiguration = {
         fs: 'empty'
       }
     },
+
+    // Additional Webpack Plugins
+    plugins: [
+      new StyleLintPlugin({
+        files: ['src/**/*.vue', 'src/**/*.scss'],
+        configFile: '.stylelintrc.js',
+        emitErrors: false,
+        syntax: 'scss'
+      })
+    ],
+
     // extractCSS: isProduction,
 
     // ビルドを爆速にする
