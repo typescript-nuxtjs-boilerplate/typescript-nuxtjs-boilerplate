@@ -130,6 +130,7 @@ app.get('/healthcheck', function(req, res) {
  */
 app.post('/login', (req, res) => {
   const body = req.body
+  console.log(body.username, body.password)
 
   if (!(body.username === 'demo' && body.password === 'password')) {
     console.log('login failed')

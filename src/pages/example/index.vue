@@ -86,6 +86,7 @@ export default class extends Vue {
   get isServerInitCalled(): StateInterface {
     return this.$store.getters['isServerInitCalled']
   }
+
   get isClientInitCalled(): StateInterface {
     return this.$store.getters['isClientInitCalled']
   }

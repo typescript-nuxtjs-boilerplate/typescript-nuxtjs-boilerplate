@@ -7,6 +7,7 @@ import {
 } from '@/interfaces/api/User/ILoginCheck'
 import { ILogoutPayload, ILogout } from '@/interfaces/api/User/ILogout'
 import { cancelToken } from '@/utilities/'
+import { AxiosAction } from '@/interfaces/app/vuex'
 
 /**
  * store 用インターフェイス
@@ -110,9 +111,11 @@ export const actions = {
   async login(
     this: Vue,
     { state, commit }: any,
-    payload: ILoginPayload
+    payload: AxiosAction<ILoginPayload> = {} as any
   ): Promise<IUser | void> {
     console.log('login payload:', payload)
+    const { key = Symbol('login'), data } = payload
+    const payloadData = data
 
     // ログイン中、またはすでにログイン済みなら処理を抜ける
     if (state.busy.login || state.loggedIn) {
@@ -127,11 +130,11 @@ export const actions = {
       const { data, headers } = await this.$axios.post<IUser>(
         this.$C.API_ENDPOINT.LOGIN,
         {
-          username: payload.username,
-          password: payload.password
+          username: payloadData.username,
+          password: payloadData.password
         },
         {
-          cancelToken: cancelToken.getToken(payload)
+          cancelToken: cancelToken.getToken(key)
         } as AxiosRequestConfig
       )
       const token = headers[this.$C.ACCESS_TOKEN_NAME]
@@ -144,8 +147,6 @@ export const actions = {
       commit('SET_USER', data)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['login', false])
     }
@@ -160,9 +161,11 @@ export const actions = {
   async logout(
     this: Vue,
     { state, commit }: any,
-    payload: ILogoutPayload
+    payload: AxiosAction<ILoginPayload> = {} as any
   ): Promise<ILogout | void> {
     console.log('logout')
+    const { key = Symbol('logout'), data } = payload
+    const payloadData = data
 
     // 処理中、未ログインなら中断
     if (state.busy.logout) {
@@ -186,8 +189,6 @@ export const actions = {
       commit('updateLoginToken', null)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['logout', false])
     }
@@ -202,9 +203,11 @@ export const actions = {
   async loginCheck(
     this: Vue,
     { state, commit }: any,
-    payload: ILoginCheckPayload
+    payload: AxiosAction<ILoginPayload> = {} as any
   ): Promise<ILoginCheck | void> {
     console.log('loginCheck', payload)
+    const { key = Symbol('loginCheck'), data } = payload
+    const payloadData = data
 
     commit('updateBusyStatus', ['loginCheck', true])
 
@@ -224,8 +227,6 @@ export const actions = {
       commit('updateLoginToken', token)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['loginCheck', false])
     }

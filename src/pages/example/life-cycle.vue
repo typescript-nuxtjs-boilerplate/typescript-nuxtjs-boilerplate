@@ -25,11 +25,17 @@ export default class LifeCycle extends Vue {
   }
 
   public asyncDataMessage: string = ''
+
   public beforeCreateMessage: string = ''
+
   public createdMessage: string = ''
+
   public beforeMountMessage: string = ''
+
   public mountMessage: string = ''
+
   public beforeDestroyMessage: string = ''
+
   public destroyedMessage: string = ''
 
   // asyncData では return で data を返す必要がある
@@ -63,6 +69,7 @@ export default class LifeCycle extends Vue {
     console.log('beforeCreate')
     this.beforeCreateMessage = 'beforeCreateMessage'
   }
+
   // created では $el はまだ使えない
   public async created() {
     console.log('created')
@@ -82,16 +89,19 @@ export default class LifeCycle extends Vue {
     console.log('beforeMount')
     this.beforeMountMessage = 'beforeMountMessage'
   }
+
   // mounted では $el は使える
   public mounted() {
     console.log('mounted')
     this.mountMessage = 'mountMessage'
     console.log('mounted $el:', this.$el)
   }
+
   public beforeDestroy() {
     console.log('beforeDestroy')
     this.beforeDestroyMessage = 'beforeDestroyMessage'
   }
+
   public destroyed() {
     console.log('destroyed')
     this.destroyedMessage = 'destroyedMessage'

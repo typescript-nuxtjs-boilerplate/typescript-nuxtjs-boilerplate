@@ -5,17 +5,19 @@ section
   )
     p(v-show="errors.has('email') | errors.has('password')") メールアドレス、またはパスワードに誤りがあります。
 
+    p {{ errors.first('email') }}
     p
       |
       input(
         type="email"
         name="email"
-        v-validate="'required|email'"
+        v-validate="'required'"
         data-vv-as="メールアドレス"
         placeholder="メールアドレスを入力"
         v-model="mailAddressData"
       )
 
+    p {{ errors.first('password') }}
     p
       |
       input(
@@ -60,7 +62,7 @@ export default class InputForm extends Vue {
 
   public updated() {
     console.log('updated', this.mailAddressData, this.passwordData)
-    this.$emit('update:mailAddress', this.mailAddressData)
+    this.$emit('update:email', this.mailAddressData)
     this.$emit('update:password', this.passwordData)
   }
 
