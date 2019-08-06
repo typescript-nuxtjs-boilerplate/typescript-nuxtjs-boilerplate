@@ -87,6 +87,10 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 [サンプル集 - typescript-nuxtjs-boilerplate-docs](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/nuxt/examples)
 
+## 🖥 npm-scripts
+
+[npm scriptsの解説 - typescript-nuxtjs-boilerplate-docs](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/nuxt/npm-scripts)
+
 ## 📚 Docs
 
 See our [docs and guides here](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/)
@@ -101,28 +105,3 @@ MIT © [hisasann](https://github.com/hisasann)
 
 <a href="https://twitter.com/hisasann"><img src="https://badgen.net/twitter/follow/hisasann" alt="twitter"></a>
 
-## 🖥 npm-scripts
-
-|Script|Summary|
-|:---:|:---:|
-|`local`|`npm run dev`のエイリアス|
-|`dev`|Nuxtの開発サーバーを起動する|
-|`dev:markup`|マークアップ向けにSPAモードで開発サーバーを起動する|
-|`build`|Universalモードとしてビルドする|
-|`build:static`|静的サイトとしてビルドする|
-|`build:local`|ローカル向けにビルドする|
-|`build:docker`|Docker向けにビルドする|
-|`start`|ビルドされたNuxtアプリを起動する|
-|`lint`|ESLintのフォーマットチェックを実行する|
-|`lintfix`|ESLintのチェック＋自動修正|
-|`precommit`|コミット前に実行する処理|
-|`test`|Jestのテストを実行する|
-|`clean:cache`|Nuxtのキャッシュを削除する|
-|`storybook`|Storybookを起動する|
-|`analyze`|ビルドファイルを解析する|
-|`docker`|Docker関連|
-|`docker:clean`|Docker関連|
-|`container-prune`|Docker関連|
-|`image-prune`|Docker関連|
-|`system-prune`|Docker関連|
-|`stats`|Docker関連|
