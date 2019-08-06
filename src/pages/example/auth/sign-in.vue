@@ -47,6 +47,7 @@ export default class SignIn extends Vue {
   }
 
   public username: string = ''
+
   public password: string = ''
 
   public async login() {

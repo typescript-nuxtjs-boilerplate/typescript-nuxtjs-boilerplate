@@ -17,6 +17,7 @@ import axios from 'axios'
 @Component
 export default class UserAgent extends Vue {
   message: string = ''
+
   data: string = ''
 
   async asyncData(context) {

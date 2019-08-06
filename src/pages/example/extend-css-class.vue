@@ -15,6 +15,7 @@ export default class Include extends Vue {
   beforeCreate() {
     console.log('beforeCreate')
   }
+
   created() {
     console.log('created')
   }

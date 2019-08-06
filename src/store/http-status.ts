@@ -30,11 +30,6 @@ export const actions = {
     { state, commit }: any,
     payload
   ): Promise<void> {
-    try {
-      await this.$axios.$get(`http://localhost:5000/status/${payload}`)
-    } catch (err) {
-      // err オブジェクトはそのまま上位に throw する
-      throw err
-    }
+    await this.$axios.$get(`http://localhost:5000/status/${payload}`)
   }
 }

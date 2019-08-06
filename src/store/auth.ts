@@ -147,8 +147,6 @@ export const actions = {
       commit('SET_USER', data)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['login', false])
     }
@@ -191,8 +189,6 @@ export const actions = {
       commit('updateLoginToken', null)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['logout', false])
     }
@@ -231,8 +227,6 @@ export const actions = {
       commit('updateLoginToken', token)
 
       return data
-    } catch (err) {
-      throw err
     } finally {
       commit('updateBusyStatus', ['loginCheck', false])
     }

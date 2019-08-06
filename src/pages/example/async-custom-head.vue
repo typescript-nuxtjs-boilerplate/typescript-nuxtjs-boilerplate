@@ -10,6 +10,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 @Component
 export default class extends Vue {
   public title: string = ''
+
   public content: string = ''
 
   public asyncData() {
@@ -17,6 +18,7 @@ export default class extends Vue {
       content: 'from asyncData'
     }
   }
+
   public data() {
     return {
       title: 'async-custom-head'

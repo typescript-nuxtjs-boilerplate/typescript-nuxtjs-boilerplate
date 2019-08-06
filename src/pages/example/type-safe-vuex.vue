@@ -23,10 +23,13 @@ import { sleep } from '@/utilities/'
 export default class extends Vue {
   @typeSafeVuexNS.State('typeSafeState')
   public typeSafeState: ITypeSafeVuexState['typeSafeState']
+
   @typeSafeVuexNS.Getter('typeSafeGetter')
   public typeSafeGetter: ITypeSafeVuexGetters['typeSafeGetter']
+
   @typeSafeVuexNS.Mutation('setTypeSafe')
   public setTypeSafe: ITypeSafeVuexMutations['setTypeSafe']
+
   @typeSafeVuexNS.Action('typeSafeAction')
   public typeSafeAction: ITypeSafeVuexActions['typeSafeAction']
 

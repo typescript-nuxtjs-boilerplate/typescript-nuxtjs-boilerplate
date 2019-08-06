@@ -48,6 +48,7 @@ export default class Api extends Vue {
   get result(): ApiInterface {
     return this.$store.getters['api/getResult']
   }
+
   // @ts-ignore
   public async fetch({ store, params, error }: any): Promise<void> {
     await store.dispatch('api/fetchApi', {
@@ -58,10 +59,12 @@ export default class Api extends Vue {
       window.alert('fetchApi is done')
     }
   }
+
   public async created() {
     await console.log('created')
     // await this.$store.dispatch('api/fetchApi', this.payload)
   }
+
   public beforeDestroy(): void {
     // リクエストをキャンセル
     // https://qiita.com/yumaeda/items/6e386172edf9beba6041

@@ -57,6 +57,7 @@ export default class InputForm extends Vue {
   public password: string
 
   public mailAddressData: string = ''
+
   public passwordData: string = ''
 
   public updated() {

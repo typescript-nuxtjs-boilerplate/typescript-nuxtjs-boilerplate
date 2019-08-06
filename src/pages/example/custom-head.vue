@@ -10,6 +10,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 @Component
 export default class extends Vue {
   public title: string = ''
+
   public data() {
     return {
       title: 'custom-head'

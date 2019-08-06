@@ -18,6 +18,7 @@ type InputType = 'click'
 export default class ChildComponent extends Vue {
   @Prop({ type: String, required: true })
   public type: InputType
+
   @Prop({ type: String, required: true })
   public value: string
 
