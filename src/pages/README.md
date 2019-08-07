@@ -1,6 +1,26 @@
 # PAGES
 
-This directory contains your Application Views and Routes.
-The framework reads all the `*.vue` files inside this directory and creates the router of your application.
+Nuxtでのルーティングについて: https://ja.nuxtjs.org/guide/routing/
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/routing).
+アプリケーション内でのリンクを表現する場合には`a`タグではなく`nuxt-link`コンポーネントを使用してください。
+
+（`nuxt-link`のエイリアスに`n-link`コンポーネントがありますが、当プロジェクトでは`nuxt-link`コンポーネントを使用してください）
+
+## Template
+
+```vue
+<template lang="pug">
+
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class IndexPage extends Vue {}
+</script>
+
+<style lang="scss" scoped></style>
+```
+
+ページコンポーネントのクラス名は`XxxxPage`のようにサフィックスに`Page`とつくパスカルケースにしてください。
