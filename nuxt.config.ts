@@ -248,7 +248,12 @@ const config: NuxtConfiguration = {
    * Sass の @extend を使う場合はこのパスの scss ファイルに CSS クラスを書く
    */
   styleResources: {
-    scss: ['@/assets/styles/components/**/*.scss']
+    scss: [
+      '@/assets/styles/vars/**/*.scss',
+      '@/assets/styles/helpers/**/*.scss',
+      '@/assets/styles/mixins/**/*.scss',
+      '@/assets/styles/components/**/*.scss'
+    ]
   },
 
   /**
