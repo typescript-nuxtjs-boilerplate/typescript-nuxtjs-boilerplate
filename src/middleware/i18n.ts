@@ -25,7 +25,7 @@ export default function({
 
   // Get locale from params
   const locale = params.lang || defaultLocale
-  if (store.state.i18n.locales.indexOf(locale) === -1) {
+  if (!store.state.i18n.locales.includes(locale)) {
     return error({ message: 'This page could not be found.', statusCode: 404 })
   }
   // Set locale

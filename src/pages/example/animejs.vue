@@ -16,10 +16,10 @@ export default class extends Vue {
     anime({
       targets: this.$refs.anime,
       translateX: 250,
-      begin: function(anim) {
+      begin: anim => {
         console.log('began : ' + anim.began)
       },
-      complete: function(anim) {
+      complete: anim => {
         console.log('completed : ' + anim.completed)
       }
     })

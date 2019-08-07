@@ -18,7 +18,7 @@ export const mutations = {
   add(state: StateInterface, text: string): void {
     state.list.push({
       id: counter++,
-      text: text,
+      text,
       done: false
     })
   },
