@@ -49,7 +49,7 @@
     "url": "https://github.com/typescript-nuxtjs-boilerplate/typescript-nuxtjs-boilerplate/issues"
   },
   "dependencies": {
-    "@lollipop-onl/vuex-typesafe-helper": "^0.2.7",
+    "@lollipop-onl/vuex-typesafe-helper": "^0.2.8",
     "@nuxt/typescript": "^2.8.1",
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/google-tag-manager": "^2.2.1",
