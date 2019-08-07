@@ -83,5 +83,8 @@ dist
 # Service worker
 sw.*
 
+# git submodule directory
+src/include/
+
 /.settings/
 /.project
