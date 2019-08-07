@@ -15,5 +15,11 @@ export default class Sample extends Vue {
       foo: this.foo
     }
   }
+
+  public head() {
+    return {
+      title: 'this-is-undefined-in-asyncData-and-fetch'
+    }
+  }
 }
 </script>
