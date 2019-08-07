@@ -28,6 +28,11 @@ $ brew install yarn
 
 **for windows**  
 
+```sh
+# for Windows (with Chocolatey)
+$ choco install yarn
+```
+
 [Use installer](https://yarnpkg.com/lang/en/docs/install/#windows-tab)
 
 ### Install dependencies
