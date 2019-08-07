@@ -6,9 +6,11 @@ example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https:/
 
 ---
 
-## 💾 Install
+## ⛑ Requirements
 
-**Note: requires node version >= 8.10.0 and npm version >= 5.6.0**
+* Node.js v10+
+
+## 💾 Install
 
 First, clone the repo via git:
 
