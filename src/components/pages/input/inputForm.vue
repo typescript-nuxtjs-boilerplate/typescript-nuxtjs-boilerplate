@@ -56,9 +56,9 @@ export default class InputForm extends Vue {
   @Prop({ type: String, required: true })
   public password: string
 
-  public mailAddressData: string = ''
+  public mailAddressData = ''
 
-  public passwordData: string = ''
+  public passwordData = ''
 
   public updated() {
     console.log('updated', this.mailAddressData, this.passwordData)
@@ -73,7 +73,7 @@ export default class InputForm extends Vue {
   }
 
   @Emit('login')
-  public async handleLogin(e) {}
+  public handleLogin(e) {}
 }
 </script>
 

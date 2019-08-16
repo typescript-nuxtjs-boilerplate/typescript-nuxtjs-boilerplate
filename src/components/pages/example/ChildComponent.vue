@@ -22,7 +22,7 @@ export default class ChildComponent extends Vue {
   @Prop({ type: String, required: true })
   public value: string
 
-  public counter: number = 0
+  public counter = 0
 
   @Emit('child-click')
   public handleChildClick(e) {

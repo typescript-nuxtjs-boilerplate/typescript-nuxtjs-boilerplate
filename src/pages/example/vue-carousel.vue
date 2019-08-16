@@ -23,9 +23,9 @@ import Slide from 'vue-carousel/src/Slide.vue'
   }
 })
 export default class extends Vue {
-  public loopCounter: number = 10
+  public loopCounter = 10
 
-  public clickCounter: string = ''
+  public clickCounter = ''
 
   public handleSlideClick(dataset) {
     console.log(dataset.index)

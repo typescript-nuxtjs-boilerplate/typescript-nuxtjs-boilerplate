@@ -11,7 +11,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class UsePlugin extends Vue {
-  public c: string = 'a'
+  public c = 'a'
 
   public asyncData(context) {
     console.log(context.app.$C)

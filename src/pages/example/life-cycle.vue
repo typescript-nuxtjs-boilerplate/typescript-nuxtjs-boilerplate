@@ -24,19 +24,19 @@ export default class LifeCycle extends Vue {
     hoge: 'foo'
   }
 
-  public asyncDataMessage: string = ''
+  public asyncDataMessage = ''
 
-  public beforeCreateMessage: string = ''
+  public beforeCreateMessage = ''
 
-  public createdMessage: string = ''
+  public createdMessage = ''
 
-  public beforeMountMessage: string = ''
+  public beforeMountMessage = ''
 
-  public mountMessage: string = ''
+  public mountMessage = ''
 
-  public beforeDestroyMessage: string = ''
+  public beforeDestroyMessage = ''
 
-  public destroyedMessage: string = ''
+  public destroyedMessage = ''
 
   // asyncData では return で data を返す必要がある
   // 逆にいうとこれ以外で vue に反映できない

@@ -10,7 +10,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Include extends Vue {
-  message: string = 'hello include!'
+  message = 'hello include!'
 
   beforeCreate() {
     console.log('beforeCreate')

@@ -9,7 +9,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class extends Vue {
-  public title: string = ''
+  public title = ''
 
   public data() {
     return {

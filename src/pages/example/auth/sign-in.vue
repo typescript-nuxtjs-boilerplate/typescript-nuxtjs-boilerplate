@@ -46,9 +46,9 @@ export default class SignIn extends Vue {
     logout: cancelToken.create(Symbol('logout'))
   }
 
-  public username: string = ''
+  public username = ''
 
-  public password: string = ''
+  public password = ''
 
   public async login() {
     const isValidForm = await this.$validator.validateAll()

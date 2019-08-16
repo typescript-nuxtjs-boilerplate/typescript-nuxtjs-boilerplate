@@ -18,7 +18,7 @@ import URLSearchParams from '@ungap/url-search-params'
 
 @Component
 export default class CustomHttpHeaders extends Vue {
-  data: string = ''
+  data = ''
 
   async asyncData({ $axios, req }) {
     $axios.defaults.headers.post['post-header'] = 'post-header1' // for POST requests

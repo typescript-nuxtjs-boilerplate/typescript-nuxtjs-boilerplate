@@ -8,7 +8,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Sample extends Vue {
-  private foo: string = 'foo'
+  private foo = 'foo'
 
   asyncData() {
     return {

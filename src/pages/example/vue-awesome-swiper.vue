@@ -34,7 +34,7 @@ export default class VueAwesomeSwiper extends Vue {
     require('@/assets/images/lemon-sour.small.jpg')
   ]
 
-  public activeIndex: number = 0
+  public activeIndex = 0
 
   /** コンポーネントのID */
   public componentId: string = shortid.generate()
