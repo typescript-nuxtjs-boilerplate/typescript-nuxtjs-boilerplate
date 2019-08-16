@@ -1,5 +1,5 @@
 # specify the node base image with your desired version node:<version>
-FROM node:8.10.0
+FROM node:8.16.1
 
 MAINTAINER hisasann
 
