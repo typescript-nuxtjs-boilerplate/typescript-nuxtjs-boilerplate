@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>static html</title>
+</head>
+<body>
+
+<h1>static html</h1>
+
+<h2>static image</h2>
+
+<p><img src="./lemon-sour.static.jpg" alt="" /></p>
+
+<h2>assets image</h2>
+
+`assets` 配下は webpack でバンドルされるため、事前にパスがわからない
+
+よって、 static 配下では、 `static` 用の画像用ディレクトリを作るのがよい
+<!--<p><img src="~/assets/images/lemon-sour.small.jpg" alt="" /></p>-->
+
+</body>
+</html>

@@ -75,6 +75,8 @@ section
     nuxt-link(to='/example/handle-api-error', no-prefetch) handle-api-error
   p
     nuxt-link(to='/example/nested-component', no-prefetch) nested-component
+  p
+    a(href='/static-html') static html
 </template>
 
 <script lang="ts">
