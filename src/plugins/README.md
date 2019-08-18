@@ -1,4 +1,4 @@
 # PLUGINS
 
-各種Nuxt/Vue Pluginを配置する。
+各種 Nuxt/Vue Plugin を配置する。
 

@@ -4,9 +4,9 @@
 
 ## `/styles`
 
-Sassのグローバルのスタイルや変数、Mixinを配置します。
+Sass のグローバルのスタイルや変数、Mixin を配置します。
 
-以下の`base`以外のディレクトリに置いたファイルはすべてのVueファイルで使用できるようになります。
+以下の `base` 以外のディレクトリに置いたファイルはすべての Vue ファイルで使用できるようになります。
 
 ```yml
 styles:
@@ -17,18 +17,18 @@ styles:
   - vars: Sassの変数
 ```
 
-なお、`mixins`では`vars`と`helpers`の内容が、`components`ではそれ以外の内容が使用できます。
+なお、`mixins`では `vars` と `helpers` の内容が、`components`ではそれ以外の内容が使用できます。
 
 ### RSCSS
 
-RSCSSはクラス名を短く書くことのできるクラス命名規則です。
-RSCSSについては以下の記事で解説しています。
+RSCSS はクラス名を短く書くことのできるクラス命名規則です。
+RSCSS については以下の記事で解説しています。
 
 > [[BEM to RSCSS] Quick Migration Guide (日本語)](https://qiita.com/simochee/items/3e537f530ca94ce6fb3a)
 
 #### Lintにはない注意点
 
-##### Componentのクラスは`&`でネストさせない
+##### Componentのクラスは `&` でネストさせない
 
 ```scss
 // ✘ NG
@@ -54,7 +54,7 @@ RSCSSについては以下の記事で解説しています。
 }
 ```
 
-##### Elementのはじめに`&`を書かない
+##### Elementのはじめに `&` を書かない
 
 ```scss
 // ✘ NG
