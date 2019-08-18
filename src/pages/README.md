@@ -1,10 +1,10 @@
 # PAGES
 
-Nuxtでのルーティングについて: https://ja.nuxtjs.org/guide/routing/
+Nuxt でのルーティングについて: https://ja.nuxtjs.org/guide/routing/
 
-アプリケーション内でのリンクを表現する場合には`a`タグではなく`nuxt-link`コンポーネントを使用してください。
+アプリケーション内でのリンクを表現する場合には `a` タグではなく `nuxt-link` コンポーネントを使用してください。
 
-（`nuxt-link`のエイリアスに`n-link`コンポーネントがありますが、当プロジェクトでは`nuxt-link`コンポーネントを使用してください）
+（`nuxt-link`のエイリアスに `n-link` コンポーネントがありますが、当プロジェクトでは `nuxt-link` コンポーネントを使用してください）
 
 ## Template
 
@@ -23,4 +23,4 @@ export default class IndexPage extends Vue {}
 <style lang="scss" scoped></style>
 ```
 
-ページコンポーネントのクラス名は`XxxxPage`のようにサフィックスに`Page`とつくパスカルケースにしてください。
+ページコンポーネントのクラス名は `XxxxPage` のようにサフィックスに `Page` とつくパスカルケースにしてください。

@@ -2,7 +2,7 @@
 
 ## `vuex-typesafe-helper`について
 
-Vuexを型安全に使用するために、各Storeでは型定義をお願いします。
+Vuex を型安全に使用するために、各 Store では型定義をお願いします。
 
 **Q. なんでこんなめんどいことするの？**
 
@@ -10,8 +10,8 @@ A. ストアのファイル名とか引数のプロパティの変更とかの�
 
 ### `State`
 
-`IState`インターフェースに各Stateの取りうる型を指定してください。
-Optionalパラメータ（`?`付きパラメータ）でない場合、`state`宣言時に初期値を指定する必要があります。
+`IState`インターフェースに各 State の取りうる型を指定してください。
+Optional パラメータ（`?`付きパラメータ）でない場合、`state`宣言時に初期値を指定する必要があります。
 
 ```ts
 export interface IState {
@@ -32,7 +32,7 @@ export const state = (): IState => ({
 
 ### `Getters`
 
-`getters`では返り値を必ず定義してください。また、`state`には必ず`IState`を型に設定してください。
+`getters`では返り値を必ず定義してください。また、`state`には必ず `IState` を型に設定してください。
 
 ```ts
 export const getters = {
@@ -43,7 +43,7 @@ export const getters = {
 };
 ```
 
-さらに、`Getters`として型を定義してください。`Convertor`ではGetter名とモジュール名の紐付けを行います。
+さらに、`Getters`として型を定義してください。`Convertor`では Getter 名とモジュール名の紐付けを行います。
 
 ```ts
 // store/counter.ts
@@ -59,7 +59,7 @@ export type Getters = Convertor<typeof getters, {
 
 ### `Mutations`
 
-`mutations`では第２引数がある場合は必ず型を定義してください。また、返り値は必ず`void`にしてください。
+`mutations`では第2引数がある場合は必ず型を定義してください。また、返り値は必ず `void` にしてください。
 
 ```ts
 export const mutations = {
@@ -74,7 +74,7 @@ export const mutations = {
 };
 ```
 
-さらに、`Mutations`として型を定義してください。`Convertor`はMutationの名前とモジュール名の紐付けを行います。
+さらに、`Mutations`として型を定義してください。`Convertor`は Mutation の名前とモジュール名の紐付けを行います。
 
 ```ts
 // store/counter.ts
@@ -90,9 +90,9 @@ export type Mutations = Convertor<typeof mutations, {
 
 ### `Actions`
 
-Actionsでは第１引数としてストアのコンテキストを受け取ります。コンテキストは`DefineActionContext`から行います。
+Actions では第1引数としてストアのコンテキストを受け取ります。コンテキストは `DefineActionContext` から行います。
 
-StateのインターフェースとGetters、Mutationsの値をそのまま指定します。定義されていない場合は`never`を指定してください。
+State のインターフェースと Getters、Mutations の値をそのまま指定します。定義されていない場合は `never` を指定してください。
 
 ```ts
 export type Ctx = DefineActionsContext<IState, typeof getters, typeof mutations>;
@@ -101,7 +101,7 @@ export type Ctx = DefineActionsContext<IState, typeof getters, typeof mutations>
 export type Ctx = DefineActionsContext<IState, never, typeof mutations>;
 ```
 
-`actions`では、第２引数と返り値の型を必ず定義してください。
+`actions`では、第2引数と返り値の型を必ず定義してください。
 
 ```ts
 export type Ctx = DefineActionsContext<IState, typeof getters, typeof mutations>;
@@ -116,7 +116,7 @@ export const actions = {
 };
 ```
 
-さらに、`Actions`として型を定義してください。`Convertor`はActionの名前とモジュール名の紐付けを行います。
+さらに、`Actions`として型を定義してください。`Convertor`は Action の名前とモジュール名の紐付けを行います。
 
 ```ts
 // store/counter.ts
@@ -134,11 +134,11 @@ export type Actions = Convertor<typeof actions, {
 
 ### ストアモジュールの型を定義する
 
-最後に、`DefineStoreModule`を用いて`Store`としてストアモジュール全体の型定義を行います。
+最後に、`DefineStoreModule`を用いて `Store` としてストアモジュール全体の型定義を行います。
 
-`DefineStoreModule`の第１引数にモジュール名を、それ以降はStateのインターフェース、Convertした各型を指定してください。
+`DefineStoreModule`の第1引数にモジュール名を、それ以降は State のインターフェース、Convert した各型を指定してください。
 
-定義していない型の場合は`never`を指定してください。
+定義していない型の場合は `never` を指定してください。
 
 ```ts
 // store/counter.ts
@@ -152,7 +152,7 @@ export type Store = DefineStoreModule<'counter', IState, never, Mutations>;
 
 ### グローバルのストアの型を定義する
 
-`@/interfaces/app/vuex`に型定義を行っているストアをimportし、結合することでストア全体の型定義ができます。
+`@/interfaces/app/vuex`に型定義を行っているストアを import し、結合することでストア全体の型定義ができます。
 
 ```ts
 // src/interfaces/app/vuex.d.ts
@@ -162,7 +162,7 @@ import { Store as UserStore } from '@/store/user';
 export type RootStore = CounterStore & UserStore;
 ```
 
-あとは、この`RootStore`をストアにアクセスするコンポーネントの`$store`メンバに指定すれば型安全にVuexを使用できるようになります。
+あとは、この `RootStore` をストアにアクセスするコンポーネントの `$store` メンバに指定すれば型安全に Vuex を使用できるようになります。
 
 ```ts
 import { Component, Vue} from 'nuxt-property-decorator';
