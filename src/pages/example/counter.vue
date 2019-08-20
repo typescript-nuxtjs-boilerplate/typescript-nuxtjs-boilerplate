@@ -16,7 +16,7 @@ div
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { RootStore } from '@/@types/vuex'
+import { RootStore } from '@/interfaces/app/vuex'
 
 @Component
 export default class Counter extends Vue {
