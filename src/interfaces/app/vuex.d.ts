@@ -2,13 +2,11 @@
  * @file Vuex内で共通して使う型、インターフェース
  */
 
-/** ベースのActionのペイロード */
-interface BaseAxiosAciton {
-  key?: symbol
-  force?: boolean
-}
+import { Store as CounterStore } from '@/store/counter'
 
-/** Axiosのリクエストを伴うアクションのペイロード */
-export type AxiosAction<T, P = {}> = BaseAxiosAciton &
+export type RootStore = CounterStore
+
+export type BaseAxiosAction = { key?: symbol }
+export type AxiosAction<T, P = {}> = BaseAxiosAction &
   (T extends void ? {} : { data: T }) &
   P
