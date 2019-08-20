@@ -1,17 +1,17 @@
-## Expected Behavior
+## 概要
 
+<!-- このIssueの概要を記載 -->
 
-## Actual Behavior
+* 
 
+## TODO
 
-## Steps to Reproduce the Problem
+<!-- このIssueを解決するための具体的な作業内容をTODO形式で記載 -->
 
-  1.
-  1.
-  1.
+* [ ] 
 
-## Specifications
+# 共有事項・補足
 
-  - Version:
-  - Platform:
-  - Subsystem:
+<!-- 共有事項や補足があれば記載 -->
+
+* 
