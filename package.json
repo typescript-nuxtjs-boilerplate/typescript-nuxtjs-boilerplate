@@ -74,6 +74,7 @@
     "nuxt-client-init-module": "^0.1.5",
     "nuxt-env": "^0.1.0",
     "nuxt-property-decorator": "^2.3.0",
+    "nuxt-user-agent": "^1.2.1",
     "shortid": "^2.2.14",
     "throttle-debounce": "^2.1.0",
     "ts-node": "^8.3.0",

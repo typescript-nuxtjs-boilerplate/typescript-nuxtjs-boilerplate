@@ -28,7 +28,8 @@
       "@types/node",
       "@types/jest",
       "@types/webpack",
-      "@nuxt/vue-app"
+      "@nuxt/vue-app",
+      "@nuxtjs/axios"
     ],
     "strict": false,
     "noImplicitAny": false,
