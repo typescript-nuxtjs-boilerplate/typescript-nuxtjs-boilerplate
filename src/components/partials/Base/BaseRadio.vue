@@ -24,7 +24,9 @@ import { Component, Inject, Prop, Vue } from 'nuxt-property-decorator'
 import { Validator } from 'vee-validate'
 import { ModelSync, Dictionary } from '@/utilities'
 
-@Component
+@Component({
+  inheritAttrs: false
+})
 export default class BaseRadio extends Vue {
   /** チェックボックスがフォーカスされているか */
   isFocus = false
