@@ -36,8 +36,6 @@ section
   p
     nuxt-link(to='/example/img-lazy-load') img-lazy-load
   p
-    nuxt-link(to='/example/type-safe-vuex') type-safe-vuex
-  p
     nuxt-link(to='/example/extend-css-class') extend-css-class
   p
     nuxt-link(to='/example/dynamic-import') dynamic-import

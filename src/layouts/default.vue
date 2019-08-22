@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Navbar from '@/components/Navbar.vue'
-import ForkThis from '@/components/ForkThis.vue'
+import Navbar from '@/components/partials/Example/Navbar.vue'
+import ForkThis from '@/components/partials/Example/ForkThis.vue'
 
 @Component({
   components: {

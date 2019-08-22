@@ -3,7 +3,7 @@ section
   h1.title
     | use-plugin
   p.c
-    | {{ c.pjName }}
+    | {{ pjName }}
 </template>
 
 <script lang="ts">
@@ -11,7 +11,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class UsePlugin extends Vue {
-  public c = 'a'
+  public pjName = 'a'
 
   public asyncData(context) {
     console.log(context.app.$C)
@@ -19,7 +19,7 @@ export default class UsePlugin extends Vue {
 
   public mounted() {
     console.log(this.$C)
-    this.c = this.$C
+    this.pjName = this.$C.pjName
   }
 
   public head() {

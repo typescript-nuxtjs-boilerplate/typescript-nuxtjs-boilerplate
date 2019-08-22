@@ -13,7 +13,7 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import InputForm from '@/components/pages/input/inputForm.vue'
+import InputForm from '@/components/pages/Input/InputForm.vue'
 
 interface ILoginController {
   mailAddress: string

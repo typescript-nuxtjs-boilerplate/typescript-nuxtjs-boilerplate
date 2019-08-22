@@ -1,5 +1,5 @@
 import { mount, shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/partials/Example/HelloWorld.vue'
 
 describe('HelloWorld', (): void => {
   test('is a Vue instance', (): void => {

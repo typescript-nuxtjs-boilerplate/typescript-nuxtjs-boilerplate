@@ -9,7 +9,7 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import ParentComponent from '@/components/pages/example/ParentComponent.vue'
+import ParentComponent from '@/components/pages/Example/ParentComponent.vue'
 
 @Component({
   components: {

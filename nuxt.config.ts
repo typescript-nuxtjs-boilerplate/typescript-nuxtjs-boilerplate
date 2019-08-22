@@ -167,8 +167,8 @@ const config: NuxtConfiguration = {
    * Plugins to load before mounting the App
    */
   plugins: [
-    '@/plugins/constants-inject.ts',
-    '@/plugins/env-inject.ts',
+    '@/plugins/constants.ts',
+    '@/plugins/env.ts',
     '@/plugins/libraries/vue-lazyload.ts',
     '@/plugins/locale/i18n.ts',
     '@/plugins/libraries/vee-validate.ts',

@@ -15,11 +15,11 @@ section.container
 </template>
 
 <script lang="ts">
-import Logo from '@/components/Logo.vue'
+import Logo from '@/components/partials/Example/Logo.vue'
 
 // Dynamic Import
 // import HelloWorld from '@/components/HelloWorld.vue'
-const HelloWorld = () => import('@/components/HelloWorld.vue')
+const HelloWorld = () => import('@/components/partials/Example/HelloWorld.vue')
 
 export default {
   components: {

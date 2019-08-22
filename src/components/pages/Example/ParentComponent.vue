@@ -9,7 +9,7 @@ section
 
 <script lang="ts">
 import { Component, Inject, Prop, Emit, Vue } from 'nuxt-property-decorator'
-import ChildComponent from '@/components/pages/example/ChildComponent.vue'
+import ChildComponent from '@/components/pages/Example/ChildComponent.vue'
 
 @Component({
   components: {
