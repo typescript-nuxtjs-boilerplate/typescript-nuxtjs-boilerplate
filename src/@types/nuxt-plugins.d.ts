@@ -10,5 +10,9 @@ declare module 'vue/types/vue' {
     $C: typeof C
     // 環境変数
     $env: any
+
+    // example plugin
+    $modeClient: any
+    $modeServer: any
   }
 }

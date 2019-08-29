@@ -175,6 +175,9 @@ const config: NuxtConfiguration = {
     { src: '@/plugins/libraries/node-log-rotate.ts', mode: 'server' },
     { src: '@/plugins/libraries/vue-carousel.ts', mode: 'client' },
     { src: '@/plugins/libraries/vue-awesome-swiper', mode: 'client' },
+    { src: '@/plugins/example/mode-client.ts', mode: 'client' },
+    { src: '@/plugins/example/mode-server.ts', mode: 'server' },
+    { src: '@/plugins/example/exec-example.ts' },
     '@/plugins/libraries/axios.ts'
   ],
 
@@ -213,7 +216,8 @@ const config: NuxtConfiguration = {
           { key: 'RUNTIME_ENV', default: 'defaultValue' } // Specify a default value
         ]
       }
-    ]
+    ],
+    'nuxt-user-agent'
   ],
 
   sentry: {

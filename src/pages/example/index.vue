@@ -90,6 +90,18 @@ export default class extends Vue {
   get isClientInitCalled(): StateInterface {
     return this.$store.getters['isClientInitCalled']
   }
+
+  public mounted() {
+    // NOTE: mode: 'client' の場合は if 文がとくに必要ない
+    this.$modeClient()
+
+    // NOTE: mode: 'server' の場合は process.server を見ないとエラーになる
+    // プラグイン - Nuxt.js - https://ja.nuxtjs.org/guide/plugins/
+    // `サーバーサイドでのみライブラリを読み込む必要がある場合は、process.server変数に true がセットされているかでチェックできます。`
+    if (process.server) {
+      this.$modeServer()
+    }
+  }
 }
 </script>
 

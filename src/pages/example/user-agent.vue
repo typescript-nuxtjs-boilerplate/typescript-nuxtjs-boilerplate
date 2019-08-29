@@ -8,6 +8,9 @@ div
   hr
   h2 ブラウザ→①→ SSR サーバー→②→ API サーバー
   p {{ data }}
+  hr
+  h2 nuxt-user-agent
+  p {{ deviceType }}
 </template>
 
 <script lang="ts">
@@ -39,6 +42,7 @@ export default class UserAgent extends Vue {
 
     return {
       message: context.userAgent,
+      deviceType: context.$ua.deviceType(),
       data
     }
   }
