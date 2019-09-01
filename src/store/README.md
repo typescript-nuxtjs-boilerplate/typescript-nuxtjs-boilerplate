@@ -166,7 +166,7 @@ export type RootStore = CounterStore & UserStore;
 
 ```ts
 import { Component, Vue} from 'nuxt-property-decorator';
-import { Context } from '@nuxt/vue-app';
+import { Context } from '@nuxt/types';
 import { RootStore } from '@/interface/app/vuex';
 
 @Component

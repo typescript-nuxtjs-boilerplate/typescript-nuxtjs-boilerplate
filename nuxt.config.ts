@@ -1,9 +1,4 @@
-import NuxtConfiguration from '@nuxt/config'
-import {
-  Configuration as WebpackConfiguration,
-  Options as WebpackOptions,
-  Plugin as WebpackPlugin
-} from 'webpack'
+import { Configuration as NuxtConfiguration } from '@nuxt/types'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
 import routers from './src/routers/'
 
@@ -35,6 +30,11 @@ const config: NuxtConfiguration = {
   },
 
   /**
+   * ビルドのモジュールにTypeScriptを追加
+   */
+  buildModules: ['@nuxt/typescript-build'],
+
+  /**
    * Build configuration
    * webpack のビルドに関する設定はここに書く
    */
@@ -60,15 +60,7 @@ const config: NuxtConfiguration = {
     /**
      * You can extend webpack config here
      */
-    extend(
-      config: WebpackConfiguration,
-      ctx: {
-        isDev: boolean
-        isClient: boolean
-        isServer: boolean
-        loaders: any
-      }
-    ): void {
+    extend(config, ctx): void {
       // Run ESLint on save
       if (ctx.isDev && process.client) {
         if (config.module) {
