@@ -2,11 +2,18 @@
  * @file Expand axios
  */
 
+import { Plugin } from '@nuxt/types'
 import { AxiosError, AxiosRequestConfig } from 'axios'
-import Vue from 'vue'
 import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
 
-export default ({ $axios, $log, $simple, app, req, error }): void => {
+const axiosPlugin: Plugin = ({
+  $axios,
+  $log,
+  $simple,
+  app,
+  req,
+  error
+}): void => {
   $simple.simpleFunction()
 
   /**
@@ -73,3 +80,5 @@ export default ({ $axios, $log, $simple, app, req, error }): void => {
     }
   })
 }
+
+export default axiosPlugin

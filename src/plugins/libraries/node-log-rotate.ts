@@ -1,7 +1,7 @@
 /**
  * @file サーバーサイド用の logger をグローバルにセットする
  */
-import { Context } from '@nuxt/vue-app'
+import { Plugin } from '@nuxt/types'
 import { setup, log } from 'node-log-rotate'
 import { pjName } from '@/common/constants/'
 
@@ -17,8 +17,10 @@ interface ILog {
 }
 interface ContextLog extends Context, ILog {}
 
-export default (context: ContextLog, inject: any): void => {
+const nodeLogRotatePlugin: Plugin = (context, inject): void => {
   // https://github.com/nuxt-community/axios-module/blob/dev/lib/plugin.js#L200
   context.$log = log
   inject('log', log)
 }
+
+export default nodeLogRotatePlugin
