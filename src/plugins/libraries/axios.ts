@@ -75,6 +75,8 @@ const axiosPlugin: Plugin = ({
 
     // 401
     if (status === app.$C.HTTP_STATUS.UNAUTHORIZED) {
+      // TODO i18nのNuxtOptionsの型が不明なので一旦無視
+      // @ts-ignore
       const message = app.i18n.t('error.api.status401')
       error({ statusCode: status, message })
     }
