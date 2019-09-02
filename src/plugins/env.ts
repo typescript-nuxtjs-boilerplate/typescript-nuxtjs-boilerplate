@@ -2,9 +2,9 @@
  * @file 環境変数をグローバルにセットする
  */
 
-import { Context } from '@nuxt/vue-app'
+import { Plugin } from '@nuxt/types'
 
-export default (context: Context): void => {
+const envPlugin: Plugin = (context): void => {
   for (const k in context.app.$env) {
     console.log('env-inject:', k, context.app.$env[k])
     if (!process.env[k]) {
@@ -12,3 +12,5 @@ export default (context: Context): void => {
     }
   }
 }
+
+export default envPlugin

@@ -2,11 +2,18 @@
  * @file Expand axios
  */
 
+import { Plugin } from '@nuxt/types'
 import { AxiosError, AxiosRequestConfig } from 'axios'
-import Vue from 'vue'
 import { setToken, unsetToken, getTokenFromCookie } from '@/utilities/'
 
-export default ({ $axios, $log, $simple, app, req, error }): void => {
+const axiosPlugin: Plugin = ({
+  $axios,
+  $log,
+  $simple,
+  app,
+  req,
+  error
+}): void => {
   $simple.simpleFunction()
 
   /**
@@ -68,8 +75,12 @@ export default ({ $axios, $log, $simple, app, req, error }): void => {
 
     // 401
     if (status === app.$C.HTTP_STATUS.UNAUTHORIZED) {
+      // TODO i18nのNuxtOptionsの型が不明なので一旦無視
+      // @ts-ignore
       const message = app.i18n.t('error.api.status401')
       error({ statusCode: status, message })
     }
   })
 }
+
+export default axiosPlugin

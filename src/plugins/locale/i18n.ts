@@ -2,12 +2,13 @@
  * @file i18n をグローバルにセットする
  */
 
+import { Plugin } from '@nuxt/types'
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
 
-export default ({ app, store }): void => {
+const i18nPlugin: Plugin = ({ app, store }): void => {
   // Set i18n instance on app
   // This way we can use it in middleware and pages asyncData/fetch
   app.i18n = new VueI18n({
@@ -27,3 +28,5 @@ export default ({ app, store }): void => {
   //   return `/${app.i18n.locale}/${link}`
   // }
 }
+
+export default i18nPlugin
