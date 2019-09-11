@@ -14,3 +14,6 @@ tools
 
 # Submodule
 src/include
+
+# Static
+src/static
