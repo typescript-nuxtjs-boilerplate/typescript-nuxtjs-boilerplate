@@ -1,0 +1,21 @@
+name: Node.js Test
+on: push
+
+jobs:
+  build:
+    name: Node.js ${{ matrix.os }} ${{ matrix.node }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [ '10' ]
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: yarn install
+      - run: yarn test
+        env:
+          NAME: hisasann
