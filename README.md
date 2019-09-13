@@ -1,5 +1,7 @@
 # :bento: typescript-nuxtjs-boilerplate
 
+`typescript-nuxtjs-boilerplate` は **Nuxt.js** で **TypeScript** を使うためのボイラープレートになります 🦑
+
 <img src="internals/images/header.png" width="100%" />
 
 Example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
@@ -100,7 +102,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## 📚 Docs
 
-See our [docs and guides here](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/)
+`typescript-nuxtjs-boilerplate` のドキュメントです [docs and guides here](https://typescript-nuxtjs-boilerplate-docs.netlify.com/#/)
 
 ## ⚙️ Maintainers
 
