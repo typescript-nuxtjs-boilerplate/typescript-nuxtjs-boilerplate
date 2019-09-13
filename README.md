@@ -2,17 +2,19 @@
 
 <img src="internals/images/header.png" width="100%" />
 
-example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
+Example url: [https://typescript-nuxtjs-boilerplate.netlify.com/example](https://typescript-nuxtjs-boilerplate.netlify.com/example)
 
 ---
 
 ## ⛑ Requirements
 
-* Node.js v10+
+* Node.js v10+ おすすめは `v10.16.0` です
 
 ## 💾 Install
 
 First, clone the repo via git:
+
+`git submodule` でサンプルを書いているので、以下のように `git clone` してください
 
 ```bash
 $ git clone --recursive git@github.com:typescript-nuxtjs-boilerplate/typescript-nuxtjs-boilerplate.git
@@ -43,13 +45,9 @@ Using yarn:
 yarn install
 ```
 
-Using npm:
-
-```bash
-npm install
-```
-
 ## 🔌 Serve with hot reload at localhost:4000
+
+Nuxt のデフォルトのポートは `3000` ですが、他のプロセスにバッティングするケースが多いので、 `4000` にしています
 
 ```bash
 $ yarn run dev
@@ -57,24 +55,32 @@ $ yarn run dev
 
 or
 
+`local` は `dev` のエイリアスです
+
 ```bash
 $ yarn run local
 ```
 
 and run mock server for examples
 
+そしてモックサーバーも別のプロセスとして起動させます
+
 ```bash
 $ node ./tools/server.js
 ```
 
-## Build for production on docker and launch server
+`5000` 番ポートで起動します
+
+## 🕹 Build for production on docker and launch server
+
+本番用の `docker` ビルドは以下になります
 
 ```bash
 $ yarn run build:docker
 $ yarn start
 ```
 
-## Build for production and `SPA mode`
+## 💻 Build for production and `SPA mode`
 
 ```bash
 $ yarn run build:static
