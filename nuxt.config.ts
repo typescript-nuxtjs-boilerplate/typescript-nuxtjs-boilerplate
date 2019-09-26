@@ -162,6 +162,7 @@ const config: NuxtConfiguration = {
     '@/plugins/constants.ts',
     '@/plugins/env.ts',
     '@/plugins/libraries/vue-lazyload.ts',
+    '@/plugins/libraries/vue-scrollto.ts',
     '@/plugins/locale/i18n.ts',
     '@/plugins/libraries/vee-validate.ts',
     { src: '@/plugins/libraries/node-log-rotate.ts', mode: 'server' },

@@ -74,6 +74,8 @@ section
   p
     nuxt-link(to='/example/nested-component', no-prefetch) nested-component
   p
+    nuxt-link(to='/example/scroll-to', no-prefetch) scroll-to
+  p
     a(href='/static-html') static html
 </template>
 
