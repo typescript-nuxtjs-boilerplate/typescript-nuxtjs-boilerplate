@@ -76,6 +76,8 @@ section
   p
     nuxt-link(to='/example/scroll-to', no-prefetch) scroll-to
   p
+    nuxt-link(to='/example/get-domain-in-head', no-prefetch) get-domain-in-head
+  p
     a(href='/static-html') static html
 </template>
 
