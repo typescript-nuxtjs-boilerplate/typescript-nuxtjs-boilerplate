@@ -17,6 +17,10 @@ import ChildComponent from '@/components/pages/Example/ChildComponent.vue'
   }
 })
 export default class ParentComponent extends Vue {
+  public parentMethod() {
+    console.log('parentMethod')
+  }
+
   @Emit('parent-click')
   public handleParentClick(counter, e) {
     return counter
