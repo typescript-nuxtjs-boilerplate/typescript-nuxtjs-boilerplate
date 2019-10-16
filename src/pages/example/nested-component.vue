@@ -4,6 +4,7 @@ section.container
     | nested-component
   ParentComponent(
     @parent-click="handleRootClick"
+    ref="parentComponent"
   )
 </template>
 
@@ -16,7 +17,16 @@ import ParentComponent from '@/components/pages/Example/ParentComponent.vue'
     ParentComponent
   }
 })
-export default class extends Vue {
+export default class NestedComponent extends Vue {
+  // add example of $ref casting to any in documentation · Issue #94 · vuejs/vue-class-component - https://github.com/vuejs/vue-class-component/issues/94
+  $refs!: {
+    parentComponent: HTMLFormElement
+  }
+
+  public mounted() {
+    this.$refs.parentComponent.parentMethod()
+  }
+
   public handleRootClick(counter, e) {
     console.log('handleRootClick', counter)
   }
