@@ -93,19 +93,22 @@ export default class VueAwesomeSwiper extends Vue {
 <style lang="scss" scoped>
 .swiper-container {
   margin-bottom: 10px;
-  .swiper-wrapper {
-    height: 300px;
+
+  > .swiper-wrapper {
     width: 100%;
-    .swiper-slide {
-      text-align: center;
+    height: 300px;
+
+    > .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 38px;
       font-weight: 700;
+      text-align: center;
       background-color: #eee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    .swiper-pagination {
+
+    > .swiper-pagination {
       > .swiper-pagination-bullet {
         background-color: red;
       }

@@ -84,14 +84,14 @@ export default class Counter extends Vue {
 }
 
 .value {
-  color: red;
   margin: 0 5px 0 5px;
+  color: red;
 }
 
 .button-size {
-  font-size: 1.2em;
   width: 170px;
   height: 100px;
   margin: 2px 2px;
+  font-size: 1.2em;
 }
 </style>

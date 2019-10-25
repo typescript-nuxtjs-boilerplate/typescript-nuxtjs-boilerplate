@@ -10,6 +10,8 @@ module.exports = {
   rules: {
     'string-quotes': 'single', // シングルクォーテーションに統一
     'no-empty-source': null, // Vueのため無効化
+    'declaration-colon-newline-after': null,
+    'value-list-comma-newline-after': null,
     'rscss/class-format': [
       false,
       {

@@ -1820,6 +1820,13 @@
     regenerator-runtime "^0.12.1"
     webpack "^4.33.0"
 
+"@team-lab/eslint-config@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@team-lab/eslint-config/-/eslint-config-0.1.1.tgz#f695ee4be3565e215785adca58d8142269d76a70"
+  integrity sha512-/f+sjPyB7zDwgKEPpZDpNyqToDthPHBJTrN6PYi8yFwiquViEDQFIzHdJSIKHeoz5KErQ0Tz2A0rhTejnKcBJw==
+  dependencies:
+    confusing-browser-globals "^1.0.8"
+
 "@textlint/ast-node-types@^4.0.2", "@textlint/ast-node-types@^4.2.1", "@textlint/ast-node-types@^4.2.4":
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.4.tgz#ae569bd76364040939044d057d5a56284563a7af"
@@ -4682,6 +4689,11 @@ configstore@^3.0.0:
     unique-string "^1.0.0"
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
+
+confusing-browser-globals@^1.0.8:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.9.tgz#72bc13b483c0276801681871d4898516f8f54fdd"
+  integrity sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==
 
 connect@^3.7.0:
   version "3.7.0"

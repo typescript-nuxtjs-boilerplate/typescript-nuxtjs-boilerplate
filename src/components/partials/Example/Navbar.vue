@@ -30,27 +30,30 @@ export default class NavBar extends Vue {
   display: flex;
   margin-bottom: 20px;
 }
+
 a {
+  padding-top: 2px;
+  padding-bottom: 2px;
   margin-right: 20px;
   font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
   color: #999;
   text-decoration: none;
   text-transform: uppercase;
-  padding-top: 2px;
-  padding-bottom: 2px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   transition: color 0.25s;
-  font-weight: 400;
-  line-height: normal;
 }
+
 a:hover {
   color: #333;
 }
+
 a.nuxt-link-active {
+  font-weight: 600;
   color: #333;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  font-weight: 600;
 }
 </style>

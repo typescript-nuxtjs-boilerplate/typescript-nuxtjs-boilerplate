@@ -5,7 +5,7 @@ section.container
   div.example
     carousel(:navigationEnabled='true', :perPage='2')
       slide(v-for='i in loopCounter', :key='i', :data-index='i' @slideclick='handleSlideClick')
-        span.label
+        span
           | {{i}}<img src='~/assets/images/lemon-sour.small.jpg'>
   p {{clickCounter}}
 </template>
@@ -43,15 +43,12 @@ export default class extends Vue {
 <style lang="scss">
 .VueCarousel-slide {
   position: relative;
-  background: #42b983;
-  color: #fff;
-  font-family: Arial;
-  font-size: 24px;
-  text-align: center;
-  min-height: 100px;
   height: 300px;
-}
-
-.label {
+  min-height: 100px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  background: #42b983;
 }
 </style>

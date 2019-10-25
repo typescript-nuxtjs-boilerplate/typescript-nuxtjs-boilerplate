@@ -8,40 +8,47 @@ div
 </template>
 
 <style lang="scss" scoped>
-.github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
-}
-svg {
-  fill: #333;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-}
 .octo-arm {
   transform-origin: 130px 106px;
 }
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  border: 0;
+  fill: #333;
+}
+
 @keyframes octocat-wave {
   0%,
   100% {
     transform: rotate(0);
   }
+
   20%,
   60% {
     transform: rotate(-25deg);
   }
+
   40%,
   80% {
     transform: rotate(10deg);
   }
 }
+
 @media (max-width: 500px) {
-  .github-corner:hover .octo-arm {
-    animation: none;
-  }
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
+  }
+
+  .github-corner:hover .octo-arm {
+    animation: none;
   }
 }
 </style>
