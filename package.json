@@ -1,7 +1,7 @@
 {
   "name": "typescript-nuxtjs-boilerplate",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Nuxt.js with TypeScript and Run with docker and docker-compose",
   "scripts": {
     "local": "npm run dev",
@@ -12,12 +12,13 @@
     "build:local": "cross-env NODE_ENV=production BUILD_ENV=local envName=local nuxt-ts build --no-lock",
     "build:docker": "cross-env NODE_ENV=production nuxt-ts build --no-lock",
     "start": "nuxt-ts start",
-    "lint": "eslint --ext .js,.ts,.vue .",
-    "lintfix": "eslint --fix --ext .js,.ts,.vue .",
-    "lint:css": "stylelint \"src/**/*.{vue,scss}\"",
-    "textlint": "textlint --config .textlintrc ./src/**/*.md",
-    "textlint:fix": "yarn textlint --fix --format diff",
-    "precommit": "npm run lint:css && npm run lint && npm run textlint",
+    "lintjs": "eslint --ext .js,.ts,.vue .",
+    "lintjs:fix": "yarn lintjs --fix",
+    "lintcss": "stylelint \"src/**/*.{vue,scss}\"",
+    "lintcss:fix": "yarn lintcss --fix",
+    "textlint": "textlint --config .textlintrc \"./{src,mock,docs}/**/*.md\"",
+    "textlint:fix": "yarn textlint --fix",
+    "prepush": "yarn lintjs && yarn lintcss && yarn textlint",
     "test": "jest",
     "clean:cache": "rimraf node_modules/.cache/hard-source",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -31,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn precommit"
+      "pre-push": "yarn prepush"
     }
   },
   "author": {
@@ -92,6 +93,7 @@
     "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "@storybook/vue": "^5.2.0",
+    "@team-lab/eslint-config": "^0.1.1",
     "@types/animejs": "^3.1.0",
     "@types/babel-core": "6.25.6",
     "@types/eslint": "^6.1.1",
@@ -131,8 +133,9 @@
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "stylelint": "^10.1.0",
+    "stylelint-config-recess-order": "^2.0.3",
+    "stylelint-config-rscss": "^1.0.0",
     "stylelint-scss": "^3.10.1",
-    "stylelint-webpack-plugin": "^0.10.5",
     "textlint": "^11.3.1",
     "textlint-filter-rule-whitelist": "^2.0.0",
     "textlint-rule-no-todo": "^2.0.1",

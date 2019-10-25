@@ -4,7 +4,7 @@
 
 ## partials/Base/BaseInput.vue
 
-下記以外にもInputタグに付けられるプロパティは付与可能。
+下記以外にも Input タグに付けられるプロパティは付与可能。
 
 ```pug
 BaseInput(
@@ -46,7 +46,7 @@ interface ISelectOption {
 
 **Scoped Slot**
 
-表示をカスタマイズする際に使用できる値がBaseSelectから降ってきます。利用可能な値は下記の通り。
+表示をカスタマイズする際に使用できる値が BaseSelect から降ってきます。利用可能な値は下記の通り。
 
 ```pug
 template(v-slot="{
@@ -61,17 +61,17 @@ template(v-slot="{
     | {{label}}
 ```
 
-※Pugでは本来、属性内での改行はできません
+※Pug では本来、属性内での改行はできません
 
 ## partials/Base/BaseCheckbox.vue
 
-BaseSelectと大体同じ。
+BaseSelect と大体同じ。
 
-`wrapper`属性でラップするタグを指定できる。デフォルトは`label`
+`wrapper`属性でラップするタグを指定できる。デフォルトは `label` 
 
 **Scoped Slot**
 
-表示をカスタマイズする際に使用できる値がBaseCheckboxから降ってきます。利用可能な値は下記の通り。
+表示をカスタマイズする際に使用できる値が BaseCheckbox から降ってきます。利用可能な値は下記の通り。
 
 ```pug
 template(v-slot="{
@@ -88,9 +88,9 @@ template(v-slot="{
 
 ## partials/Base/BaseRadio.vue
 
-`cancellable`属性と`cancelledValue`属性を受け取れる。
-`cancellable`を`true`にすると、選択中のラジオを再度クリックすると選択が解除される。
-選択解除された際の値は`cancelledValue`で指定する。初期値は`''`。
+`cancellable`属性と `cancelledValue` 属性を受け取れる。
+`cancellable`を `true` にすると、選択中のラジオを再度クリックすると選択が解除される。
+選択解除された際の値は `cancelledValue` で指定する。初期値は `''` 。
 
 `v-slot`から降ってくる値はチェックボックスと同じ。
 
