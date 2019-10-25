@@ -1,5 +1,4 @@
 import { Configuration as NuxtConfiguration } from '@nuxt/types'
-import StyleLintPlugin from 'stylelint-webpack-plugin'
 import routers from './src/routers/'
 
 const pkg = require('./package')
@@ -89,14 +88,7 @@ const config: NuxtConfiguration = {
     },
 
     // Additional Webpack Plugins
-    plugins: [
-      new StyleLintPlugin({
-        files: ['src/**/*.vue', 'src/**/*.scss'],
-        configFile: '.stylelintrc.js',
-        emitErrors: false,
-        syntax: 'scss'
-      })
-    ],
+    plugins: [],
 
     // extractCSS: isProduction,
 
