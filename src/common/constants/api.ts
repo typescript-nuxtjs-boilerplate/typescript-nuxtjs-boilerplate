@@ -24,6 +24,9 @@ export const API_ENDPOINT = {
   LOGOUT: getBffUrl('/logout')
 }
 
+/** サイトのドメイン */
+export const DOMAIN = 'typescript-nuxtjs-boilerplate.netlify.com'
+
 /** アクセストークンヘッダ名 - API サーバーとのログインセッション用のトークン名 */
 export const ACCESS_TOKEN_NAME = 'x-authorization-code'
 

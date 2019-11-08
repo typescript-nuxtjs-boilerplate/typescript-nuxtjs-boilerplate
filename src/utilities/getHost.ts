@@ -7,27 +7,37 @@
  */
 import isHTTPS from 'is-https'
 
-export function getHost(req: any): string {
+export function getHost(req: any, domain?: string): string {
   let host = ''
   let port = ''
   let protocol = ''
 
   // SSR
   if (req) {
-    host = req.headers.host
-    if (host.indexOf(':') > 0) {
-      ;[host, port] = host.split(':')
+    if (domain) {
+      host = domain
+    } else {
+      host = req.headers.host
+      if (host.indexOf(':') > 0) {
+        ;[host, port] = host.split(':')
+      }
     }
+
     protocol = isHTTPS(req) ? 'https' : 'http'
     host = host + (port ? ':' + port : '')
     return [protocol, '://', host].join('')
   }
 
   // CSR
-  host = window.location.host
-  if (host.indexOf(':') > 0) {
-    ;[host, port] = host.split(':')
+  if (domain) {
+    host = domain
+  } else {
+    host = window.location.host
+    if (host.indexOf(':') > 0) {
+      ;[host, port] = host.split(':')
+    }
   }
+
   protocol = window.location.protocol
   host = host + (port ? ':' + port : '')
   return [protocol, '//', host].join('')
