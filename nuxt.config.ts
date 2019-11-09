@@ -42,6 +42,9 @@ const config: NuxtConfiguration = {
     // https://ja.nuxtjs.org/api/configuration-build/#devtools
     devtools: true,
 
+    transpile: [
+      'is-https',
+    ],
     loaders: {
       // https://ja.nuxtjs.org/faq/webpack-audio-files/
       vue: {
