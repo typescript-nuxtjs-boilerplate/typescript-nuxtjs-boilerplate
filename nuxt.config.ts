@@ -43,9 +43,7 @@ const config: NuxtConfiguration = {
     devtools: true,
 
     // 特定の依存関係を Babel で変換したい場合、マッチする依存ファイル名の文字列または正規表現オブジェクトをここに書く
-    transpile: [
-      'is-https'
-    ],
+    transpile: ['is-https'],
 
     loaders: {
       // https://ja.nuxtjs.org/faq/webpack-audio-files/
