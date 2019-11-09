@@ -44,6 +44,7 @@ const config: NuxtConfiguration = {
 
     transpile: [
       'is-https',
+      'is-https'
     ],
     loaders: {
       // https://ja.nuxtjs.org/faq/webpack-audio-files/
