@@ -9,11 +9,11 @@
  * @param {req} request
  * @param {xForwardedProto}
  */
-function isEmpty(v) {
+function isEmpty(v): boolean {
   return v === undefined || v === null
 }
 
-export default function isHTTPS(req, xForwardedProto = true) {
+export default function isHTTPS(req, xForwardedProto = true): boolean | null {
   // Test using req.connection.encrypted
   const encrypted = isEmpty(req.connection.encrypted)
     ? null
