@@ -5,7 +5,7 @@
  *
  * @param {req} request
  */
-import isHTTPS from 'is-https'
+import isHTTPS from './is-https'
 
 export function getHost(req: any, domain?: string): string {
   let host = ''
