@@ -6,6 +6,20 @@
       "hello": "こんにちは"
     }
   },
+  "meta": {
+    "viewport": {
+      "ipad": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=1200"
+      },
+      "else": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    }
+  },
   "errorはいろいろな箇所で使われるエラーの文字列を定義します": "これによりいろいろな箇所で書かれるであろうエラー文言を統一できます",
   "error": {
     "home": {

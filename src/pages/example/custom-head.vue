@@ -22,7 +22,7 @@ export default class extends Vue {
     return {
       title: this.title,
       meta: [
-        makeViewport(this.$ua),
+        makeViewport(this.$ua, this.$t.bind(this)),
         {
           hid: 'description',
           name: 'description',
