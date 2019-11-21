@@ -6,7 +6,7 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { makeViewport } from '@/utilities/makeViewport'
+import { makeViewport } from '@/utilities/'
 
 @Component
 export default class extends Vue {
