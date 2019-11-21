@@ -6,6 +6,7 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import { makeViewport } from '@/utilities/makeViewport'
 
 @Component
 export default class extends Vue {
@@ -21,6 +22,7 @@ export default class extends Vue {
     return {
       title: this.title,
       meta: [
+        makeViewport(this.$ua),
         {
           hid: 'description',
           name: 'description',
