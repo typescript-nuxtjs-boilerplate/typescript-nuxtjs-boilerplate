@@ -8,15 +8,20 @@
   },
   "meta": {
     "viewport": {
-      "ipad": {
+      "small": {
         "hid": "viewport",
         "name": "viewport",
-        "content": "width=1200"
+        "content": "width=375, initial-scale=0.853"
+      },
+      "normal": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
       },
       "else": {
         "hid": "viewport",
         "name": "viewport",
-        "content": "width=device-width, initial-scale=1"
+        "content": "width=1200"
       }
     }
   },

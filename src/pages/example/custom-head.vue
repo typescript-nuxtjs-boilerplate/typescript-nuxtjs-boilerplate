@@ -6,9 +6,12 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import InitMixin from '@/mixins/Viewport'
 import { makeViewport } from '@/utilities/'
 
-@Component
+@Component({
+  mixins: [InitMixin]
+})
 export default class extends Vue {
   public title = ''
 
@@ -22,7 +25,6 @@ export default class extends Vue {
     return {
       title: this.title,
       meta: [
-        makeViewport(this.$ua, this.$t.bind(this)),
         {
           hid: 'description',
           name: 'description',
