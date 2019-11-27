@@ -7,7 +7,6 @@ section.container
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import InitMixin from '@/mixins/Viewport'
-import { makeViewport } from '@/utilities/'
 
 @Component({
   mixins: [InitMixin]
