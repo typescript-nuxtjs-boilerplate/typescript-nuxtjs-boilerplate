@@ -118,6 +118,7 @@ const config: NuxtConfiguration = {
    * Headers of the page
    */
   head: {
+    // title でカスタムパラメータを使う場合
     titleTemplate: `%s - ${pkg.name}`,
     meta: [
       { charset: 'utf-8' },
