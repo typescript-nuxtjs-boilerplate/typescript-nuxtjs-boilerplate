@@ -6,8 +6,11 @@ section.container
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import InitMixin from '@/mixins/Viewport'
 
-@Component
+@Component({
+  mixins: [InitMixin]
+})
 export default class extends Vue {
   public title = ''
 

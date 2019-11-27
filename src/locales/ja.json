@@ -6,6 +6,25 @@
       "hello": "こんにちは"
     }
   },
+  "meta": {
+    "viewport": {
+      "small": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=375, initial-scale=0.853"
+      },
+      "normal": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      },
+      "else": {
+        "hid": "viewport",
+        "name": "viewport",
+        "content": "width=1200"
+      }
+    }
+  },
   "errorはいろいろな箇所で使われるエラーの文字列を定義します": "これによりいろいろな箇所で書かれるであろうエラー文言を統一できます",
   "error": {
     "home": {

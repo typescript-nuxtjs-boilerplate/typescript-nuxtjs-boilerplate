@@ -12,8 +12,12 @@ declare module 'vue/types/vue' {
     $C: typeof C
     // 環境変数
     $env: any
+
     $simple: typeof simple
     $log: typeof log
+
+    // vue-meta
+    $metaInfo: any
 
     // example plugin
     $modeClient: any
