@@ -110,7 +110,7 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-preset-vue": "^2.0.2",
-    "core-js": "2.6.5",
+    "core-js": "2.6.12",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-config-standard": ">=14.1.0",
