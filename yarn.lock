@@ -1632,10 +1632,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@lollipop-onl/vuex-typesafe-helper@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@lollipop-onl/vuex-typesafe-helper/-/vuex-typesafe-helper-0.2.8.tgz#9d3f2ee6db91a43251e10cddf11187a31a6993ee"
-  integrity sha512-xTokatGzH68B5WtAg/86+COUqZNXkBftjnRq8bF7bcgykGUK0KiShAijtJmCPKgJSt+ykHfKi2BalZ7OBwVP7g==
+"@lollipop-onl/vuex-typesafe-helper@0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@lollipop-onl/vuex-typesafe-helper/-/vuex-typesafe-helper-0.2.13.tgz#92f40a62a791c764c2b305c8c8d5100b891722b0"
+  integrity sha512-EfDTV3r1h/cIfsO1tHtBAYL41tAR/rtnp335QWlxuSMsLrHbrrHtGJva4RNhN7UYc3sv0/HyAQte203bj5xJzg==
   dependencies:
     typescript "^3.4.5"
     vue "^2.6.10"
