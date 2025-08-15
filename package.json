@@ -71,7 +71,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "node-log-rotate": "^0.0.11",
-    "nuxt": "^2.10.2",
+    "nuxt": "^3.0.0",
     "nuxt-client-init-module": "^0.1.6",
     "nuxt-env": "^0.1.0",
     "nuxt-property-decorator": "^2.4.0",
