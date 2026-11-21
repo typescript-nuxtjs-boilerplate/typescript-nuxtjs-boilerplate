@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
-    "@nuxt/typescript-build": "^0.3.4",
+    "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "@storybook/vue": "^5.2.0",
